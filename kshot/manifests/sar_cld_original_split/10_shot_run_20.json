@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "dataset_key": "sar_cld_original_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 10,
+  "run_index": 20,
+  "seed": 10062,
+  "num_classes": 7,
+  "class_pool_sizes": {
+    "0": 200,
+    "1": 344,
+    "2": 205,
+    "3": 224,
+    "4": 180,
+    "5": 462,
+    "6": 92
+  },
+  "selected_count": 70,
+  "selected_per_class": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10,
+    "6": 10
+  },
+  "selected": [
+    {
+      "id": "train/bacterial_blight/BBC00032.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00054.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00074.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00081.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00116.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00126.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00131.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00137.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00177.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/bacterial_blight/BBC00205.jpg",
+      "class_name": "bacterial_blight",
+      "label": 0
+    },
+    {
+      "id": "train/curl_virus/CV00131.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00132.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00154.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00156.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00158.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00167.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00190.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00194.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00354.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/curl_virus/CV00417.jpg",
+      "class_name": "curl_virus",
+      "label": 1
+    },
+    {
+      "id": "train/healthy_leaf/HL00017.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00106.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00157.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00158.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00167.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00175.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00199.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00207.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00229.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/healthy_leaf/HL00250.jpg",
+      "class_name": "healthy_leaf",
+      "label": 2
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00006.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00023.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00063.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00088.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00119.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00163.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00209.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00217.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00233.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/herbicide_growth_damage/HGD00243.jpg",
+      "class_name": "herbicide_growth_damage",
+      "label": 3
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00011.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00012.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00055.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00069.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00104.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00152.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00172.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00184.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00197.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_hopper_jassids/LHJ00212.jpg",
+      "class_name": "leaf_hopper_jassids",
+      "label": 4
+    },
+    {
+      "id": "train/leaf_redding/LR00017.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00131.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00175.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00250.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00342.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00353.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00422.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00480.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00481.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_redding/LR00514.jpg",
+      "class_name": "leaf_redding",
+      "label": 5
+    },
+    {
+      "id": "train/leaf_variegation/LV00013.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00024.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00031.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00036.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00047.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00064.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00069.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00072.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00086.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    },
+    {
+      "id": "train/leaf_variegation/LV00116.jpg",
+      "class_name": "leaf_variegation",
+      "label": 6
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "dataset_key": "leafsugar_disease_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 1,
+  "run_index": 19,
+  "seed": 1061,
+  "num_classes": 5,
+  "class_pool_sizes": {
+    "0": 417,
+    "1": 369,
+    "2": 414,
+    "3": 411,
+    "4": 404
+  },
+  "selected_count": 5,
+  "selected_per_class": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1
+  },
+  "selected": [
+    {
+      "id": "train/healthy/healthy (410).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/mosaic/mosaic (294).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/redrot/redrot (280).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/rust/rust (178).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/yellow/yellow (310).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

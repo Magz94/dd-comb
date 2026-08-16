@@ -1,0 +1,42 @@
+# Hydra entry config for scripts/sweep_kshot.py — k-shot multirun sweep.
+#
+# Schema: KShotSweepConfig in src/ddcomb/config.py
+#
+# pipeline.kshot_manifest_path and pipeline.run_tag are auto-built via
+# OmegaConf interpolation from the sweep dimensions (kshot_dataset_key,
+# kshot_shot, kshot_run_idx). Each multirun job picks one (shot, run_idx)
+# combination and resolves to a unique manifest + run tag.
+#
+# Workflow:
+#   # 1. Build the manifests once for your dataset under ./kshot/manifests.
+#   python scripts/build_kshot_manifests.py \
+#       dataset_key=plantvillage_color_split \
+#       dataset_type=imagefolder \
+#       imagefolder_root=/home/magz94/ddcomb/data/plantvillage_color_split
+#
+#   # 2. Sweep training across shots × repeats (4 × 20 = 80 jobs).
+#   python scripts/sweep_kshot.py -m \
+#       stage_a_source=img100_dirichlet_imagenet_1_acc85 \
+#       dataset=plantvillage_color_split \
+#       kshot_dataset_key=plantvillage_color_split \
+#       kshot_shot=1,5,10,20 \
+#       kshot_run_idx=range(1,21)
+
+defaults:
+  - kshot_sweep_schema
+  - dataset: null
+  - stage_a_source: null
+  - _self_
+
+# Sweep-tied auto-derived fields. Relative kshot paths are resolved against the
+# repository root, not Hydra's multirun job directory.
+pipeline:
+  kshot_manifest_path: "${kshot_root}/${kshot_dataset_key}/${kshot_shot}_shot_run_${kshot_run_idx}.json"
+  run_tag: "attn_stage_d_kshot_${kshot_shot}shot_run${kshot_run_idx}_${pipeline.attention_method}_${pipeline.classifier_method}_${kshot_dataset_key}"
+  # The old hardcoded train_stage_d_kshot_selective.py disabled wandb for
+  # robustness on long runs; keep that default. Override per-run with
+  # `pipeline.use_wandb=true` if desired.
+  use_wandb: false
+  # Match the old script: include uncertainty bundle in eval, skip diagnostic plots.
+  enable_uncertainty_metrics: true
+  enable_diagnostic_plots: false

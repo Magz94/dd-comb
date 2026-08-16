@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "dataset_key": "bloodmnist_224_imagefolder_mergeval",
+  "dataset_type": "imagefolder",
+  "k_shot": 5,
+  "run_index": 12,
+  "seed": 5054,
+  "num_classes": 8,
+  "class_pool_sizes": {
+    "0": 974,
+    "1": 2493,
+    "2": 1240,
+    "3": 2316,
+    "4": 971,
+    "5": 1136,
+    "6": 2663,
+    "7": 1878
+  },
+  "selected_count": 40,
+  "selected_per_class": {
+    "0": 5,
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5
+  },
+  "selected": [
+    {
+      "id": "train/0_basophil/train_002106.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_005287.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_006526.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_010045.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_011017.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/1_eosinophil/train_001456.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_001681.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_003811.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_007621.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "val/1_eosinophil/val_001426.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/2_erythroblast/train_000774.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_005824.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_007889.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_010111.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "val/2_erythroblast/val_001521.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_006240.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_006846.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_008347.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "val/3_immature_granulocytes/val_000077.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "val/3_immature_granulocytes/val_000514.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/4_lymphocyte/train_006426.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_010317.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_011180.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_011218.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "val/4_lymphocyte/val_001435.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/5_monocyte/train_003066.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_005703.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_008874.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "val/5_monocyte/val_000236.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "val/5_monocyte/val_000654.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/6_neutrophil/train_002067.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_003039.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_006693.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_007112.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_007546.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/7_platelet/train_003442.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_005906.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_006773.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "val/7_platelet/val_000324.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "val/7_platelet/val_001069.png",
+      "class_name": "7_platelet",
+      "label": 7
+    }
+  ],
+  "meta": {
+    "train_pool": "train + val"
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "dataset_key": "bloodmnist_224_imagefolder_mergeval",
+  "dataset_type": "imagefolder",
+  "k_shot": 10,
+  "run_index": 8,
+  "seed": 10050,
+  "num_classes": 8,
+  "class_pool_sizes": {
+    "0": 974,
+    "1": 2493,
+    "2": 1240,
+    "3": 2316,
+    "4": 971,
+    "5": 1136,
+    "6": 2663,
+    "7": 1878
+  },
+  "selected_count": 80,
+  "selected_per_class": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10,
+    "6": 10,
+    "7": 10
+  },
+  "selected": [
+    {
+      "id": "train/0_basophil/train_001226.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_002009.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_002028.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_002585.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_004476.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_005431.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_005933.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/0_basophil/train_007857.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "val/0_basophil/val_000471.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "val/0_basophil/val_001694.png",
+      "class_name": "0_basophil",
+      "label": 0
+    },
+    {
+      "id": "train/1_eosinophil/train_001078.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_002658.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_004027.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_004203.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_005286.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_006300.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_006754.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_007621.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_011014.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/1_eosinophil/train_011939.png",
+      "class_name": "1_eosinophil",
+      "label": 1
+    },
+    {
+      "id": "train/2_erythroblast/train_001375.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_001800.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_002730.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_004235.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_005629.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_005758.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_006391.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_009931.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/2_erythroblast/train_010839.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "val/2_erythroblast/val_001256.png",
+      "class_name": "2_erythroblast",
+      "label": 2
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_001410.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_002352.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_007863.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_008045.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_008067.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_008597.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_009274.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_010711.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/3_immature_granulocytes/train_011320.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "val/3_immature_granulocytes/val_000637.png",
+      "class_name": "3_immature_granulocytes",
+      "label": 3
+    },
+    {
+      "id": "train/4_lymphocyte/train_002713.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_003711.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_003833.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_006354.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_007392.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_008164.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_010275.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_010840.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/4_lymphocyte/train_011038.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "val/4_lymphocyte/val_001035.png",
+      "class_name": "4_lymphocyte",
+      "label": 4
+    },
+    {
+      "id": "train/5_monocyte/train_001100.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_001920.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_003515.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_006262.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_006723.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_008839.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_009317.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_009692.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/5_monocyte/train_011170.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "val/5_monocyte/val_001003.png",
+      "class_name": "5_monocyte",
+      "label": 5
+    },
+    {
+      "id": "train/6_neutrophil/train_000294.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_001928.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_002568.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_005390.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_005882.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_006026.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_007486.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_008525.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_008604.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/6_neutrophil/train_010678.png",
+      "class_name": "6_neutrophil",
+      "label": 6
+    },
+    {
+      "id": "train/7_platelet/train_000806.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_001470.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_004894.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_004988.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_004999.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_005864.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_006826.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_008344.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_009374.png",
+      "class_name": "7_platelet",
+      "label": 7
+    },
+    {
+      "id": "train/7_platelet/train_009853.png",
+      "class_name": "7_platelet",
+      "label": 7
+    }
+  ],
+  "meta": {
+    "train_pool": "train + val"
+  }
+}

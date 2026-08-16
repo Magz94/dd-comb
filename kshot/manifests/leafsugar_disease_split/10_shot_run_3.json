@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "dataset_key": "leafsugar_disease_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 10,
+  "run_index": 3,
+  "seed": 10045,
+  "num_classes": 5,
+  "class_pool_sizes": {
+    "0": 417,
+    "1": 369,
+    "2": 414,
+    "3": 411,
+    "4": 404
+  },
+  "selected_count": 50,
+  "selected_per_class": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10
+  },
+  "selected": [
+    {
+      "id": "train/healthy/healthy (108).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (179).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (24).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (260).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (290).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (313).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (452).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (475).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (48).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/healthy/healthy (63).jpeg",
+      "class_name": "healthy",
+      "label": 0
+    },
+    {
+      "id": "train/mosaic/mosaic (142).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (176).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (242).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (292).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (35).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (350).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (352).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (360).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (390).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/mosaic/mosaic (94).jpeg",
+      "class_name": "mosaic",
+      "label": 1
+    },
+    {
+      "id": "train/redrot/redrot (128).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (15).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (186).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (303).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (351).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (395).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (441).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (457).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (470).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/redrot/redrot (53).jpeg",
+      "class_name": "redrot",
+      "label": 2
+    },
+    {
+      "id": "train/rust/rust (227).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (282).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (3).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (371).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (373).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (418).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (483).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (50).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (70).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/rust/rust (73).jpeg",
+      "class_name": "rust",
+      "label": 3
+    },
+    {
+      "id": "train/yellow/yellow (152).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (162).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (163).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (243).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (283).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (305).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (348).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (441).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (484).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    },
+    {
+      "id": "train/yellow/yellow (75).jpeg",
+      "class_name": "yellow",
+      "label": 4
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

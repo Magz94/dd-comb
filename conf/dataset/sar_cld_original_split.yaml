@@ -1,0 +1,13 @@
+# @package pipeline
+# SAR-CLD-2024 original cotton leaf disease dataset, fixed ImageFolder split (train/, test/).
+
+use_deepweeds: false
+use_ssl_patches: true
+use_imagenet1k_parquet: false
+use_jkk: false
+
+ssl_patches_root: /home/magz94/ddcomb/data/sar_cld_original_split
+ssl_patches_train_split: train
+ssl_patches_eval_split: test
+
+num_classes: 7

@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "dataset_key": "plant_seedlings_v2_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 5,
+  "run_index": 1,
+  "seed": 5043,
+  "num_classes": 12,
+  "class_pool_sizes": {
+    "0": 247,
+    "1": 361,
+    "2": 268,
+    "3": 570,
+    "4": 202,
+    "5": 430,
+    "6": 609,
+    "7": 205,
+    "8": 485,
+    "9": 219,
+    "10": 460,
+    "11": 370
+  },
+  "selected_count": 60,
+  "selected_per_class": {
+    "0": 5,
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 5
+  },
+  "selected": [
+    {
+      "id": "train/black_grass/10.png",
+      "class_name": "black_grass",
+      "label": 0
+    },
+    {
+      "id": "train/black_grass/17.png",
+      "class_name": "black_grass",
+      "label": 0
+    },
+    {
+      "id": "train/black_grass/22.png",
+      "class_name": "black_grass",
+      "label": 0
+    },
+    {
+      "id": "train/black_grass/257.png",
+      "class_name": "black_grass",
+      "label": 0
+    },
+    {
+      "id": "train/black_grass/288.png",
+      "class_name": "black_grass",
+      "label": 0
+    },
+    {
+      "id": "train/charlock/112.png",
+      "class_name": "charlock",
+      "label": 1
+    },
+    {
+      "id": "train/charlock/148.png",
+      "class_name": "charlock",
+      "label": 1
+    },
+    {
+      "id": "train/charlock/265.png",
+      "class_name": "charlock",
+      "label": 1
+    },
+    {
+      "id": "train/charlock/319.png",
+      "class_name": "charlock",
+      "label": 1
+    },
+    {
+      "id": "train/charlock/72.png",
+      "class_name": "charlock",
+      "label": 1
+    },
+    {
+      "id": "train/cleavers/256.png",
+      "class_name": "cleavers",
+      "label": 2
+    },
+    {
+      "id": "train/cleavers/261.png",
+      "class_name": "cleavers",
+      "label": 2
+    },
+    {
+      "id": "train/cleavers/271.png",
+      "class_name": "cleavers",
+      "label": 2
+    },
+    {
+      "id": "train/cleavers/63.png",
+      "class_name": "cleavers",
+      "label": 2
+    },
+    {
+      "id": "train/cleavers/83.png",
+      "class_name": "cleavers",
+      "label": 2
+    },
+    {
+      "id": "train/common_chickweed/200.png",
+      "class_name": "common_chickweed",
+      "label": 3
+    },
+    {
+      "id": "train/common_chickweed/21.png",
+      "class_name": "common_chickweed",
+      "label": 3
+    },
+    {
+      "id": "train/common_chickweed/534.png",
+      "class_name": "common_chickweed",
+      "label": 3
+    },
+    {
+      "id": "train/common_chickweed/575.png",
+      "class_name": "common_chickweed",
+      "label": 3
+    },
+    {
+      "id": "train/common_chickweed/87.png",
+      "class_name": "common_chickweed",
+      "label": 3
+    },
+    {
+      "id": "train/common_wheat/166.png",
+      "class_name": "common_wheat",
+      "label": 4
+    },
+    {
+      "id": "train/common_wheat/171.png",
+      "class_name": "common_wheat",
+      "label": 4
+    },
+    {
+      "id": "train/common_wheat/223.png",
+      "class_name": "common_wheat",
+      "label": 4
+    },
+    {
+      "id": "train/common_wheat/4.png",
+      "class_name": "common_wheat",
+      "label": 4
+    },
+    {
+      "id": "train/common_wheat/64.png",
+      "class_name": "common_wheat",
+      "label": 4
+    },
+    {
+      "id": "train/fat_hen/231.png",
+      "class_name": "fat_hen",
+      "label": 5
+    },
+    {
+      "id": "train/fat_hen/236.png",
+      "class_name": "fat_hen",
+      "label": 5
+    },
+    {
+      "id": "train/fat_hen/237.png",
+      "class_name": "fat_hen",
+      "label": 5
+    },
+    {
+      "id": "train/fat_hen/265.png",
+      "class_name": "fat_hen",
+      "label": 5
+    },
+    {
+      "id": "train/fat_hen/389.png",
+      "class_name": "fat_hen",
+      "label": 5
+    },
+    {
+      "id": "train/loose_silky_bent/105.png",
+      "class_name": "loose_silky_bent",
+      "label": 6
+    },
+    {
+      "id": "train/loose_silky_bent/263.png",
+      "class_name": "loose_silky_bent",
+      "label": 6
+    },
+    {
+      "id": "train/loose_silky_bent/431.png",
+      "class_name": "loose_silky_bent",
+      "label": 6
+    },
+    {
+      "id": "train/loose_silky_bent/59.png",
+      "class_name": "loose_silky_bent",
+      "label": 6
+    },
+    {
+      "id": "train/loose_silky_bent/754.png",
+      "class_name": "loose_silky_bent",
+      "label": 6
+    },
+    {
+      "id": "train/maize/119.png",
+      "class_name": "maize",
+      "label": 7
+    },
+    {
+      "id": "train/maize/161.png",
+      "class_name": "maize",
+      "label": 7
+    },
+    {
+      "id": "train/maize/189.png",
+      "class_name": "maize",
+      "label": 7
+    },
+    {
+      "id": "train/maize/233.png",
+      "class_name": "maize",
+      "label": 7
+    },
+    {
+      "id": "train/maize/31.png",
+      "class_name": "maize",
+      "label": 7
+    },
+    {
+      "id": "train/scentless_mayweed/199.png",
+      "class_name": "scentless_mayweed",
+      "label": 8
+    },
+    {
+      "id": "train/scentless_mayweed/262.png",
+      "class_name": "scentless_mayweed",
+      "label": 8
+    },
+    {
+      "id": "train/scentless_mayweed/307.png",
+      "class_name": "scentless_mayweed",
+      "label": 8
+    },
+    {
+      "id": "train/scentless_mayweed/393.png",
+      "class_name": "scentless_mayweed",
+      "label": 8
+    },
+    {
+      "id": "train/scentless_mayweed/46.png",
+      "class_name": "scentless_mayweed",
+      "label": 8
+    },
+    {
+      "id": "train/shepherds_purse/112.png",
+      "class_name": "shepherds_purse",
+      "label": 9
+    },
+    {
+      "id": "train/shepherds_purse/140.png",
+      "class_name": "shepherds_purse",
+      "label": 9
+    },
+    {
+      "id": "train/shepherds_purse/158.png",
+      "class_name": "shepherds_purse",
+      "label": 9
+    },
+    {
+      "id": "train/shepherds_purse/60.png",
+      "class_name": "shepherds_purse",
+      "label": 9
+    },
+    {
+      "id": "train/shepherds_purse/74.png",
+      "class_name": "shepherds_purse",
+      "label": 9
+    },
+    {
+      "id": "train/small_flowered_cranesbill/103.png",
+      "class_name": "small_flowered_cranesbill",
+      "label": 10
+    },
+    {
+      "id": "train/small_flowered_cranesbill/308.png",
+      "class_name": "small_flowered_cranesbill",
+      "label": 10
+    },
+    {
+      "id": "train/small_flowered_cranesbill/46.png",
+      "class_name": "small_flowered_cranesbill",
+      "label": 10
+    },
+    {
+      "id": "train/small_flowered_cranesbill/578.png",
+      "class_name": "small_flowered_cranesbill",
+      "label": 10
+    },
+    {
+      "id": "train/small_flowered_cranesbill/62.png",
+      "class_name": "small_flowered_cranesbill",
+      "label": 10
+    },
+    {
+      "id": "train/sugar_beet/248.png",
+      "class_name": "sugar_beet",
+      "label": 11
+    },
+    {
+      "id": "train/sugar_beet/304.png",
+      "class_name": "sugar_beet",
+      "label": 11
+    },
+    {
+      "id": "train/sugar_beet/314.png",
+      "class_name": "sugar_beet",
+      "label": 11
+    },
+    {
+      "id": "train/sugar_beet/331.png",
+      "class_name": "sugar_beet",
+      "label": 11
+    },
+    {
+      "id": "train/sugar_beet/446.png",
+      "class_name": "sugar_beet",
+      "label": 11
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

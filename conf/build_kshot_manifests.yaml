@@ -1,0 +1,32 @@
+# Hydra entry config for scripts/build_kshot_manifests.py — produces stratified
+# k-shot manifests via data.kshot.ensure_kshot_manifests.
+#
+# Schema: KShotManifestConfig in src/ddcomb/config.py
+#
+# Required: dataset_key, dataset_type. Plus the dataset-specific fields:
+#   - dataset_type=deepweeds_csv → deepweeds_labels_dir (and optional
+#     deepweeds_subset, deepweeds_drop_label8, deepweeds_merge_val_into_train)
+#   - dataset_type=imagefolder → imagefolder_root (and optional
+#     imagefolder_train_split, imagefolder_merge_split)
+#
+# Manifests land at repo-local ./kshot/manifests by default:
+#   ${manifest_root}/${dataset_key}/{k_shot}_shot_run_{run_idx}.json
+# matching the file pattern that conf/sweep_kshot.yaml interpolates.
+#
+# Examples:
+#
+#   # ImageFolder split (PlantVillage, no train+val merge):
+#   python scripts/build_kshot_manifests.py \
+#       dataset_key=plantvillage_color_split \
+#       dataset_type=imagefolder \
+#       imagefolder_root=/home/magz94/ddcomb/data/plantvillage_color_split
+#
+#   # DeepWeeds with label-8 dropped and val merged into train:
+#   python scripts/build_kshot_manifests.py \
+#       dataset_key=deepweeds_no_bg_mergeval \
+#       dataset_type=deepweeds_csv \
+#       deepweeds_labels_dir=/datasets/DeepWeeds/labels
+
+defaults:
+  - kshot_manifest_schema
+  - _self_

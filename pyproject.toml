@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ddcomb"
+version = "0.1.0"
+description = "DD-CoMB: parameter-free evidential Dempster-Dirichlet combination of frozen heterogeneous backbones for reliable few-shot out-of-domain image classification"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mohamed Amine Guezguez" }]
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "torchmetrics>=1.0",
+    "timm>=0.9",
+    "open_clip_torch>=2.20",
+    "wandb>=0.16",
+    "Pillow>=9.0",
+    "numpy>=1.23",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "scikit-learn>=1.3",
+    "umap-learn>=0.5",
+    "datasets>=2.16",
+    "hydra-core>=1.3",
+    "omegaconf>=2.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+ddcomb = "ddcomb.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

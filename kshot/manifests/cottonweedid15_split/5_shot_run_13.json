@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "dataset_key": "cottonweedid15_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 5,
+  "run_index": 13,
+  "seed": 5055,
+  "num_classes": 15,
+  "class_pool_sizes": {
+    "0": 610,
+    "1": 88,
+    "2": 203,
+    "3": 172,
+    "4": 892,
+    "5": 218,
+    "6": 551,
+    "7": 103,
+    "8": 360,
+    "9": 103,
+    "10": 192,
+    "11": 187,
+    "12": 48,
+    "13": 57,
+    "14": 360
+  },
+  "selected_count": 75,
+  "selected_per_class": {
+    "0": 5,
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 5,
+    "12": 5,
+    "13": 5,
+    "14": 5
+  },
+  "selected": [
+    {
+      "id": "train/carpetweeds/07122021_IphoneSE_YL_Carpetweed_121.JPG",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/4aed943bf17b4c038b79c6302c517740__carpetweed__21.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/791c9db2c2384ac2ab1ec382713df8f9__carpetweed__1.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/9c2bf12e2102494a991851cf80d9044b__carpetweed__14.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/bc89ceb0a01f49c19424c60f50be08e1__carpetweed__3.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/crabgrass/18a6c4521699497f95a2ba2805e1a48f__crabgrass__0.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0336.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0338.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0343.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/ff1bcc3f1fa54a4f9b8fb30e11debaf0__crabgrass__0.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/eclipta/774D656F-C65A-423E-9E47-1186D04612A2.jpeg",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1070.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1098.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1972.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1973 (3).JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/goosegrass/1ae5d237d8d74909ab8dde04e831feb5__goosegrass__1.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/5766dc47017b44a3a309ead612e6b413__goosegrass__2.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/75c2f2b6ddca4825aea4e57e6ed3cb0a__goosegrass__7.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/7963ca69808e4e01b200686cb07c5e2c__goosegrass__6.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/cea5696cff344b6e987ffa1daa4a1dc2__goosegrass__0.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/morningglory/0f9a720152c441f0a06001be8ec77b33__morningglory__2.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/1d7d4502cc054649a5a07a1b9afedffb__morningglory__1.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/7b58d5b2f6bd4c908ce4ecbd0abd61c3__morningglory__0.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/IMG_0436_2.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/a8d2df3aff1f4e6882b2fb3d305ee57a__morningglory__0.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/nutsedge/426086cd77f54a628f1fd408796970ba__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/47e73c8269914e4ba7f845ca6d89318e__nutsedge__1.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/4f033d3a38234f6fba7a62ce5903a1a3__nutsedge__3.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/IMG_0988.JPG",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/c55463b0714342d784bdb92d03805cf1__nutsedge__3.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/palmeramaranth/22a2ad6e0ce748ccb5ff784ff2424732__palmer_amaranth__46.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/939bc716a4ee430b927105db761d3de0__palmer_amaranth__0.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/IMG_1830.JPG",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/IMG_1862.JPG",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/ef5c6c814fd54f7fa979110c0417e101__palmer_amaranth__0.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/prickly_sida/0014e22d2db14f1e9fdcd5f929da366c__prickly_sida__2.jpg",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/EADC22EC-B140-4914-9DD4-23176B310027.jpeg",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_2026 (2).JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/b3ee8bf829d440d6b39be6d7c004e681__cocklebur__2.jpg",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/c10ebdec3ad241629d6affae23d0eb2b__prickly_sida__0.jpg",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/purslane/IMG_1351 (2).JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1370.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1549.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_2065.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_2203 (2).JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/ragweed/10aea99408064630a23d82a554378a86__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/10aea99408064630a23d82a554378a86__ragweed__3.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/4cb22ffa637e442f903192c3313c193e__ragweed__2.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/e3354a33f90e44e2a48662dbab7bebce__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/f4b127f06cd949899252d9c4f7e9c1a6__ragweed__1.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/sicklepod/23b235e4b6ce4e6fb9fd15c7b114e849__sicklepod__4.jpg",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_0258.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_0315.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_0326.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/b39100cc45b24bf6a161b9e4283bf98a__sicklepod__5.jpg",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/spottedspurge/0aae628eba034f9182f20dcad5539f13__prostrate_spurge__1.jpg",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/5c39effa6c694904b5543f67d3357254__prostrate_spurge__0.jpg",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_0741.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_0773.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_1141.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spurredanoda/7045965258e0476bbf4353ddb0824a5e__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/b1be57cbf01841bdb094b98f36a1201f__spurred_anoda__1.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/c13f374757e946dc8900fc7204e8119b__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/e62b111fe70c44e797fe422a2d3b8908__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/spurred-anoda.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/swinecress/07af9ca8dbd4464fab2199c218d0aada__swinecress__0.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/80101700.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/84189ab0314e4e5c9cf8a51aa34f5469__swinecress__3.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/8fe35f09948b46fb8be8a5c725adc8b6__swinecress__5.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/f1557535a2ef4f42ab9e4975637e8c59__swinecress__10.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/waterhemp/DSC_0339.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1003 (4).JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1028 (2).JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1034.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1613.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

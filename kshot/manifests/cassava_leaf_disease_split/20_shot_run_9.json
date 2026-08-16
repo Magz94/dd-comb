@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "dataset_key": "cassava_leaf_disease_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 20,
+  "run_index": 9,
+  "seed": 20051,
+  "num_classes": 5,
+  "class_pool_sizes": {
+    "0": 869,
+    "1": 1751,
+    "2": 1908,
+    "3": 10526,
+    "4": 2061
+  },
+  "selected_count": 100,
+  "selected_per_class": {
+    "0": 20,
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+  },
+  "selected": [
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1050949665.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1166973570.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1207142999.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1408296206.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1474376023.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1806336706.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/1844847808.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/2034410033.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/2429816530.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/2467650038.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/3040337109.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/3810425289.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/3959033347.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/4237476054.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/423771558.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/476858432.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/584996062.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/749210924.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/969069572.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Bacterial_Blight_CBB/981961513.jpg",
+      "class_name": "Cassava_Bacterial_Blight_CBB",
+      "label": 0
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/1177346702.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/1352934921.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/1589109993.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/1766917625.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/1875533805.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/2125659201.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/2293657925.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/2345003518.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/2499562554.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/2719189650.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/284280039.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/3312736716.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/3677086623.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/375108909.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/392955098.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/4018169789.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/403458333.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/607067900.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/616718743.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Brown_Streak_Disease_CBSD/891874541.jpg",
+      "class_name": "Cassava_Brown_Streak_Disease_CBSD",
+      "label": 1
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/1014359226.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/1045208006.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/1330510466.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/1452260416.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/1748078047.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/2078875826.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/2102590292.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/227631164.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/2368293365.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/2421566220.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/2653833670.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/297627784.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/3009109658.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/360024971.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/3852514218.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/3878478005.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/4079242692.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/4214126617.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/430094135.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Green_Mottle_CGM/751463025.jpg",
+      "class_name": "Cassava_Green_Mottle_CGM",
+      "label": 2
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/1391327178.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/149376158.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/195590994.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/225631259.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/2512000919.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/2672675899.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/2767669424.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/2800121117.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/2837017211.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3277182366.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3369073457.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3444347549.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3452368233.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3557789910.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3567679401.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3750562893.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/3758960984.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/503916638.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/772317210.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Cassava_Mosaic_Disease_CMD/952391818.jpg",
+      "class_name": "Cassava_Mosaic_Disease_CMD",
+      "label": 3
+    },
+    {
+      "id": "train/Healthy/1504701291.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/1681274509.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/1721889897.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/1950245943.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2445684335.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2518671335.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2704191528.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/27047804.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2762258439.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2820350.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2834607422.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/2932210794.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/3214130849.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/3703003342.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/3788771379.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/3847675023.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/4233314988.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/4272950907.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/432371484.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Healthy/867855885.jpg",
+      "class_name": "Healthy",
+      "label": 4
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

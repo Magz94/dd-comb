@@ -1,0 +1,1748 @@
+{
+  "schema_version": 1,
+  "dataset_key": "ninco_ood_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 5,
+  "run_index": 9,
+  "seed": 5051,
+  "num_classes": 64,
+  "class_pool_sizes": {
+    "0": 80,
+    "1": 141,
+    "2": 37,
+    "3": 80,
+    "4": 73,
+    "5": 78,
+    "6": 80,
+    "7": 70,
+    "8": 80,
+    "9": 80,
+    "10": 79,
+    "11": 80,
+    "12": 64,
+    "13": 80,
+    "14": 80,
+    "15": 80,
+    "16": 80,
+    "17": 79,
+    "18": 80,
+    "19": 80,
+    "20": 77,
+    "21": 80,
+    "22": 80,
+    "23": 85,
+    "24": 80,
+    "25": 80,
+    "26": 71,
+    "27": 45,
+    "28": 77,
+    "29": 79,
+    "30": 41,
+    "31": 25,
+    "32": 79,
+    "33": 80,
+    "34": 80,
+    "35": 80,
+    "36": 54,
+    "37": 26,
+    "38": 80,
+    "39": 80,
+    "40": 66,
+    "41": 80,
+    "42": 80,
+    "43": 53,
+    "44": 80,
+    "45": 54,
+    "46": 80,
+    "47": 80,
+    "48": 80,
+    "49": 79,
+    "50": 80,
+    "51": 79,
+    "52": 54,
+    "53": 80,
+    "54": 54,
+    "55": 80,
+    "56": 80,
+    "57": 80,
+    "58": 80,
+    "59": 80,
+    "60": 80,
+    "61": 49,
+    "62": 79,
+    "63": 57
+  },
+  "selected_count": 320,
+  "selected_per_class": {
+    "0": 5,
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 5,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 5,
+    "12": 5,
+    "13": 5,
+    "14": 5,
+    "15": 5,
+    "16": 5,
+    "17": 5,
+    "18": 5,
+    "19": 5,
+    "20": 5,
+    "21": 5,
+    "22": 5,
+    "23": 5,
+    "24": 5,
+    "25": 5,
+    "26": 5,
+    "27": 5,
+    "28": 5,
+    "29": 5,
+    "30": 5,
+    "31": 5,
+    "32": 5,
+    "33": 5,
+    "34": 5,
+    "35": 5,
+    "36": 5,
+    "37": 5,
+    "38": 5,
+    "39": 5,
+    "40": 5,
+    "41": 5,
+    "42": 5,
+    "43": 5,
+    "44": 5,
+    "45": 5,
+    "46": 5,
+    "47": 5,
+    "48": 5,
+    "49": 5,
+    "50": 5,
+    "51": 5,
+    "52": 5,
+    "53": 5,
+    "54": 5,
+    "55": 5,
+    "56": 5,
+    "57": 5,
+    "58": 5,
+    "59": 5,
+    "60": 5,
+    "61": 5,
+    "62": 5,
+    "63": 5
+  },
+  "selected": [
+    {
+      "id": "train/Caracal caracal caracal/Caracal caracal caracal_016_017-31447020.jpeg",
+      "class_name": "Caracal caracal caracal",
+      "label": 0
+    },
+    {
+      "id": "train/Caracal caracal caracal/Caracal caracal caracal_020_023-32775416.jpeg",
+      "class_name": "Caracal caracal caracal",
+      "label": 0
+    },
+    {
+      "id": "train/Caracal caracal caracal/Caracal caracal caracal_024_039-44698847.jpeg",
+      "class_name": "Caracal caracal caracal",
+      "label": 0
+    },
+    {
+      "id": "train/Caracal caracal caracal/Caracal caracal caracal_026_042-51847410.jpeg",
+      "class_name": "Caracal caracal caracal",
+      "label": 0
+    },
+    {
+      "id": "train/Caracal caracal caracal/Caracal caracal caracal_030_049-56034253.jpeg",
+      "class_name": "Caracal caracal caracal",
+      "label": 0
+    },
+    {
+      "id": "train/amphiuma_means/amphiuma_means_002_10321699.jpg",
+      "class_name": "amphiuma_means",
+      "label": 1
+    },
+    {
+      "id": "train/amphiuma_means/amphiuma_means_025_19733.jpg",
+      "class_name": "amphiuma_means",
+      "label": 1
+    },
+    {
+      "id": "train/amphiuma_means/amphiuma_means_047_27660881.jpg",
+      "class_name": "amphiuma_means",
+      "label": 1
+    },
+    {
+      "id": "train/amphiuma_means/amphiuma_means_073_38558975.jpg",
+      "class_name": "amphiuma_means",
+      "label": 1
+    },
+    {
+      "id": "train/amphiuma_means/amphiuma_means_160_79874972.jpeg",
+      "class_name": "amphiuma_means",
+      "label": 1
+    },
+    {
+      "id": "train/aphanizomenon_flosaquae/aphanizomenon_flosaquae_000_10050623.jpg",
+      "class_name": "aphanizomenon_flosaquae",
+      "label": 2
+    },
+    {
+      "id": "train/aphanizomenon_flosaquae/aphanizomenon_flosaquae_001_11424557.jpg",
+      "class_name": "aphanizomenon_flosaquae",
+      "label": 2
+    },
+    {
+      "id": "train/aphanizomenon_flosaquae/aphanizomenon_flosaquae_005_13022597.jpg",
+      "class_name": "aphanizomenon_flosaquae",
+      "label": 2
+    },
+    {
+      "id": "train/aphanizomenon_flosaquae/aphanizomenon_flosaquae_035_51371003.jpg",
+      "class_name": "aphanizomenon_flosaquae",
+      "label": 2
+    },
+    {
+      "id": "train/aphanizomenon_flosaquae/aphanizomenon_flosaquae_039_59163717.jpg",
+      "class_name": "aphanizomenon_flosaquae",
+      "label": 2
+    },
+    {
+      "id": "train/araneus_gemma/araneus_gemma_006_16908530.jpg",
+      "class_name": "araneus_gemma",
+      "label": 3
+    },
+    {
+      "id": "train/araneus_gemma/araneus_gemma_016_20408880.jpg",
+      "class_name": "araneus_gemma",
+      "label": 3
+    },
+    {
+      "id": "train/araneus_gemma/araneus_gemma_041_33346489.jpg",
+      "class_name": "araneus_gemma",
+      "label": 3
+    },
+    {
+      "id": "train/araneus_gemma/araneus_gemma_070_36545594.jpeg",
+      "class_name": "araneus_gemma",
+      "label": 3
+    },
+    {
+      "id": "train/araneus_gemma/araneus_gemma_094_52542309.jpg",
+      "class_name": "araneus_gemma",
+      "label": 3
+    },
+    {
+      "id": "train/arctocephalus_galapagoensis/arctocephalus_galapagoensis_043_35198871.jpg",
+      "class_name": "arctocephalus_galapagoensis",
+      "label": 4
+    },
+    {
+      "id": "train/arctocephalus_galapagoensis/arctocephalus_galapagoensis_059_44299914.jpg",
+      "class_name": "arctocephalus_galapagoensis",
+      "label": 4
+    },
+    {
+      "id": "train/arctocephalus_galapagoensis/arctocephalus_galapagoensis_061_4461784.jpg",
+      "class_name": "arctocephalus_galapagoensis",
+      "label": 4
+    },
+    {
+      "id": "train/arctocephalus_galapagoensis/arctocephalus_galapagoensis_067_60514754.jpg",
+      "class_name": "arctocephalus_galapagoensis",
+      "label": 4
+    },
+    {
+      "id": "train/arctocephalus_galapagoensis/arctocephalus_galapagoensis_089_81478788.jpg",
+      "class_name": "arctocephalus_galapagoensis",
+      "label": 4
+    },
+    {
+      "id": "train/bagpipe/bagpipe_025_n02775483_11104.JPEG",
+      "class_name": "bagpipe",
+      "label": 5
+    },
+    {
+      "id": "train/bagpipe/bagpipe_059_n02775483_13745.JPEG",
+      "class_name": "bagpipe",
+      "label": 5
+    },
+    {
+      "id": "train/bagpipe/bagpipe_061_n02775483_14028.JPEG",
+      "class_name": "bagpipe",
+      "label": 5
+    },
+    {
+      "id": "train/bagpipe/bagpipe_076_n02775483_15519.JPEG",
+      "class_name": "bagpipe",
+      "label": 5
+    },
+    {
+      "id": "train/bagpipe/bagpipe_088_n02775483_16294.JPEG",
+      "class_name": "bagpipe",
+      "label": 5
+    },
+    {
+      "id": "train/batrachoseps_attenuatus/batrachoseps_attenuatus_000_1025296.jpg",
+      "class_name": "batrachoseps_attenuatus",
+      "label": 6
+    },
+    {
+      "id": "train/batrachoseps_attenuatus/batrachoseps_attenuatus_057_1135178.jpg",
+      "class_name": "batrachoseps_attenuatus",
+      "label": 6
+    },
+    {
+      "id": "train/batrachoseps_attenuatus/batrachoseps_attenuatus_082_1149377.JPG",
+      "class_name": "batrachoseps_attenuatus",
+      "label": 6
+    },
+    {
+      "id": "train/batrachoseps_attenuatus/batrachoseps_attenuatus_088_1149405.JPG",
+      "class_name": "batrachoseps_attenuatus",
+      "label": 6
+    },
+    {
+      "id": "train/batrachoseps_attenuatus/batrachoseps_attenuatus_091_1149428.JPG",
+      "class_name": "batrachoseps_attenuatus",
+      "label": 6
+    },
+    {
+      "id": "train/cable/cable_004_0008.png",
+      "class_name": "cable",
+      "label": 7
+    },
+    {
+      "id": "train/cable/cable_006_0013.png",
+      "class_name": "cable",
+      "label": 7
+    },
+    {
+      "id": "train/cable/cable_029_0079.png",
+      "class_name": "cable",
+      "label": 7
+    },
+    {
+      "id": "train/cable/cable_041_0125.png",
+      "class_name": "cable",
+      "label": 7
+    },
+    {
+      "id": "train/cable/cable_050_0263.png",
+      "class_name": "cable",
+      "label": 7
+    },
+    {
+      "id": "train/chicken_quesadilla/chicken_quesadilla_017_22075.jpg",
+      "class_name": "chicken_quesadilla",
+      "label": 8
+    },
+    {
+      "id": "train/chicken_quesadilla/chicken_quesadilla_019_2209167.jpg",
+      "class_name": "chicken_quesadilla",
+      "label": 8
+    },
+    {
+      "id": "train/chicken_quesadilla/chicken_quesadilla_051_2099293.jpg",
+      "class_name": "chicken_quesadilla",
+      "label": 8
+    },
+    {
+      "id": "train/chicken_quesadilla/chicken_quesadilla_077_3679448.jpg",
+      "class_name": "chicken_quesadilla",
+      "label": 8
+    },
+    {
+      "id": "train/chicken_quesadilla/chicken_quesadilla_095_477765.jpg",
+      "class_name": "chicken_quesadilla",
+      "label": 8
+    },
+    {
+      "id": "train/cirsium_pitcheri/cirsium_pitcheri_005_13101129.jpg",
+      "class_name": "cirsium_pitcheri",
+      "label": 9
+    },
+    {
+      "id": "train/cirsium_pitcheri/cirsium_pitcheri_033_15236678.jpg",
+      "class_name": "cirsium_pitcheri",
+      "label": 9
+    },
+    {
+      "id": "train/cirsium_pitcheri/cirsium_pitcheri_070_25890760.jpg",
+      "class_name": "cirsium_pitcheri",
+      "label": 9
+    },
+    {
+      "id": "train/cirsium_pitcheri/cirsium_pitcheri_087_26959019.jpg",
+      "class_name": "cirsium_pitcheri",
+      "label": 9
+    },
+    {
+      "id": "train/cirsium_pitcheri/cirsium_pitcheri_096_27606389.jpg",
+      "class_name": "cirsium_pitcheri",
+      "label": 9
+    },
+    {
+      "id": "train/creme_brulee/creme_brulee_006_163889.jpg",
+      "class_name": "creme_brulee",
+      "label": 10
+    },
+    {
+      "id": "train/creme_brulee/creme_brulee_007_1303368.jpg",
+      "class_name": "creme_brulee",
+      "label": 10
+    },
+    {
+      "id": "train/creme_brulee/creme_brulee_028_138478.jpg",
+      "class_name": "creme_brulee",
+      "label": 10
+    },
+    {
+      "id": "train/creme_brulee/creme_brulee_078_2610691.jpg",
+      "class_name": "creme_brulee",
+      "label": 10
+    },
+    {
+      "id": "train/creme_brulee/creme_brulee_082_141449.jpg",
+      "class_name": "creme_brulee",
+      "label": 10
+    },
+    {
+      "id": "train/ctenolepisma_longicaudata/ctenolepisma_longicaudata_004_10269995.jpeg",
+      "class_name": "ctenolepisma_longicaudata",
+      "label": 11
+    },
+    {
+      "id": "train/ctenolepisma_longicaudata/ctenolepisma_longicaudata_010_1110116.jpg",
+      "class_name": "ctenolepisma_longicaudata",
+      "label": 11
+    },
+    {
+      "id": "train/ctenolepisma_longicaudata/ctenolepisma_longicaudata_031_12268847.jpeg",
+      "class_name": "ctenolepisma_longicaudata",
+      "label": 11
+    },
+    {
+      "id": "train/ctenolepisma_longicaudata/ctenolepisma_longicaudata_064_1685980.jpg",
+      "class_name": "ctenolepisma_longicaudata",
+      "label": 11
+    },
+    {
+      "id": "train/ctenolepisma_longicaudata/ctenolepisma_longicaudata_078_17748645.jpg",
+      "class_name": "ctenolepisma_longicaudata",
+      "label": 11
+    },
+    {
+      "id": "train/cup_cakes/cup_cakes_027_56108.jpg",
+      "class_name": "cup_cakes",
+      "label": 12
+    },
+    {
+      "id": "train/cup_cakes/cup_cakes_041_3070488.jpg",
+      "class_name": "cup_cakes",
+      "label": 12
+    },
+    {
+      "id": "train/cup_cakes/cup_cakes_047_566174.jpg",
+      "class_name": "cup_cakes",
+      "label": 12
+    },
+    {
+      "id": "train/cup_cakes/cup_cakes_054_1873081.jpg",
+      "class_name": "cup_cakes",
+      "label": 12
+    },
+    {
+      "id": "train/cup_cakes/cup_cakes_069_284741.jpg",
+      "class_name": "cup_cakes",
+      "label": 12
+    },
+    {
+      "id": "train/darlingtonia_californica/darlingtonia_californica_000_10001598.jpg",
+      "class_name": "darlingtonia_californica",
+      "label": 13
+    },
+    {
+      "id": "train/darlingtonia_californica/darlingtonia_californica_012_10700537.jpg",
+      "class_name": "darlingtonia_californica",
+      "label": 13
+    },
+    {
+      "id": "train/darlingtonia_californica/darlingtonia_californica_020_11302164.jpg",
+      "class_name": "darlingtonia_californica",
+      "label": 13
+    },
+    {
+      "id": "train/darlingtonia_californica/darlingtonia_californica_058_13220180.jpeg",
+      "class_name": "darlingtonia_californica",
+      "label": 13
+    },
+    {
+      "id": "train/darlingtonia_californica/darlingtonia_californica_082_13936531.jpg",
+      "class_name": "darlingtonia_californica",
+      "label": 13
+    },
+    {
+      "id": "train/dendrolagus_lumholtzi/dendrolagus_lumholtzi_015_30353665.jpeg",
+      "class_name": "dendrolagus_lumholtzi",
+      "label": 14
+    },
+    {
+      "id": "train/dendrolagus_lumholtzi/dendrolagus_lumholtzi_054_45228232.jpg",
+      "class_name": "dendrolagus_lumholtzi",
+      "label": 14
+    },
+    {
+      "id": "train/dendrolagus_lumholtzi/dendrolagus_lumholtzi_061_62189363.jpg",
+      "class_name": "dendrolagus_lumholtzi",
+      "label": 14
+    },
+    {
+      "id": "train/dendrolagus_lumholtzi/dendrolagus_lumholtzi_070_67420247.jpg",
+      "class_name": "dendrolagus_lumholtzi",
+      "label": 14
+    },
+    {
+      "id": "train/dendrolagus_lumholtzi/dendrolagus_lumholtzi_074_69045070.jpg",
+      "class_name": "dendrolagus_lumholtzi",
+      "label": 14
+    },
+    {
+      "id": "train/donuts/donuts_001_952086.jpg",
+      "class_name": "donuts",
+      "label": 15
+    },
+    {
+      "id": "train/donuts/donuts_028_2392914.jpg",
+      "class_name": "donuts",
+      "label": 15
+    },
+    {
+      "id": "train/donuts/donuts_070_162583.jpg",
+      "class_name": "donuts",
+      "label": 15
+    },
+    {
+      "id": "train/donuts/donuts_083_693160.jpg",
+      "class_name": "donuts",
+      "label": 15
+    },
+    {
+      "id": "train/donuts/donuts_097_3120649.jpg",
+      "class_name": "donuts",
+      "label": 15
+    },
+    {
+      "id": "train/door/door_008_00011.jpg",
+      "class_name": "door",
+      "label": 16
+    },
+    {
+      "id": "train/door/door_030_00045.jpg",
+      "class_name": "door",
+      "label": 16
+    },
+    {
+      "id": "train/door/door_072_00104.jpg",
+      "class_name": "door",
+      "label": 16
+    },
+    {
+      "id": "train/door/door_091_00160.jpg",
+      "class_name": "door",
+      "label": 16
+    },
+    {
+      "id": "train/door/door_095_00195.jpg",
+      "class_name": "door",
+      "label": 16
+    },
+    {
+      "id": "train/empty_water_dispencer/empty_water_dispencer_013_00028.jpg",
+      "class_name": "empty_water_dispencer",
+      "label": 17
+    },
+    {
+      "id": "train/empty_water_dispencer/empty_water_dispencer_030_00056.jpg",
+      "class_name": "empty_water_dispencer",
+      "label": 17
+    },
+    {
+      "id": "train/empty_water_dispencer/empty_water_dispencer_032_00058.jpg",
+      "class_name": "empty_water_dispencer",
+      "label": 17
+    },
+    {
+      "id": "train/empty_water_dispencer/empty_water_dispencer_062_00116.jpg",
+      "class_name": "empty_water_dispencer",
+      "label": 17
+    },
+    {
+      "id": "train/empty_water_dispencer/empty_water_dispencer_077_00139.jpg",
+      "class_name": "empty_water_dispencer",
+      "label": 17
+    },
+    {
+      "id": "train/epithelantha_micromeris/epithelantha_micromeris_007_10867826.jpg",
+      "class_name": "epithelantha_micromeris",
+      "label": 18
+    },
+    {
+      "id": "train/epithelantha_micromeris/epithelantha_micromeris_015_12402349.jpeg",
+      "class_name": "epithelantha_micromeris",
+      "label": 18
+    },
+    {
+      "id": "train/epithelantha_micromeris/epithelantha_micromeris_026_16304703.jpg",
+      "class_name": "epithelantha_micromeris",
+      "label": 18
+    },
+    {
+      "id": "train/epithelantha_micromeris/epithelantha_micromeris_049_19007580.jpeg",
+      "class_name": "epithelantha_micromeris",
+      "label": 18
+    },
+    {
+      "id": "train/epithelantha_micromeris/epithelantha_micromeris_060_23415566.jpeg",
+      "class_name": "epithelantha_micromeris",
+      "label": 18
+    },
+    {
+      "id": "train/erysimum_franciscanum/erysimum_franciscanum_015_10116421.jpeg",
+      "class_name": "erysimum_franciscanum",
+      "label": 19
+    },
+    {
+      "id": "train/erysimum_franciscanum/erysimum_franciscanum_038_11351668.jpg",
+      "class_name": "erysimum_franciscanum",
+      "label": 19
+    },
+    {
+      "id": "train/erysimum_franciscanum/erysimum_franciscanum_041_11497330.jpg",
+      "class_name": "erysimum_franciscanum",
+      "label": 19
+    },
+    {
+      "id": "train/erysimum_franciscanum/erysimum_franciscanum_048_11648721.jpg",
+      "class_name": "erysimum_franciscanum",
+      "label": 19
+    },
+    {
+      "id": "train/erysimum_franciscanum/erysimum_franciscanum_064_11698919.jpg",
+      "class_name": "erysimum_franciscanum",
+      "label": 19
+    },
+    {
+      "id": "train/f_field_road/f_field_road_048_00002306.jpg",
+      "class_name": "f_field_road",
+      "label": 20
+    },
+    {
+      "id": "train/f_field_road/f_field_road_063_00003201.jpg",
+      "class_name": "f_field_road",
+      "label": 20
+    },
+    {
+      "id": "train/f_field_road/f_field_road_075_00003680.jpg",
+      "class_name": "f_field_road",
+      "label": 20
+    },
+    {
+      "id": "train/f_field_road/f_field_road_080_00003867.jpg",
+      "class_name": "f_field_road",
+      "label": 20
+    },
+    {
+      "id": "train/f_field_road/f_field_road_084_00004060.jpg",
+      "class_name": "f_field_road",
+      "label": 20
+    },
+    {
+      "id": "train/f_forest_path/f_forest_path_006_00000396.jpg",
+      "class_name": "f_forest_path",
+      "label": 21
+    },
+    {
+      "id": "train/f_forest_path/f_forest_path_042_00001981.jpg",
+      "class_name": "f_forest_path",
+      "label": 21
+    },
+    {
+      "id": "train/f_forest_path/f_forest_path_046_00002072.jpg",
+      "class_name": "f_forest_path",
+      "label": 21
+    },
+    {
+      "id": "train/f_forest_path/f_forest_path_049_00002200.jpg",
+      "class_name": "f_forest_path",
+      "label": 21
+    },
+    {
+      "id": "train/f_forest_path/f_forest_path_060_00002705.jpg",
+      "class_name": "f_forest_path",
+      "label": 21
+    },
+    {
+      "id": "train/ferocactus_pilosus/ferocactus_pilosus_037_13542287.jpeg",
+      "class_name": "ferocactus_pilosus",
+      "label": 22
+    },
+    {
+      "id": "train/ferocactus_pilosus/ferocactus_pilosus_045_14223620.jpg",
+      "class_name": "ferocactus_pilosus",
+      "label": 22
+    },
+    {
+      "id": "train/ferocactus_pilosus/ferocactus_pilosus_069_16709167.jpeg",
+      "class_name": "ferocactus_pilosus",
+      "label": 22
+    },
+    {
+      "id": "train/ferocactus_pilosus/ferocactus_pilosus_081_1751376.JPG",
+      "class_name": "ferocactus_pilosus",
+      "label": 22
+    },
+    {
+      "id": "train/ferocactus_pilosus/ferocactus_pilosus_093_18863396.jpeg",
+      "class_name": "ferocactus_pilosus",
+      "label": 22
+    },
+    {
+      "id": "train/fire_extinguisher/fire_extinguisher_002_00003.jpg",
+      "class_name": "fire_extinguisher",
+      "label": 23
+    },
+    {
+      "id": "train/fire_extinguisher/fire_extinguisher_025_00028.jpg",
+      "class_name": "fire_extinguisher",
+      "label": 23
+    },
+    {
+      "id": "train/fire_extinguisher/fire_extinguisher_031_00036.jpg",
+      "class_name": "fire_extinguisher",
+      "label": 23
+    },
+    {
+      "id": "train/fire_extinguisher/fire_extinguisher_041_00046.jpg",
+      "class_name": "fire_extinguisher",
+      "label": 23
+    },
+    {
+      "id": "train/fire_extinguisher/fire_extinguisher_057_00062.jpg",
+      "class_name": "fire_extinguisher",
+      "label": 23
+    },
+    {
+      "id": "train/fireworks/fireworks_012_0018.png",
+      "class_name": "fireworks",
+      "label": 24
+    },
+    {
+      "id": "train/fireworks/fireworks_023_0036.png",
+      "class_name": "fireworks",
+      "label": 24
+    },
+    {
+      "id": "train/fireworks/fireworks_043_0065.png",
+      "class_name": "fireworks",
+      "label": 24
+    },
+    {
+      "id": "train/fireworks/fireworks_044_0066.png",
+      "class_name": "fireworks",
+      "label": 24
+    },
+    {
+      "id": "train/fireworks/fireworks_047_0070.png",
+      "class_name": "fireworks",
+      "label": 24
+    },
+    {
+      "id": "train/french_fries/french_fries_011_2369424.jpg",
+      "class_name": "french_fries",
+      "label": 25
+    },
+    {
+      "id": "train/french_fries/french_fries_020_3500811.jpg",
+      "class_name": "french_fries",
+      "label": 25
+    },
+    {
+      "id": "train/french_fries/french_fries_049_3012487.jpg",
+      "class_name": "french_fries",
+      "label": 25
+    },
+    {
+      "id": "train/french_fries/french_fries_070_1345833.jpg",
+      "class_name": "french_fries",
+      "label": 25
+    },
+    {
+      "id": "train/french_fries/french_fries_087_1850835.jpg",
+      "class_name": "french_fries",
+      "label": 25
+    },
+    {
+      "id": "train/glass_of_milk/glass_of_milk_030_glass_of_milk_0088_flickr.jpg",
+      "class_name": "glass_of_milk",
+      "label": 26
+    },
+    {
+      "id": "train/glass_of_milk/glass_of_milk_047_glass_of_milk_0142_pixabay.jpg",
+      "class_name": "glass_of_milk",
+      "label": 26
+    },
+    {
+      "id": "train/glass_of_milk/glass_of_milk_051_glass_of_milk_0151_pixabay.jpg",
+      "class_name": "glass_of_milk",
+      "label": 26
+    },
+    {
+      "id": "train/glass_of_milk/glass_of_milk_056_glass_of_milk_0179_pixabay.jpg",
+      "class_name": "glass_of_milk",
+      "label": 26
+    },
+    {
+      "id": "train/glass_of_milk/glass_of_milk_083_glass_of_milk_0279_pixabay.jpg",
+      "class_name": "glass_of_milk",
+      "label": 26
+    },
+    {
+      "id": "train/gramophone/gramophone_015_image_0018.jpg",
+      "class_name": "gramophone",
+      "label": 27
+    },
+    {
+      "id": "train/gramophone/gramophone_026_image_0030.jpg",
+      "class_name": "gramophone",
+      "label": 27
+    },
+    {
+      "id": "train/gramophone/gramophone_028_image_0033.jpg",
+      "class_name": "gramophone",
+      "label": 27
+    },
+    {
+      "id": "train/gramophone/gramophone_037_image_0048.jpg",
+      "class_name": "gramophone",
+      "label": 27
+    },
+    {
+      "id": "train/gramophone/gramophone_042_gramophone_0007_pixabay.jpg",
+      "class_name": "gramophone",
+      "label": 27
+    },
+    {
+      "id": "train/haemulon_sciurus/haemulon_sciurus_029_21239277.jpg",
+      "class_name": "haemulon_sciurus",
+      "label": 28
+    },
+    {
+      "id": "train/haemulon_sciurus/haemulon_sciurus_030_21342886.jpg",
+      "class_name": "haemulon_sciurus",
+      "label": 28
+    },
+    {
+      "id": "train/haemulon_sciurus/haemulon_sciurus_072_53372030.jpg",
+      "class_name": "haemulon_sciurus",
+      "label": 28
+    },
+    {
+      "id": "train/haemulon_sciurus/haemulon_sciurus_084_62456667.jpg",
+      "class_name": "haemulon_sciurus",
+      "label": 28
+    },
+    {
+      "id": "train/haemulon_sciurus/haemulon_sciurus_094_70058997.jpeg",
+      "class_name": "haemulon_sciurus",
+      "label": 28
+    },
+    {
+      "id": "train/high heels/high heels_004_109.jpg",
+      "class_name": "high heels",
+      "label": 29
+    },
+    {
+      "id": "train/high heels/high heels_057_281.jpg",
+      "class_name": "high heels",
+      "label": 29
+    },
+    {
+      "id": "train/high heels/high heels_067_330.jpg",
+      "class_name": "high heels",
+      "label": 29
+    },
+    {
+      "id": "train/high heels/high heels_075_423.jpg",
+      "class_name": "high heels",
+      "label": 29
+    },
+    {
+      "id": "train/high heels/high heels_082_503.jpg",
+      "class_name": "high heels",
+      "label": 29
+    },
+    {
+      "id": "train/hindu_temple/hindu_temple_017_7.jpg",
+      "class_name": "hindu_temple",
+      "label": 30
+    },
+    {
+      "id": "train/hindu_temple/hindu_temple_022_w1.jpeg",
+      "class_name": "hindu_temple",
+      "label": 30
+    },
+    {
+      "id": "train/hindu_temple/hindu_temple_036_0194.png",
+      "class_name": "hindu_temple",
+      "label": 30
+    },
+    {
+      "id": "train/hindu_temple/hindu_temple_048_0542.png",
+      "class_name": "hindu_temple",
+      "label": 30
+    },
+    {
+      "id": "train/hindu_temple/hindu_temple_049_0553.png",
+      "class_name": "hindu_temple",
+      "label": 30
+    },
+    {
+      "id": "train/hippopus_hippopus/hippopus_hippopus_004_31028820.jpeg",
+      "class_name": "hippopus_hippopus",
+      "label": 31
+    },
+    {
+      "id": "train/hippopus_hippopus/hippopus_hippopus_014_39914891.jpg",
+      "class_name": "hippopus_hippopus",
+      "label": 31
+    },
+    {
+      "id": "train/hippopus_hippopus/hippopus_hippopus_019_54920822.jpeg",
+      "class_name": "hippopus_hippopus",
+      "label": 31
+    },
+    {
+      "id": "train/hippopus_hippopus/hippopus_hippopus_023_6399585.jpg",
+      "class_name": "hippopus_hippopus",
+      "label": 31
+    },
+    {
+      "id": "train/hippopus_hippopus/hippopus_hippopus_025_67128422.jpg",
+      "class_name": "hippopus_hippopus",
+      "label": 31
+    },
+    {
+      "id": "train/lasionycteris_noctivagans/lasionycteris_noctivagans_002_10603075.jpg",
+      "class_name": "lasionycteris_noctivagans",
+      "label": 32
+    },
+    {
+      "id": "train/lasionycteris_noctivagans/lasionycteris_noctivagans_071_24343160.jpg",
+      "class_name": "lasionycteris_noctivagans",
+      "label": 32
+    },
+    {
+      "id": "train/lasionycteris_noctivagans/lasionycteris_noctivagans_085_28289583.jpg",
+      "class_name": "lasionycteris_noctivagans",
+      "label": 32
+    },
+    {
+      "id": "train/lasionycteris_noctivagans/lasionycteris_noctivagans_092_31046200.jpeg",
+      "class_name": "lasionycteris_noctivagans",
+      "label": 32
+    },
+    {
+      "id": "train/lasionycteris_noctivagans/lasionycteris_noctivagans_098_31638931.jpg",
+      "class_name": "lasionycteris_noctivagans",
+      "label": 32
+    },
+    {
+      "id": "train/lathyrus_odoratus/lathyrus_odoratus_020_16737859.jpeg",
+      "class_name": "lathyrus_odoratus",
+      "label": 33
+    },
+    {
+      "id": "train/lathyrus_odoratus/lathyrus_odoratus_038_23761313.jpg",
+      "class_name": "lathyrus_odoratus",
+      "label": 33
+    },
+    {
+      "id": "train/lathyrus_odoratus/lathyrus_odoratus_057_30867695.jpeg",
+      "class_name": "lathyrus_odoratus",
+      "label": 33
+    },
+    {
+      "id": "train/lathyrus_odoratus/lathyrus_odoratus_080_44123563.jpg",
+      "class_name": "lathyrus_odoratus",
+      "label": 33
+    },
+    {
+      "id": "train/lathyrus_odoratus/lathyrus_odoratus_091_46085440.jpg",
+      "class_name": "lathyrus_odoratus",
+      "label": 33
+    },
+    {
+      "id": "train/lepomis_auritus/lepomis_auritus_019_10421401.jpeg",
+      "class_name": "lepomis_auritus",
+      "label": 34
+    },
+    {
+      "id": "train/lepomis_auritus/lepomis_auritus_042_11463260.jpg",
+      "class_name": "lepomis_auritus",
+      "label": 34
+    },
+    {
+      "id": "train/lepomis_auritus/lepomis_auritus_053_12184676.jpg",
+      "class_name": "lepomis_auritus",
+      "label": 34
+    },
+    {
+      "id": "train/lepomis_auritus/lepomis_auritus_069_13048193.jpeg",
+      "class_name": "lepomis_auritus",
+      "label": 34
+    },
+    {
+      "id": "train/lepomis_auritus/lepomis_auritus_071_13100257.jpeg",
+      "class_name": "lepomis_auritus",
+      "label": 34
+    },
+    {
+      "id": "train/leptoglossus_phyllopus/leptoglossus_phyllopus_000_1024124.JPG",
+      "class_name": "leptoglossus_phyllopus",
+      "label": 35
+    },
+    {
+      "id": "train/leptoglossus_phyllopus/leptoglossus_phyllopus_002_1060714.jpg",
+      "class_name": "leptoglossus_phyllopus",
+      "label": 35
+    },
+    {
+      "id": "train/leptoglossus_phyllopus/leptoglossus_phyllopus_039_2086210.jpg",
+      "class_name": "leptoglossus_phyllopus",
+      "label": 35
+    },
+    {
+      "id": "train/leptoglossus_phyllopus/leptoglossus_phyllopus_050_2319959.JPG",
+      "class_name": "leptoglossus_phyllopus",
+      "label": 35
+    },
+    {
+      "id": "train/leptoglossus_phyllopus/leptoglossus_phyllopus_070_2751795.JPG",
+      "class_name": "leptoglossus_phyllopus",
+      "label": 35
+    },
+    {
+      "id": "train/mbira/mbira_023_172.png",
+      "class_name": "mbira",
+      "label": 36
+    },
+    {
+      "id": "train/mbira/mbira_029_2.png",
+      "class_name": "mbira",
+      "label": 36
+    },
+    {
+      "id": "train/mbira/mbira_030_22.png",
+      "class_name": "mbira",
+      "label": 36
+    },
+    {
+      "id": "train/mbira/mbira_032_223.png",
+      "class_name": "mbira",
+      "label": 36
+    },
+    {
+      "id": "train/mbira/mbira_061_33.png",
+      "class_name": "mbira",
+      "label": 36
+    },
+    {
+      "id": "train/microcystis_wesenbergii/microcystis_wesenbergii_004_16433465.jpeg",
+      "class_name": "microcystis_wesenbergii",
+      "label": 37
+    },
+    {
+      "id": "train/microcystis_wesenbergii/microcystis_wesenbergii_009_33518300.jpg",
+      "class_name": "microcystis_wesenbergii",
+      "label": 37
+    },
+    {
+      "id": "train/microcystis_wesenbergii/microcystis_wesenbergii_018_3716154.jpg",
+      "class_name": "microcystis_wesenbergii",
+      "label": 37
+    },
+    {
+      "id": "train/microcystis_wesenbergii/microcystis_wesenbergii_021_49894871.jpg",
+      "class_name": "microcystis_wesenbergii",
+      "label": 37
+    },
+    {
+      "id": "train/microcystis_wesenbergii/microcystis_wesenbergii_028_63993452.jpeg",
+      "class_name": "microcystis_wesenbergii",
+      "label": 37
+    },
+    {
+      "id": "train/octopus_bimaculoides/octopus_bimaculoides_040_18273272.jpg",
+      "class_name": "octopus_bimaculoides",
+      "label": 38
+    },
+    {
+      "id": "train/octopus_bimaculoides/octopus_bimaculoides_042_18636257.jpg",
+      "class_name": "octopus_bimaculoides",
+      "label": 38
+    },
+    {
+      "id": "train/octopus_bimaculoides/octopus_bimaculoides_050_19164774.jpg",
+      "class_name": "octopus_bimaculoides",
+      "label": 38
+    },
+    {
+      "id": "train/octopus_bimaculoides/octopus_bimaculoides_082_28308220.jpg",
+      "class_name": "octopus_bimaculoides",
+      "label": 38
+    },
+    {
+      "id": "train/octopus_bimaculoides/octopus_bimaculoides_083_28453370.jpg",
+      "class_name": "octopus_bimaculoides",
+      "label": 38
+    },
+    {
+      "id": "train/octopus_rubescens/octopus_rubescens_026_1188226.JPG",
+      "class_name": "octopus_rubescens",
+      "label": 39
+    },
+    {
+      "id": "train/octopus_rubescens/octopus_rubescens_034_12568833.jpg",
+      "class_name": "octopus_rubescens",
+      "label": 39
+    },
+    {
+      "id": "train/octopus_rubescens/octopus_rubescens_063_14186668.jpg",
+      "class_name": "octopus_rubescens",
+      "label": 39
+    },
+    {
+      "id": "train/octopus_rubescens/octopus_rubescens_091_19329360.jpeg",
+      "class_name": "octopus_rubescens",
+      "label": 39
+    },
+    {
+      "id": "train/octopus_rubescens/octopus_rubescens_095_19807255.jpg",
+      "class_name": "octopus_rubescens",
+      "label": 39
+    },
+    {
+      "id": "train/ozotoceros_bezoarticus/ozotoceros_bezoarticus_033_41567798.jpeg",
+      "class_name": "ozotoceros_bezoarticus",
+      "label": 40
+    },
+    {
+      "id": "train/ozotoceros_bezoarticus/ozotoceros_bezoarticus_045_53328279.jpg",
+      "class_name": "ozotoceros_bezoarticus",
+      "label": 40
+    },
+    {
+      "id": "train/ozotoceros_bezoarticus/ozotoceros_bezoarticus_055_68765670.jpeg",
+      "class_name": "ozotoceros_bezoarticus",
+      "label": 40
+    },
+    {
+      "id": "train/ozotoceros_bezoarticus/ozotoceros_bezoarticus_071_89732864.jpg",
+      "class_name": "ozotoceros_bezoarticus",
+      "label": 40
+    },
+    {
+      "id": "train/ozotoceros_bezoarticus/ozotoceros_bezoarticus_074_90666145.jpeg",
+      "class_name": "ozotoceros_bezoarticus",
+      "label": 40
+    },
+    {
+      "id": "train/platycephalus_fuscus/platycephalus_fuscus_036_19607299.jpeg",
+      "class_name": "platycephalus_fuscus",
+      "label": 41
+    },
+    {
+      "id": "train/platycephalus_fuscus/platycephalus_fuscus_044_21075849.jpeg",
+      "class_name": "platycephalus_fuscus",
+      "label": 41
+    },
+    {
+      "id": "train/platycephalus_fuscus/platycephalus_fuscus_053_22406748.jpg",
+      "class_name": "platycephalus_fuscus",
+      "label": 41
+    },
+    {
+      "id": "train/platycephalus_fuscus/platycephalus_fuscus_079_33689328.jpg",
+      "class_name": "platycephalus_fuscus",
+      "label": 41
+    },
+    {
+      "id": "train/platycephalus_fuscus/platycephalus_fuscus_097_36248843.png",
+      "class_name": "platycephalus_fuscus",
+      "label": 41
+    },
+    {
+      "id": "train/polistes_dominula/polistes_dominula_029_1294777.jpg",
+      "class_name": "polistes_dominula",
+      "label": 42
+    },
+    {
+      "id": "train/polistes_dominula/polistes_dominula_039_1465988.jpg",
+      "class_name": "polistes_dominula",
+      "label": 42
+    },
+    {
+      "id": "train/polistes_dominula/polistes_dominula_070_1782585.jpg",
+      "class_name": "polistes_dominula",
+      "label": 42
+    },
+    {
+      "id": "train/polistes_dominula/polistes_dominula_084_1812340.jpg",
+      "class_name": "polistes_dominula",
+      "label": 42
+    },
+    {
+      "id": "train/polistes_dominula/polistes_dominula_094_1862635.jpg",
+      "class_name": "polistes_dominula",
+      "label": 42
+    },
+    {
+      "id": "train/pseudorca_crassidens/pseudorca_crassidens_008_19724950.jpeg",
+      "class_name": "pseudorca_crassidens",
+      "label": 43
+    },
+    {
+      "id": "train/pseudorca_crassidens/pseudorca_crassidens_010_20513027.jpeg",
+      "class_name": "pseudorca_crassidens",
+      "label": 43
+    },
+    {
+      "id": "train/pseudorca_crassidens/pseudorca_crassidens_036_45928464.png",
+      "class_name": "pseudorca_crassidens",
+      "label": 43
+    },
+    {
+      "id": "train/pseudorca_crassidens/pseudorca_crassidens_037_49177578.jpg",
+      "class_name": "pseudorca_crassidens",
+      "label": 43
+    },
+    {
+      "id": "train/pseudorca_crassidens/pseudorca_crassidens_038_49837983.jpg",
+      "class_name": "pseudorca_crassidens",
+      "label": 43
+    },
+    {
+      "id": "train/pyramid/pyramid_014_image_0017.jpg",
+      "class_name": "pyramid",
+      "label": 44
+    },
+    {
+      "id": "train/pyramid/pyramid_015_image_0018.jpg",
+      "class_name": "pyramid",
+      "label": 44
+    },
+    {
+      "id": "train/pyramid/pyramid_024_image_0033.jpg",
+      "class_name": "pyramid",
+      "label": 44
+    },
+    {
+      "id": "train/pyramid/pyramid_076_pyramid_0100_flickr.png",
+      "class_name": "pyramid",
+      "label": 44
+    },
+    {
+      "id": "train/pyramid/pyramid_077_pyramid_0101_flickr.png",
+      "class_name": "pyramid",
+      "label": 44
+    },
+    {
+      "id": "train/s_sky/s_sky_000_00000043.jpg",
+      "class_name": "s_sky",
+      "label": 45
+    },
+    {
+      "id": "train/s_sky/s_sky_012_00001293.jpg",
+      "class_name": "s_sky",
+      "label": 45
+    },
+    {
+      "id": "train/s_sky/s_sky_038_00003211.jpg",
+      "class_name": "s_sky",
+      "label": 45
+    },
+    {
+      "id": "train/s_sky/s_sky_053_00003972.jpg",
+      "class_name": "s_sky",
+      "label": 45
+    },
+    {
+      "id": "train/s_sky/s_sky_058_00004237.jpg",
+      "class_name": "s_sky",
+      "label": 45
+    },
+    {
+      "id": "train/sarpa_salpa/sarpa_salpa_005_10991800.jpg",
+      "class_name": "sarpa_salpa",
+      "label": 46
+    },
+    {
+      "id": "train/sarpa_salpa/sarpa_salpa_064_37408905.jpeg",
+      "class_name": "sarpa_salpa",
+      "label": 46
+    },
+    {
+      "id": "train/sarpa_salpa/sarpa_salpa_082_42476287.jpeg",
+      "class_name": "sarpa_salpa",
+      "label": 46
+    },
+    {
+      "id": "train/sarpa_salpa/sarpa_salpa_088_4665981.jpg",
+      "class_name": "sarpa_salpa",
+      "label": 46
+    },
+    {
+      "id": "train/sarpa_salpa/sarpa_salpa_094_48849523.jpg",
+      "class_name": "sarpa_salpa",
+      "label": 46
+    },
+    {
+      "id": "train/sarracenia_alata/sarracenia_alata_020_11120859.jpg",
+      "class_name": "sarracenia_alata",
+      "label": 47
+    },
+    {
+      "id": "train/sarracenia_alata/sarracenia_alata_036_12212881.jpg",
+      "class_name": "sarracenia_alata",
+      "label": 47
+    },
+    {
+      "id": "train/sarracenia_alata/sarracenia_alata_038_12212883.jpg",
+      "class_name": "sarracenia_alata",
+      "label": 47
+    },
+    {
+      "id": "train/sarracenia_alata/sarracenia_alata_041_12402403.jpg",
+      "class_name": "sarracenia_alata",
+      "label": 47
+    },
+    {
+      "id": "train/sarracenia_alata/sarracenia_alata_066_13300834.jpg",
+      "class_name": "sarracenia_alata",
+      "label": 47
+    },
+    {
+      "id": "train/scissors/scissors_007_image_0008.jpg",
+      "class_name": "scissors",
+      "label": 48
+    },
+    {
+      "id": "train/scissors/scissors_047_scissors_0124_pixabay.jpg",
+      "class_name": "scissors",
+      "label": 48
+    },
+    {
+      "id": "train/scissors/scissors_067_scissors_0206_pixabay.jpg",
+      "class_name": "scissors",
+      "label": 48
+    },
+    {
+      "id": "train/scissors/scissors_076_scissors_0252_pixabay.jpg",
+      "class_name": "scissors",
+      "label": 48
+    },
+    {
+      "id": "train/scissors/scissors_088_scissors_0339_pixabay.jpg",
+      "class_name": "scissors",
+      "label": 48
+    },
+    {
+      "id": "train/sepia_apama/sepia_apama_018_12260517.jpeg",
+      "class_name": "sepia_apama",
+      "label": 49
+    },
+    {
+      "id": "train/sepia_apama/sepia_apama_019_12427454.jpeg",
+      "class_name": "sepia_apama",
+      "label": 49
+    },
+    {
+      "id": "train/sepia_apama/sepia_apama_045_19142980.jpg",
+      "class_name": "sepia_apama",
+      "label": 49
+    },
+    {
+      "id": "train/sepia_apama/sepia_apama_050_20446261.jpeg",
+      "class_name": "sepia_apama",
+      "label": 49
+    },
+    {
+      "id": "train/sepia_apama/sepia_apama_092_37516223.jpg",
+      "class_name": "sepia_apama",
+      "label": 49
+    },
+    {
+      "id": "train/sepia_officinalis/sepia_officinalis_003_1100170.jpg",
+      "class_name": "sepia_officinalis",
+      "label": 50
+    },
+    {
+      "id": "train/sepia_officinalis/sepia_officinalis_039_17388157.jpg",
+      "class_name": "sepia_officinalis",
+      "label": 50
+    },
+    {
+      "id": "train/sepia_officinalis/sepia_officinalis_089_2996825.jpg",
+      "class_name": "sepia_officinalis",
+      "label": 50
+    },
+    {
+      "id": "train/sepia_officinalis/sepia_officinalis_092_2996828.jpg",
+      "class_name": "sepia_officinalis",
+      "label": 50
+    },
+    {
+      "id": "train/sepia_officinalis/sepia_officinalis_097_30488906.jpg",
+      "class_name": "sepia_officinalis",
+      "label": 50
+    },
+    {
+      "id": "train/sepioteuthis_australis/sepioteuthis_australis_000_10096976.jpg",
+      "class_name": "sepioteuthis_australis",
+      "label": 51
+    },
+    {
+      "id": "train/sepioteuthis_australis/sepioteuthis_australis_011_16934065.png",
+      "class_name": "sepioteuthis_australis",
+      "label": 51
+    },
+    {
+      "id": "train/sepioteuthis_australis/sepioteuthis_australis_049_38105114.jpeg",
+      "class_name": "sepioteuthis_australis",
+      "label": 51
+    },
+    {
+      "id": "train/sepioteuthis_australis/sepioteuthis_australis_084_55165154.jpeg",
+      "class_name": "sepioteuthis_australis",
+      "label": 51
+    },
+    {
+      "id": "train/sepioteuthis_australis/sepioteuthis_australis_094_62275752.jpeg",
+      "class_name": "sepioteuthis_australis",
+      "label": 51
+    },
+    {
+      "id": "train/shuttlecock/shuttlecock_004_0006.png",
+      "class_name": "shuttlecock",
+      "label": 52
+    },
+    {
+      "id": "train/shuttlecock/shuttlecock_027_0231.png",
+      "class_name": "shuttlecock",
+      "label": 52
+    },
+    {
+      "id": "train/shuttlecock/shuttlecock_034_0297.png",
+      "class_name": "shuttlecock",
+      "label": 52
+    },
+    {
+      "id": "train/shuttlecock/shuttlecock_043_p0018.jpg",
+      "class_name": "shuttlecock",
+      "label": 52
+    },
+    {
+      "id": "train/shuttlecock/shuttlecock_059_pe2.jpg",
+      "class_name": "shuttlecock",
+      "label": 52
+    },
+    {
+      "id": "train/skipper_caterpillar/skipper_caterpillar_008_014-8777158.jpeg",
+      "class_name": "skipper_caterpillar",
+      "label": 53
+    },
+    {
+      "id": "train/skipper_caterpillar/skipper_caterpillar_009_015-9047575.jpg",
+      "class_name": "skipper_caterpillar",
+      "label": 53
+    },
+    {
+      "id": "train/skipper_caterpillar/skipper_caterpillar_058_086-55873461.jpeg",
+      "class_name": "skipper_caterpillar",
+      "label": 53
+    },
+    {
+      "id": "train/skipper_caterpillar/skipper_caterpillar_060_099-62292413.jpeg",
+      "class_name": "skipper_caterpillar",
+      "label": 53
+    },
+    {
+      "id": "train/skipper_caterpillar/skipper_caterpillar_086_145-110389951.jpeg",
+      "class_name": "skipper_caterpillar",
+      "label": 53
+    },
+    {
+      "id": "train/spaghetti_bolognese/spaghetti_bolognese_026_863987.jpg",
+      "class_name": "spaghetti_bolognese",
+      "label": 54
+    },
+    {
+      "id": "train/spaghetti_bolognese/spaghetti_bolognese_030_2028065.jpg",
+      "class_name": "spaghetti_bolognese",
+      "label": 54
+    },
+    {
+      "id": "train/spaghetti_bolognese/spaghetti_bolognese_034_2794362.jpg",
+      "class_name": "spaghetti_bolognese",
+      "label": 54
+    },
+    {
+      "id": "train/spaghetti_bolognese/spaghetti_bolognese_051_2512710.jpg",
+      "class_name": "spaghetti_bolognese",
+      "label": 54
+    },
+    {
+      "id": "train/spaghetti_bolognese/spaghetti_bolognese_053_476276.jpg",
+      "class_name": "spaghetti_bolognese",
+      "label": 54
+    },
+    {
+      "id": "train/stapler/stapler_028_image_0033.jpg",
+      "class_name": "stapler",
+      "label": 55
+    },
+    {
+      "id": "train/stapler/stapler_049_stapler_0012_flickr.png",
+      "class_name": "stapler",
+      "label": 55
+    },
+    {
+      "id": "train/stapler/stapler_054_stapler_0018_flickr.png",
+      "class_name": "stapler",
+      "label": 55
+    },
+    {
+      "id": "train/stapler/stapler_070_stapler_0043_flickr.png",
+      "class_name": "stapler",
+      "label": 55
+    },
+    {
+      "id": "train/stapler/stapler_082_stapler_0060_flickr.png",
+      "class_name": "stapler",
+      "label": 55
+    },
+    {
+      "id": "train/streptopus_lanceolatus/streptopus_lanceolatus_005_1165439.JPG",
+      "class_name": "streptopus_lanceolatus",
+      "label": 56
+    },
+    {
+      "id": "train/streptopus_lanceolatus/streptopus_lanceolatus_021_12666465.jpeg",
+      "class_name": "streptopus_lanceolatus",
+      "label": 56
+    },
+    {
+      "id": "train/streptopus_lanceolatus/streptopus_lanceolatus_069_13235917.jpeg",
+      "class_name": "streptopus_lanceolatus",
+      "label": 56
+    },
+    {
+      "id": "train/streptopus_lanceolatus/streptopus_lanceolatus_079_13333399.jpg",
+      "class_name": "streptopus_lanceolatus",
+      "label": 56
+    },
+    {
+      "id": "train/streptopus_lanceolatus/streptopus_lanceolatus_085_13376339.jpeg",
+      "class_name": "streptopus_lanceolatus",
+      "label": 56
+    },
+    {
+      "id": "train/tapirus_bairdii/tapirus_bairdii_000_10103742.jpg",
+      "class_name": "tapirus_bairdii",
+      "label": 57
+    },
+    {
+      "id": "train/tapirus_bairdii/tapirus_bairdii_008_1129414.JPG",
+      "class_name": "tapirus_bairdii",
+      "label": 57
+    },
+    {
+      "id": "train/tapirus_bairdii/tapirus_bairdii_023_14005578.jpg",
+      "class_name": "tapirus_bairdii",
+      "label": 57
+    },
+    {
+      "id": "train/tapirus_bairdii/tapirus_bairdii_044_20812591.jpg",
+      "class_name": "tapirus_bairdii",
+      "label": 57
+    },
+    {
+      "id": "train/tapirus_bairdii/tapirus_bairdii_055_21747416.jpg",
+      "class_name": "tapirus_bairdii",
+      "label": 57
+    },
+    {
+      "id": "train/triturus_marmoratus/triturus_marmoratus_008_12871364.jpeg",
+      "class_name": "triturus_marmoratus",
+      "label": 58
+    },
+    {
+      "id": "train/triturus_marmoratus/triturus_marmoratus_011_13034364.jpg",
+      "class_name": "triturus_marmoratus",
+      "label": 58
+    },
+    {
+      "id": "train/triturus_marmoratus/triturus_marmoratus_046_18681619.jpg",
+      "class_name": "triturus_marmoratus",
+      "label": 58
+    },
+    {
+      "id": "train/triturus_marmoratus/triturus_marmoratus_069_21063318.jpeg",
+      "class_name": "triturus_marmoratus",
+      "label": 58
+    },
+    {
+      "id": "train/triturus_marmoratus/triturus_marmoratus_095_25165281.jpeg",
+      "class_name": "triturus_marmoratus",
+      "label": 58
+    },
+    {
+      "id": "train/tursiops_aduncus/tursiops_aduncus_047_29772471.jpeg",
+      "class_name": "tursiops_aduncus",
+      "label": 59
+    },
+    {
+      "id": "train/tursiops_aduncus/tursiops_aduncus_058_344021.jpg",
+      "class_name": "tursiops_aduncus",
+      "label": 59
+    },
+    {
+      "id": "train/tursiops_aduncus/tursiops_aduncus_068_4121419.jpeg",
+      "class_name": "tursiops_aduncus",
+      "label": 59
+    },
+    {
+      "id": "train/tursiops_aduncus/tursiops_aduncus_085_54031054.jpeg",
+      "class_name": "tursiops_aduncus",
+      "label": 59
+    },
+    {
+      "id": "train/tursiops_aduncus/tursiops_aduncus_095_59297683.jpeg",
+      "class_name": "tursiops_aduncus",
+      "label": 59
+    },
+    {
+      "id": "train/vaccinium_reticulatum/vaccinium_reticulatum_002_10870429.jpg",
+      "class_name": "vaccinium_reticulatum",
+      "label": 60
+    },
+    {
+      "id": "train/vaccinium_reticulatum/vaccinium_reticulatum_024_1499601.jpg",
+      "class_name": "vaccinium_reticulatum",
+      "label": 60
+    },
+    {
+      "id": "train/vaccinium_reticulatum/vaccinium_reticulatum_026_15003031.jpg",
+      "class_name": "vaccinium_reticulatum",
+      "label": 60
+    },
+    {
+      "id": "train/vaccinium_reticulatum/vaccinium_reticulatum_044_18758022.jpg",
+      "class_name": "vaccinium_reticulatum",
+      "label": 60
+    },
+    {
+      "id": "train/vaccinium_reticulatum/vaccinium_reticulatum_094_31927642.jpeg",
+      "class_name": "vaccinium_reticulatum",
+      "label": 60
+    },
+    {
+      "id": "train/waffles/waffles_010_661951.jpg",
+      "class_name": "waffles",
+      "label": 61
+    },
+    {
+      "id": "train/waffles/waffles_030_885452.jpg",
+      "class_name": "waffles",
+      "label": 61
+    },
+    {
+      "id": "train/waffles/waffles_032_342491.jpg",
+      "class_name": "waffles",
+      "label": 61
+    },
+    {
+      "id": "train/waffles/waffles_036_2389143.jpg",
+      "class_name": "waffles",
+      "label": 61
+    },
+    {
+      "id": "train/waffles/waffles_050_1152335.jpg",
+      "class_name": "waffles",
+      "label": 61
+    },
+    {
+      "id": "train/walker/walker_016_00036.jpg",
+      "class_name": "walker",
+      "label": 62
+    },
+    {
+      "id": "train/walker/walker_042_00097.jpg",
+      "class_name": "walker",
+      "label": 62
+    },
+    {
+      "id": "train/walker/walker_049_00119.jpg",
+      "class_name": "walker",
+      "label": 62
+    },
+    {
+      "id": "train/walker/walker_076_00216.jpg",
+      "class_name": "walker",
+      "label": 62
+    },
+    {
+      "id": "train/walker/walker_089_00289.jpg",
+      "class_name": "walker",
+      "label": 62
+    },
+    {
+      "id": "train/windsor_chair/windsor_chair_013_image_0014.jpg",
+      "class_name": "windsor_chair",
+      "label": 63
+    },
+    {
+      "id": "train/windsor_chair/windsor_chair_014_image_0015.jpg",
+      "class_name": "windsor_chair",
+      "label": 63
+    },
+    {
+      "id": "train/windsor_chair/windsor_chair_019_image_0020.jpg",
+      "class_name": "windsor_chair",
+      "label": 63
+    },
+    {
+      "id": "train/windsor_chair/windsor_chair_026_image_0028.jpg",
+      "class_name": "windsor_chair",
+      "label": 63
+    },
+    {
+      "id": "train/windsor_chair/windsor_chair_059_windsor_chair_0021_flickr.png",
+      "class_name": "windsor_chair",
+      "label": 63
+    }
+  ],
+  "meta": {
+    "train_pool": "train",
+    "eval_pool": "val"
+  }
+}

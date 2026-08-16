@@ -1,0 +1,2995 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Four-dataset comparison</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:26px;background:#fafafa;color:#111}
+h1{font-size:22px}h2{font-size:18px;margin-top:30px;border-bottom:3px solid #111;padding-bottom:4px}
+nav{margin:10px 0 18px;font-size:14px}nav a{margin-right:14px}
+table{border-collapse:collapse;margin:6px 0 20px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+caption{caption-side:top;text-align:left;font-weight:700;font-size:13px;padding:5px 0}
+th,td{border:1px solid #ddd;padding:5px 10px;font-size:12.5px;text-align:right}
+th{background:#111;color:#fff}th:first-child,td.m{text-align:left;white-space:nowrap}td.m{font-weight:600}
+.s{color:#888;font-size:10px;margin-left:3px}
+tr.ours td{background:#eef6ff}tr.ours td.m{font-weight:800}td.win{font-weight:800;background:#dff5e1;color:#0b4f16}
+tr.single td{background:#fffbe9}tr.base td{background:#f3f0fa}</style></head><body>
+<h1>DD-CoMB vs single backbones & uncertainty baselines — four few-shot OOD datasets</h1>
+<p>Frozen backbones, few-shot (k∈{1,5,10,20}), <b>mean ± std over 20 runs</b>. Twelve metrics per dataset, including calibration and proper scoring rules <b>before</b> (ECE, MCE, NLL, Brier) and <b>after temperature scaling</b> (ECE (TS), MCE (TS), NLL (TS), Brier (TS)); T is fit per run on the held-out calibration split by minimising NLL. Green = best per column (higher better for Accuracy/Macro-F1/AUROC-H, lower for ECE/MCE/NLL/Brier/FPR95-H). Blue = our fusion, yellow = single backbones, purple = baselines. Plant Seedlings V2 / SSL-Patches from the validated clean re-run; DeepWeeds/BloodMNIST verified unaffected.</p>
+<nav><b>Jump to:</b> <a href="#deepweeds">DeepWeeds</a> <a href="#plant-seedlings-v2">Plant Seedlings V2</a> <a href="#bloodmnist">BloodMNIST</a> <a href="#ssl-patches">SSL-Patches</a></nav>
+<h2 id="deepweeds">DeepWeeds</h2>
+<table><caption>Accuracy ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.515<span class="s">±0.066</span></td>
+<td class="">0.740<span class="s">±0.035</span></td>
+<td class="">0.801<span class="s">±0.026</span></td>
+<td class="">0.868<span class="s">±0.012</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.368<span class="s">±0.060</span></td>
+<td class="">0.569<span class="s">±0.036</span></td>
+<td class="">0.692<span class="s">±0.027</span></td>
+<td class="">0.787<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.506<span class="s">±0.069</span></td>
+<td class="">0.763<span class="s">±0.024</span></td>
+<td class="">0.829<span class="s">±0.020</span></td>
+<td class="">0.877<span class="s">±0.012</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.328<span class="s">±0.059</span></td>
+<td class="">0.643<span class="s">±0.079</span></td>
+<td class="">0.681<span class="s">±0.074</span></td>
+<td class="">0.714<span class="s">±0.086</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.375<span class="s">±0.058</span></td>
+<td class="">0.626<span class="s">±0.020</span></td>
+<td class="">0.706<span class="s">±0.024</span></td>
+<td class="">0.786<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.290<span class="s">±0.056</span></td>
+<td class="">0.597<span class="s">±0.033</span></td>
+<td class="">0.684<span class="s">±0.030</span></td>
+<td class="">0.750<span class="s">±0.048</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.542<span class="s">±0.068</span></td>
+<td class="win">0.783<span class="s">±0.022</span></td>
+<td class="">0.843<span class="s">±0.012</span></td>
+<td class="">0.888<span class="s">±0.011</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.388<span class="s">±0.058</span></td>
+<td class="">0.662<span class="s">±0.016</span></td>
+<td class="">0.741<span class="s">±0.020</span></td>
+<td class="">0.812<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.479<span class="s">±0.065</span></td>
+<td class="">0.738<span class="s">±0.028</span></td>
+<td class="">0.810<span class="s">±0.025</span></td>
+<td class="">0.878<span class="s">±0.013</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.513<span class="s">±0.064</span></td>
+<td class="">0.779<span class="s">±0.023</span></td>
+<td class="win">0.845<span class="s">±0.014</span></td>
+<td class="win">0.894<span class="s">±0.012</span></td>
+</tr>
+</tbody></table>
+<table><caption>Macro-F1 ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.546<span class="s">±0.065</span></td>
+<td class="">0.758<span class="s">±0.030</span></td>
+<td class="">0.814<span class="s">±0.021</span></td>
+<td class="">0.872<span class="s">±0.011</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.391<span class="s">±0.061</span></td>
+<td class="">0.612<span class="s">±0.023</span></td>
+<td class="">0.705<span class="s">±0.024</span></td>
+<td class="">0.793<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.532<span class="s">±0.066</span></td>
+<td class="">0.775<span class="s">±0.021</span></td>
+<td class="">0.835<span class="s">±0.018</span></td>
+<td class="">0.880<span class="s">±0.012</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.242<span class="s">±0.061</span></td>
+<td class="">0.583<span class="s">±0.107</span></td>
+<td class="">0.621<span class="s">±0.098</span></td>
+<td class="">0.661<span class="s">±0.113</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.394<span class="s">±0.058</span></td>
+<td class="">0.637<span class="s">±0.020</span></td>
+<td class="">0.715<span class="s">±0.022</span></td>
+<td class="">0.791<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.241<span class="s">±0.072</span></td>
+<td class="">0.599<span class="s">±0.043</span></td>
+<td class="">0.679<span class="s">±0.047</span></td>
+<td class="">0.735<span class="s">±0.074</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.558<span class="s">±0.067</span></td>
+<td class="win">0.789<span class="s">±0.022</span></td>
+<td class="">0.846<span class="s">±0.011</span></td>
+<td class="">0.889<span class="s">±0.011</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.405<span class="s">±0.057</span></td>
+<td class="">0.666<span class="s">±0.016</span></td>
+<td class="">0.746<span class="s">±0.020</span></td>
+<td class="">0.814<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.515<span class="s">±0.065</span></td>
+<td class="">0.752<span class="s">±0.026</span></td>
+<td class="">0.819<span class="s">±0.021</span></td>
+<td class="">0.880<span class="s">±0.012</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.529<span class="s">±0.064</span></td>
+<td class="">0.782<span class="s">±0.024</span></td>
+<td class="win">0.848<span class="s">±0.014</span></td>
+<td class="win">0.896<span class="s">±0.011</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.318<span class="s">±0.065</span></td>
+<td class="">0.160<span class="s">±0.032</span></td>
+<td class="">0.120<span class="s">±0.022</span></td>
+<td class="">0.072<span class="s">±0.012</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.431<span class="s">±0.058</span></td>
+<td class="">0.279<span class="s">±0.038</span></td>
+<td class="">0.174<span class="s">±0.026</span></td>
+<td class="">0.112<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.068<span class="s">±0.036</span></td>
+<td class="">0.062<span class="s">±0.024</span></td>
+<td class="win">0.045<span class="s">±0.018</span></td>
+<td class="win">0.035<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.116<span class="s">±0.033</span></td>
+<td class="">0.245<span class="s">±0.042</span></td>
+<td class="">0.245<span class="s">±0.043</span></td>
+<td class="">0.221<span class="s">±0.044</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.065<span class="s">±0.035</span></td>
+<td class="">0.105<span class="s">±0.028</span></td>
+<td class="">0.078<span class="s">±0.020</span></td>
+<td class="">0.062<span class="s">±0.022</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.072<span class="s">±0.021</span></td>
+<td class="">0.281<span class="s">±0.029</span></td>
+<td class="">0.334<span class="s">±0.032</span></td>
+<td class="">0.332<span class="s">±0.036</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.094<span class="s">±0.035</span></td>
+<td class="">0.243<span class="s">±0.016</span></td>
+<td class="">0.238<span class="s">±0.013</span></td>
+<td class="">0.221<span class="s">±0.009</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.080<span class="s">±0.033</span></td>
+<td class="">0.180<span class="s">±0.017</span></td>
+<td class="">0.203<span class="s">±0.016</span></td>
+<td class="">0.203<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.173<span class="s">±0.052</span></td>
+<td class="win">0.056<span class="s">±0.012</span></td>
+<td class="">0.054<span class="s">±0.013</span></td>
+<td class="">0.040<span class="s">±0.007</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="win">0.063<span class="s">±0.024</span></td>
+<td class="">0.161<span class="s">±0.021</span></td>
+<td class="">0.158<span class="s">±0.017</span></td>
+<td class="">0.131<span class="s">±0.011</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.052<span class="s">±0.021</span></td>
+<td class="">0.036<span class="s">±0.009</span></td>
+<td class="">0.031<span class="s">±0.008</span></td>
+<td class="">0.026<span class="s">±0.007</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.056<span class="s">±0.017</span></td>
+<td class="">0.039<span class="s">±0.010</span></td>
+<td class="">0.038<span class="s">±0.007</span></td>
+<td class="">0.031<span class="s">±0.008</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.047<span class="s">±0.011</span></td>
+<td class="win">0.035<span class="s">±0.011</span></td>
+<td class="">0.030<span class="s">±0.008</span></td>
+<td class="">0.029<span class="s">±0.008</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.098<span class="s">±0.039</span></td>
+<td class="">0.083<span class="s">±0.025</span></td>
+<td class="">0.074<span class="s">±0.025</span></td>
+<td class="">0.066<span class="s">±0.022</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.047<span class="s">±0.017</span></td>
+<td class="">0.046<span class="s">±0.018</span></td>
+<td class="">0.036<span class="s">±0.010</span></td>
+<td class="">0.031<span class="s">±0.009</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.060<span class="s">±0.021</span></td>
+<td class="">0.056<span class="s">±0.012</span></td>
+<td class="">0.050<span class="s">±0.016</span></td>
+<td class="">0.043<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.059<span class="s">±0.019</span></td>
+<td class="">0.046<span class="s">±0.012</span></td>
+<td class="">0.039<span class="s">±0.008</span></td>
+<td class="">0.035<span class="s">±0.012</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.055<span class="s">±0.016</span></td>
+<td class="">0.054<span class="s">±0.010</span></td>
+<td class="">0.046<span class="s">±0.009</span></td>
+<td class="">0.039<span class="s">±0.007</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.075<span class="s">±0.024</span></td>
+<td class="">0.092<span class="s">±0.018</span></td>
+<td class="">0.083<span class="s">±0.016</span></td>
+<td class="">0.060<span class="s">±0.012</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="win">0.046<span class="s">±0.015</span></td>
+<td class="">0.038<span class="s">±0.009</span></td>
+<td class="win">0.027<span class="s">±0.006</span></td>
+<td class="win">0.022<span class="s">±0.008</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.480<span class="s">±0.086</span></td>
+<td class="">0.392<span class="s">±0.121</span></td>
+<td class="">0.341<span class="s">±0.058</span></td>
+<td class="">0.358<span class="s">±0.134</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.565<span class="s">±0.068</span></td>
+<td class="">0.392<span class="s">±0.039</span></td>
+<td class="">0.389<span class="s">±0.153</span></td>
+<td class="">0.353<span class="s">±0.151</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.206<span class="s">±0.098</span></td>
+<td class="win">0.202<span class="s">±0.152</span></td>
+<td class="win">0.190<span class="s">±0.057</span></td>
+<td class="">0.265<span class="s">±0.143</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.354<span class="s">±0.040</span></td>
+<td class="">0.420<span class="s">±0.028</span></td>
+<td class="">0.395<span class="s">±0.034</span></td>
+<td class="">0.364<span class="s">±0.060</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.268<span class="s">±0.179</span></td>
+<td class="">0.231<span class="s">±0.099</span></td>
+<td class="">0.247<span class="s">±0.196</span></td>
+<td class="">0.269<span class="s">±0.239</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.360<span class="s">±0.110</span></td>
+<td class="">0.502<span class="s">±0.020</span></td>
+<td class="">0.482<span class="s">±0.033</span></td>
+<td class="">0.448<span class="s">±0.029</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.357<span class="s">±0.198</span></td>
+<td class="">0.352<span class="s">±0.107</span></td>
+<td class="">0.319<span class="s">±0.118</span></td>
+<td class="">0.385<span class="s">±0.219</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.263<span class="s">±0.145</span></td>
+<td class="">0.359<span class="s">±0.153</span></td>
+<td class="">0.299<span class="s">±0.043</span></td>
+<td class="">0.269<span class="s">±0.058</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.376<span class="s">±0.145</span></td>
+<td class="">0.279<span class="s">±0.167</span></td>
+<td class="">0.244<span class="s">±0.050</span></td>
+<td class="">0.316<span class="s">±0.156</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="win">0.180<span class="s">±0.042</span></td>
+<td class="">0.267<span class="s">±0.129</span></td>
+<td class="">0.230<span class="s">±0.032</span></td>
+<td class="win">0.251<span class="s">±0.063</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.234<span class="s">±0.173</span></td>
+<td class="">0.206<span class="s">±0.146</span></td>
+<td class="">0.256<span class="s">±0.143</span></td>
+<td class="">0.309<span class="s">±0.169</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.268<span class="s">±0.154</span></td>
+<td class="">0.230<span class="s">±0.207</span></td>
+<td class="">0.192<span class="s">±0.156</span></td>
+<td class="">0.247<span class="s">±0.131</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.165<span class="s">±0.063</span></td>
+<td class="">0.187<span class="s">±0.158</span></td>
+<td class="">0.210<span class="s">±0.081</span></td>
+<td class="">0.314<span class="s">±0.174</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.257<span class="s">±0.068</span></td>
+<td class="">0.188<span class="s">±0.040</span></td>
+<td class="">0.231<span class="s">±0.080</span></td>
+<td class="">0.266<span class="s">±0.095</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.330<span class="s">±0.239</span></td>
+<td class="">0.187<span class="s">±0.091</span></td>
+<td class="">0.279<span class="s">±0.277</span></td>
+<td class="">0.301<span class="s">±0.218</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.365<span class="s">±0.123</span></td>
+<td class="win">0.173<span class="s">±0.061</span></td>
+<td class="win">0.189<span class="s">±0.071</span></td>
+<td class="win">0.200<span class="s">±0.094</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.263<span class="s">±0.197</span></td>
+<td class="">0.226<span class="s">±0.074</span></td>
+<td class="">0.333<span class="s">±0.150</span></td>
+<td class="">0.411<span class="s">±0.223</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.237<span class="s">±0.072</span></td>
+<td class="">0.228<span class="s">±0.073</span></td>
+<td class="">0.242<span class="s">±0.143</span></td>
+<td class="">0.310<span class="s">±0.197</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.257<span class="s">±0.163</span></td>
+<td class="">0.214<span class="s">±0.049</span></td>
+<td class="">0.239<span class="s">±0.033</span></td>
+<td class="">0.289<span class="s">±0.114</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.165<span class="s">±0.052</span></td>
+<td class="">0.243<span class="s">±0.139</span></td>
+<td class="">0.240<span class="s">±0.142</span></td>
+<td class="">0.271<span class="s">±0.131</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">2.370<span class="s">±0.520</span></td>
+<td class="">1.160<span class="s">±0.204</span></td>
+<td class="">0.845<span class="s">±0.121</span></td>
+<td class="">0.541<span class="s">±0.085</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">3.210<span class="s">±0.445</span></td>
+<td class="">1.958<span class="s">±0.238</span></td>
+<td class="">1.231<span class="s">±0.174</span></td>
+<td class="">0.841<span class="s">±0.106</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">1.425<span class="s">±0.147</span></td>
+<td class="win">0.716<span class="s">±0.056</span></td>
+<td class="win">0.519<span class="s">±0.049</span></td>
+<td class="win">0.378<span class="s">±0.034</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">1.817<span class="s">±0.101</span></td>
+<td class="">1.266<span class="s">±0.120</span></td>
+<td class="">1.130<span class="s">±0.112</span></td>
+<td class="">0.997<span class="s">±0.145</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">1.737<span class="s">±0.099</span></td>
+<td class="">1.129<span class="s">±0.038</span></td>
+<td class="">0.877<span class="s">±0.045</span></td>
+<td class="">0.651<span class="s">±0.048</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">1.918<span class="s">±0.086</span></td>
+<td class="">1.465<span class="s">±0.049</span></td>
+<td class="">1.324<span class="s">±0.051</span></td>
+<td class="">1.131<span class="s">±0.075</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">1.387<span class="s">±0.127</span></td>
+<td class="">0.880<span class="s">±0.043</span></td>
+<td class="">0.712<span class="s">±0.026</span></td>
+<td class="">0.569<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">1.730<span class="s">±0.114</span></td>
+<td class="">1.153<span class="s">±0.023</span></td>
+<td class="">0.964<span class="s">±0.040</span></td>
+<td class="">0.770<span class="s">±0.030</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">1.963<span class="s">±0.251</span></td>
+<td class="">0.934<span class="s">±0.100</span></td>
+<td class="">0.692<span class="s">±0.075</span></td>
+<td class="">0.448<span class="s">±0.052</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">1.431<span class="s">±0.137</span></td>
+<td class="">0.804<span class="s">±0.043</span></td>
+<td class="">0.613<span class="s">±0.031</span></td>
+<td class="">0.445<span class="s">±0.023</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">1.415<span class="s">±0.157</span></td>
+<td class="">0.793<span class="s">±0.095</span></td>
+<td class="">0.609<span class="s">±0.057</span></td>
+<td class="">0.423<span class="s">±0.041</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">1.742<span class="s">±0.084</span></td>
+<td class="">1.235<span class="s">±0.079</span></td>
+<td class="">0.910<span class="s">±0.068</span></td>
+<td class="">0.662<span class="s">±0.045</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">1.409<span class="s">±0.140</span></td>
+<td class="">0.703<span class="s">±0.065</span></td>
+<td class="win">0.512<span class="s">±0.055</span></td>
+<td class="">0.374<span class="s">±0.036</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">1.797<span class="s">±0.098</span></td>
+<td class="">1.089<span class="s">±0.177</span></td>
+<td class="">0.935<span class="s">±0.167</span></td>
+<td class="">0.825<span class="s">±0.202</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">1.723<span class="s">±0.083</span></td>
+<td class="">1.099<span class="s">±0.049</span></td>
+<td class="">0.859<span class="s">±0.051</span></td>
+<td class="">0.640<span class="s">±0.057</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">1.912<span class="s">±0.083</span></td>
+<td class="">1.208<span class="s">±0.091</span></td>
+<td class="">0.988<span class="s">±0.077</span></td>
+<td class="">0.805<span class="s">±0.131</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">1.363<span class="s">±0.147</span></td>
+<td class="win">0.699<span class="s">±0.066</span></td>
+<td class="">0.524<span class="s">±0.041</span></td>
+<td class="">0.395<span class="s">±0.035</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">1.717<span class="s">±0.100</span></td>
+<td class="">1.061<span class="s">±0.038</span></td>
+<td class="">0.831<span class="s">±0.051</span></td>
+<td class="">0.635<span class="s">±0.045</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">1.489<span class="s">±0.116</span></td>
+<td class="">0.847<span class="s">±0.066</span></td>
+<td class="">0.658<span class="s">±0.056</span></td>
+<td class="">0.436<span class="s">±0.042</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">1.424<span class="s">±0.134</span></td>
+<td class="">0.717<span class="s">±0.060</span></td>
+<td class="">0.515<span class="s">±0.042</span></td>
+<td class="win">0.363<span class="s">±0.034</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.772<span class="s">±0.118</span></td>
+<td class="">0.417<span class="s">±0.062</span></td>
+<td class="">0.317<span class="s">±0.041</span></td>
+<td class="">0.209<span class="s">±0.019</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">1.009<span class="s">±0.101</span></td>
+<td class="">0.689<span class="s">±0.064</span></td>
+<td class="">0.476<span class="s">±0.044</span></td>
+<td class="">0.331<span class="s">±0.029</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.638<span class="s">±0.071</span></td>
+<td class="win">0.335<span class="s">±0.030</span></td>
+<td class="win">0.247<span class="s">±0.024</span></td>
+<td class="win">0.180<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.766<span class="s">±0.045</span></td>
+<td class="">0.541<span class="s">±0.047</span></td>
+<td class="">0.471<span class="s">±0.046</span></td>
+<td class="">0.406<span class="s">±0.061</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.759<span class="s">±0.044</span></td>
+<td class="">0.520<span class="s">±0.019</span></td>
+<td class="">0.415<span class="s">±0.027</span></td>
+<td class="">0.311<span class="s">±0.023</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.818<span class="s">±0.032</span></td>
+<td class="">0.651<span class="s">±0.018</span></td>
+<td class="">0.583<span class="s">±0.021</span></td>
+<td class="">0.488<span class="s">±0.028</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.617<span class="s">±0.058</span></td>
+<td class="">0.385<span class="s">±0.022</span></td>
+<td class="">0.298<span class="s">±0.015</span></td>
+<td class="">0.225<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.758<span class="s">±0.048</span></td>
+<td class="">0.514<span class="s">±0.012</span></td>
+<td class="">0.423<span class="s">±0.020</span></td>
+<td class="">0.327<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.728<span class="s">±0.080</span></td>
+<td class="">0.393<span class="s">±0.033</span></td>
+<td class="">0.300<span class="s">±0.030</span></td>
+<td class="">0.198<span class="s">±0.017</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.639<span class="s">±0.064</span></td>
+<td class="">0.350<span class="s">±0.021</span></td>
+<td class="">0.260<span class="s">±0.017</span></td>
+<td class="">0.181<span class="s">±0.012</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.628<span class="s">±0.067</span></td>
+<td class="">0.368<span class="s">±0.047</span></td>
+<td class="">0.283<span class="s">±0.031</span></td>
+<td class="">0.194<span class="s">±0.016</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.763<span class="s">±0.037</span></td>
+<td class="">0.574<span class="s">±0.037</span></td>
+<td class="">0.424<span class="s">±0.033</span></td>
+<td class="">0.306<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.633<span class="s">±0.065</span></td>
+<td class="">0.330<span class="s">±0.032</span></td>
+<td class="">0.244<span class="s">±0.026</span></td>
+<td class="">0.179<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.757<span class="s">±0.043</span></td>
+<td class="">0.461<span class="s">±0.071</span></td>
+<td class="">0.396<span class="s">±0.068</span></td>
+<td class="">0.348<span class="s">±0.083</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.755<span class="s">±0.038</span></td>
+<td class="">0.506<span class="s">±0.021</span></td>
+<td class="">0.407<span class="s">±0.030</span></td>
+<td class="">0.305<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.815<span class="s">±0.032</span></td>
+<td class="">0.536<span class="s">±0.036</span></td>
+<td class="">0.432<span class="s">±0.033</span></td>
+<td class="">0.347<span class="s">±0.050</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.606<span class="s">±0.067</span></td>
+<td class="win">0.312<span class="s">±0.029</span></td>
+<td class="">0.232<span class="s">±0.019</span></td>
+<td class="">0.169<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.752<span class="s">±0.042</span></td>
+<td class="">0.472<span class="s">±0.017</span></td>
+<td class="">0.372<span class="s">±0.024</span></td>
+<td class="">0.279<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.673<span class="s">±0.051</span></td>
+<td class="">0.398<span class="s">±0.030</span></td>
+<td class="">0.307<span class="s">±0.030</span></td>
+<td class="">0.203<span class="s">±0.018</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.635<span class="s">±0.062</span></td>
+<td class="">0.318<span class="s">±0.028</span></td>
+<td class="win">0.229<span class="s">±0.019</span></td>
+<td class="win">0.160<span class="s">±0.015</span></td>
+</tr>
+</tbody></table>
+<table><caption>AUROC-H ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.725<span class="s">±0.056</span></td>
+<td class="">0.807<span class="s">±0.036</span></td>
+<td class="">0.847<span class="s">±0.021</span></td>
+<td class="">0.880<span class="s">±0.017</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.663<span class="s">±0.045</span></td>
+<td class="">0.705<span class="s">±0.032</span></td>
+<td class="">0.793<span class="s">±0.024</span></td>
+<td class="">0.830<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.717<span class="s">±0.045</span></td>
+<td class="">0.840<span class="s">±0.031</span></td>
+<td class="">0.863<span class="s">±0.022</span></td>
+<td class="">0.894<span class="s">±0.011</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.817<span class="s">±0.068</span></td>
+<td class="win">0.888<span class="s">±0.025</span></td>
+<td class="win">0.919<span class="s">±0.029</span></td>
+<td class="win">0.934<span class="s">±0.033</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.675<span class="s">±0.040</span></td>
+<td class="">0.752<span class="s">±0.030</span></td>
+<td class="">0.785<span class="s">±0.028</span></td>
+<td class="">0.816<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.685<span class="s">±0.065</span></td>
+<td class="">0.783<span class="s">±0.017</span></td>
+<td class="">0.821<span class="s">±0.034</span></td>
+<td class="">0.855<span class="s">±0.034</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.730<span class="s">±0.049</span></td>
+<td class="">0.846<span class="s">±0.018</span></td>
+<td class="">0.874<span class="s">±0.023</span></td>
+<td class="">0.895<span class="s">±0.012</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.671<span class="s">±0.038</span></td>
+<td class="">0.782<span class="s">±0.024</span></td>
+<td class="">0.812<span class="s">±0.019</span></td>
+<td class="">0.840<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.692<span class="s">±0.056</span></td>
+<td class="">0.803<span class="s">±0.021</span></td>
+<td class="">0.829<span class="s">±0.028</span></td>
+<td class="">0.869<span class="s">±0.013</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.713<span class="s">±0.053</span></td>
+<td class="">0.840<span class="s">±0.017</span></td>
+<td class="">0.861<span class="s">±0.016</span></td>
+<td class="">0.886<span class="s">±0.010</span></td>
+</tr>
+</tbody></table>
+<table><caption>FPR95-H ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.729<span class="s">±0.143</span></td>
+<td class="">0.635<span class="s">±0.130</span></td>
+<td class="">0.512<span class="s">±0.091</span></td>
+<td class="">0.449<span class="s">±0.086</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.819<span class="s">±0.062</span></td>
+<td class="">0.778<span class="s">±0.063</span></td>
+<td class="">0.617<span class="s">±0.065</span></td>
+<td class="">0.565<span class="s">±0.074</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.712<span class="s">±0.085</span></td>
+<td class="">0.459<span class="s">±0.071</span></td>
+<td class="">0.419<span class="s">±0.068</span></td>
+<td class="">0.337<span class="s">±0.044</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.545<span class="s">±0.169</span></td>
+<td class="win">0.396<span class="s">±0.079</span></td>
+<td class="win">0.295<span class="s">±0.072</span></td>
+<td class="win">0.236<span class="s">±0.069</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.791<span class="s">±0.058</span></td>
+<td class="">0.686<span class="s">±0.066</span></td>
+<td class="">0.606<span class="s">±0.060</span></td>
+<td class="">0.534<span class="s">±0.049</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.774<span class="s">±0.077</span></td>
+<td class="">0.632<span class="s">±0.046</span></td>
+<td class="">0.560<span class="s">±0.066</span></td>
+<td class="">0.477<span class="s">±0.080</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.699<span class="s">±0.095</span></td>
+<td class="">0.462<span class="s">±0.056</span></td>
+<td class="">0.414<span class="s">±0.080</span></td>
+<td class="">0.370<span class="s">±0.049</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.808<span class="s">±0.054</span></td>
+<td class="">0.630<span class="s">±0.059</span></td>
+<td class="">0.562<span class="s">±0.046</span></td>
+<td class="">0.530<span class="s">±0.066</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.748<span class="s">±0.097</span></td>
+<td class="">0.573<span class="s">±0.053</span></td>
+<td class="">0.526<span class="s">±0.085</span></td>
+<td class="">0.434<span class="s">±0.057</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.732<span class="s">±0.091</span></td>
+<td class="">0.485<span class="s">±0.051</span></td>
+<td class="">0.440<span class="s">±0.066</span></td>
+<td class="">0.386<span class="s">±0.050</span></td>
+</tr>
+</tbody></table>
+<h2 id="plant-seedlings-v2">Plant Seedlings V2</h2>
+<table><caption>Accuracy ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.435<span class="s">±0.034</span></td>
+<td class="">0.667<span class="s">±0.035</span></td>
+<td class="">0.796<span class="s">±0.028</span></td>
+<td class="">0.864<span class="s">±0.012</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.270<span class="s">±0.057</span></td>
+<td class="">0.509<span class="s">±0.030</span></td>
+<td class="">0.678<span class="s">±0.037</span></td>
+<td class="">0.778<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.426<span class="s">±0.040</span></td>
+<td class="">0.683<span class="s">±0.029</span></td>
+<td class="">0.789<span class="s">±0.025</span></td>
+<td class="">0.854<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.251<span class="s">±0.076</span></td>
+<td class="">0.380<span class="s">±0.061</span></td>
+<td class="">0.397<span class="s">±0.063</span></td>
+<td class="">0.424<span class="s">±0.120</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.285<span class="s">±0.039</span></td>
+<td class="">0.530<span class="s">±0.032</span></td>
+<td class="">0.658<span class="s">±0.029</span></td>
+<td class="">0.753<span class="s">±0.022</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.189<span class="s">±0.049</span></td>
+<td class="">0.222<span class="s">±0.064</span></td>
+<td class="">0.312<span class="s">±0.067</span></td>
+<td class="">0.262<span class="s">±0.087</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.466<span class="s">±0.044</span></td>
+<td class="win">0.748<span class="s">±0.022</span></td>
+<td class="">0.822<span class="s">±0.030</span></td>
+<td class="">0.876<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.310<span class="s">±0.028</span></td>
+<td class="">0.601<span class="s">±0.018</span></td>
+<td class="">0.713<span class="s">±0.023</span></td>
+<td class="">0.801<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.403<span class="s">±0.045</span></td>
+<td class="">0.658<span class="s">±0.061</span></td>
+<td class="">0.805<span class="s">±0.033</span></td>
+<td class="">0.866<span class="s">±0.014</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.442<span class="s">±0.037</span></td>
+<td class="">0.744<span class="s">±0.018</span></td>
+<td class="win">0.826<span class="s">±0.029</span></td>
+<td class="win">0.884<span class="s">±0.016</span></td>
+</tr>
+</tbody></table>
+<table><caption>Macro-F1 ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.479<span class="s">±0.034</span></td>
+<td class="">0.690<span class="s">±0.025</span></td>
+<td class="">0.796<span class="s">±0.026</span></td>
+<td class="">0.860<span class="s">±0.008</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.305<span class="s">±0.049</span></td>
+<td class="">0.540<span class="s">±0.023</span></td>
+<td class="">0.689<span class="s">±0.028</span></td>
+<td class="">0.780<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.467<span class="s">±0.038</span></td>
+<td class="">0.692<span class="s">±0.021</span></td>
+<td class="">0.791<span class="s">±0.024</span></td>
+<td class="">0.855<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.212<span class="s">±0.071</span></td>
+<td class="">0.358<span class="s">±0.054</span></td>
+<td class="">0.375<span class="s">±0.067</span></td>
+<td class="">0.400<span class="s">±0.106</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.317<span class="s">±0.041</span></td>
+<td class="">0.535<span class="s">±0.026</span></td>
+<td class="">0.667<span class="s">±0.032</span></td>
+<td class="">0.762<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.167<span class="s">±0.046</span></td>
+<td class="">0.212<span class="s">±0.061</span></td>
+<td class="">0.289<span class="s">±0.054</span></td>
+<td class="">0.254<span class="s">±0.075</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.498<span class="s">±0.045</span></td>
+<td class="win">0.748<span class="s">±0.016</span></td>
+<td class="">0.819<span class="s">±0.026</span></td>
+<td class="">0.871<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.326<span class="s">±0.034</span></td>
+<td class="">0.600<span class="s">±0.013</span></td>
+<td class="">0.714<span class="s">±0.020</span></td>
+<td class="">0.795<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.443<span class="s">±0.045</span></td>
+<td class="">0.673<span class="s">±0.060</span></td>
+<td class="">0.805<span class="s">±0.027</span></td>
+<td class="">0.866<span class="s">±0.013</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.468<span class="s">±0.040</span></td>
+<td class="">0.741<span class="s">±0.014</span></td>
+<td class="win">0.821<span class="s">±0.025</span></td>
+<td class="win">0.879<span class="s">±0.012</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.382<span class="s">±0.038</span></td>
+<td class="">0.172<span class="s">±0.033</span></td>
+<td class="">0.088<span class="s">±0.019</span></td>
+<td class="">0.070<span class="s">±0.012</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.499<span class="s">±0.070</span></td>
+<td class="">0.218<span class="s">±0.028</span></td>
+<td class="">0.127<span class="s">±0.033</span></td>
+<td class="">0.104<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.084<span class="s">±0.033</span></td>
+<td class="">0.112<span class="s">±0.034</span></td>
+<td class="">0.094<span class="s">±0.021</span></td>
+<td class="">0.080<span class="s">±0.023</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.108<span class="s">±0.026</span></td>
+<td class="">0.192<span class="s">±0.047</span></td>
+<td class="">0.181<span class="s">±0.050</span></td>
+<td class="">0.186<span class="s">±0.066</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.072<span class="s">±0.028</span></td>
+<td class="">0.171<span class="s">±0.043</span></td>
+<td class="">0.162<span class="s">±0.035</span></td>
+<td class="">0.133<span class="s">±0.025</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="win">0.053<span class="s">±0.019</span></td>
+<td class="">0.111<span class="s">±0.046</span></td>
+<td class="">0.180<span class="s">±0.054</span></td>
+<td class="">0.153<span class="s">±0.050</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.108<span class="s">±0.022</span></td>
+<td class="">0.338<span class="s">±0.027</span></td>
+<td class="">0.333<span class="s">±0.026</span></td>
+<td class="">0.294<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.064<span class="s">±0.031</span></td>
+<td class="">0.273<span class="s">±0.022</span></td>
+<td class="">0.315<span class="s">±0.020</span></td>
+<td class="">0.305<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.229<span class="s">±0.045</span></td>
+<td class="win">0.059<span class="s">±0.024</span></td>
+<td class="win">0.058<span class="s">±0.017</span></td>
+<td class="win">0.048<span class="s">±0.010</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.062<span class="s">±0.019</span></td>
+<td class="">0.275<span class="s">±0.021</span></td>
+<td class="">0.278<span class="s">±0.025</span></td>
+<td class="">0.214<span class="s">±0.018</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.066<span class="s">±0.019</span></td>
+<td class="">0.046<span class="s">±0.011</span></td>
+<td class="win">0.033<span class="s">±0.010</span></td>
+<td class="win">0.024<span class="s">±0.008</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.069<span class="s">±0.022</span></td>
+<td class="">0.050<span class="s">±0.014</span></td>
+<td class="">0.042<span class="s">±0.012</span></td>
+<td class="">0.034<span class="s">±0.009</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.080<span class="s">±0.022</span></td>
+<td class="">0.057<span class="s">±0.026</span></td>
+<td class="">0.045<span class="s">±0.015</span></td>
+<td class="">0.039<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.076<span class="s">±0.029</span></td>
+<td class="">0.055<span class="s">±0.016</span></td>
+<td class="">0.050<span class="s">±0.015</span></td>
+<td class="">0.045<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.074<span class="s">±0.031</span></td>
+<td class="">0.067<span class="s">±0.028</span></td>
+<td class="">0.054<span class="s">±0.015</span></td>
+<td class="">0.046<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="win">0.047<span class="s">±0.016</span></td>
+<td class="">0.068<span class="s">±0.022</span></td>
+<td class="">0.083<span class="s">±0.027</span></td>
+<td class="">0.063<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.077<span class="s">±0.028</span></td>
+<td class="">0.050<span class="s">±0.008</span></td>
+<td class="">0.042<span class="s">±0.011</span></td>
+<td class="">0.040<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.054<span class="s">±0.025</span></td>
+<td class="">0.049<span class="s">±0.012</span></td>
+<td class="">0.042<span class="s">±0.013</span></td>
+<td class="">0.046<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.113<span class="s">±0.038</span></td>
+<td class="">0.094<span class="s">±0.026</span></td>
+<td class="">0.075<span class="s">±0.016</span></td>
+<td class="">0.058<span class="s">±0.012</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.067<span class="s">±0.021</span></td>
+<td class="win">0.043<span class="s">±0.014</span></td>
+<td class="">0.035<span class="s">±0.014</span></td>
+<td class="">0.029<span class="s">±0.007</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.553<span class="s">±0.070</span></td>
+<td class="">0.388<span class="s">±0.161</span></td>
+<td class="">0.367<span class="s">±0.146</span></td>
+<td class="">0.369<span class="s">±0.158</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.654<span class="s">±0.083</span></td>
+<td class="">0.341<span class="s">±0.049</span></td>
+<td class="">0.282<span class="s">±0.124</span></td>
+<td class="">0.365<span class="s">±0.186</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.200<span class="s">±0.077</span></td>
+<td class="win">0.217<span class="s">±0.046</span></td>
+<td class="">0.272<span class="s">±0.187</span></td>
+<td class="win">0.245<span class="s">±0.061</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.464<span class="s">±0.082</span></td>
+<td class="">0.605<span class="s">±0.044</span></td>
+<td class="">0.524<span class="s">±0.052</span></td>
+<td class="">0.490<span class="s">±0.069</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.450<span class="s">±0.255</span></td>
+<td class="">0.308<span class="s">±0.073</span></td>
+<td class="win">0.249<span class="s">±0.045</span></td>
+<td class="">0.319<span class="s">±0.220</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.418<span class="s">±0.164</span></td>
+<td class="">0.563<span class="s">±0.139</span></td>
+<td class="">0.622<span class="s">±0.051</span></td>
+<td class="">0.568<span class="s">±0.053</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.278<span class="s">±0.064</span></td>
+<td class="">0.462<span class="s">±0.101</span></td>
+<td class="">0.433<span class="s">±0.097</span></td>
+<td class="">0.367<span class="s">±0.113</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.284<span class="s">±0.225</span></td>
+<td class="">0.461<span class="s">±0.041</span></td>
+<td class="">0.469<span class="s">±0.140</span></td>
+<td class="">0.423<span class="s">±0.149</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.457<span class="s">±0.110</span></td>
+<td class="">0.245<span class="s">±0.135</span></td>
+<td class="">0.317<span class="s">±0.190</span></td>
+<td class="">0.342<span class="s">±0.196</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.214<span class="s">±0.088</span></td>
+<td class="">0.360<span class="s">±0.033</span></td>
+<td class="">0.367<span class="s">±0.057</span></td>
+<td class="">0.417<span class="s">±0.211</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="win">0.235<span class="s">±0.053</span></td>
+<td class="">0.288<span class="s">±0.208</span></td>
+<td class="">0.293<span class="s">±0.210</span></td>
+<td class="">0.300<span class="s">±0.183</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.421<span class="s">±0.138</span></td>
+<td class="win">0.174<span class="s">±0.059</span></td>
+<td class="">0.205<span class="s">±0.162</span></td>
+<td class="">0.297<span class="s">±0.210</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.296<span class="s">±0.088</span></td>
+<td class="">0.184<span class="s">±0.055</span></td>
+<td class="win">0.196<span class="s">±0.062</span></td>
+<td class="">0.271<span class="s">±0.138</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.349<span class="s">±0.130</span></td>
+<td class="">0.246<span class="s">±0.069</span></td>
+<td class="">0.236<span class="s">±0.071</span></td>
+<td class="">0.278<span class="s">±0.099</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.454<span class="s">±0.184</span></td>
+<td class="">0.188<span class="s">±0.082</span></td>
+<td class="">0.216<span class="s">±0.156</span></td>
+<td class="win">0.248<span class="s">±0.189</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.376<span class="s">±0.182</span></td>
+<td class="">0.350<span class="s">±0.188</span></td>
+<td class="">0.272<span class="s">±0.058</span></td>
+<td class="">0.252<span class="s">±0.075</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.264<span class="s">±0.146</span></td>
+<td class="">0.209<span class="s">±0.060</span></td>
+<td class="">0.263<span class="s">±0.122</span></td>
+<td class="">0.386<span class="s">±0.193</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.311<span class="s">±0.192</span></td>
+<td class="">0.256<span class="s">±0.288</span></td>
+<td class="">0.261<span class="s">±0.195</span></td>
+<td class="">0.320<span class="s">±0.215</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.431<span class="s">±0.195</span></td>
+<td class="">0.245<span class="s">±0.143</span></td>
+<td class="">0.292<span class="s">±0.157</span></td>
+<td class="">0.307<span class="s">±0.162</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.258<span class="s">±0.106</span></td>
+<td class="">0.245<span class="s">±0.188</span></td>
+<td class="">0.285<span class="s">±0.175</span></td>
+<td class="">0.353<span class="s">±0.223</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">3.164<span class="s">±0.334</span></td>
+<td class="">1.269<span class="s">±0.215</span></td>
+<td class="">0.674<span class="s">±0.114</span></td>
+<td class="">0.477<span class="s">±0.071</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">4.376<span class="s">±0.509</span></td>
+<td class="">1.842<span class="s">±0.160</span></td>
+<td class="">1.082<span class="s">±0.150</span></td>
+<td class="">0.753<span class="s">±0.063</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">1.919<span class="s">±0.204</span></td>
+<td class="win">1.027<span class="s">±0.082</span></td>
+<td class="">0.653<span class="s">±0.053</span></td>
+<td class="">0.451<span class="s">±0.033</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">2.244<span class="s">±0.116</span></td>
+<td class="">2.035<span class="s">±0.075</span></td>
+<td class="">1.929<span class="s">±0.083</span></td>
+<td class="">1.818<span class="s">±0.187</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">2.293<span class="s">±0.159</span></td>
+<td class="">1.608<span class="s">±0.056</span></td>
+<td class="">1.139<span class="s">±0.066</span></td>
+<td class="">0.785<span class="s">±0.035</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">2.382<span class="s">±0.062</span></td>
+<td class="">2.348<span class="s">±0.057</span></td>
+<td class="">2.228<span class="s">±0.071</span></td>
+<td class="">2.209<span class="s">±0.103</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">1.793<span class="s">±0.111</span></td>
+<td class="">1.218<span class="s">±0.036</span></td>
+<td class="">0.967<span class="s">±0.057</span></td>
+<td class="">0.743<span class="s">±0.039</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">2.155<span class="s">±0.075</span></td>
+<td class="">1.580<span class="s">±0.031</span></td>
+<td class="">1.286<span class="s">±0.049</span></td>
+<td class="">0.990<span class="s">±0.042</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">2.957<span class="s">±0.276</span></td>
+<td class="">1.201<span class="s">±0.177</span></td>
+<td class="win">0.628<span class="s">±0.060</span></td>
+<td class="win">0.417<span class="s">±0.035</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">1.833<span class="s">±0.107</span></td>
+<td class="">1.106<span class="s">±0.043</span></td>
+<td class="">0.857<span class="s">±0.055</span></td>
+<td class="">0.592<span class="s">±0.034</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">1.824<span class="s">±0.111</span></td>
+<td class="">1.004<span class="s">±0.110</span></td>
+<td class="win">0.602<span class="s">±0.086</span></td>
+<td class="win">0.407<span class="s">±0.041</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">2.238<span class="s">±0.086</span></td>
+<td class="">1.508<span class="s">±0.088</span></td>
+<td class="">0.956<span class="s">±0.097</span></td>
+<td class="">0.649<span class="s">±0.044</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">1.855<span class="s">±0.144</span></td>
+<td class="">0.988<span class="s">±0.104</span></td>
+<td class="">0.614<span class="s">±0.071</span></td>
+<td class="">0.416<span class="s">±0.050</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">2.211<span class="s">±0.137</span></td>
+<td class="">1.833<span class="s">±0.124</span></td>
+<td class="">1.755<span class="s">±0.148</span></td>
+<td class="">1.636<span class="s">±0.271</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">2.229<span class="s">±0.098</span></td>
+<td class="">1.541<span class="s">±0.090</span></td>
+<td class="">1.058<span class="s">±0.092</span></td>
+<td class="">0.714<span class="s">±0.058</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">2.371<span class="s">±0.071</span></td>
+<td class="">2.254<span class="s">±0.112</span></td>
+<td class="">2.038<span class="s">±0.132</span></td>
+<td class="">2.061<span class="s">±0.171</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">1.769<span class="s">±0.134</span></td>
+<td class="">0.885<span class="s">±0.073</span></td>
+<td class="">0.638<span class="s">±0.096</span></td>
+<td class="">0.471<span class="s">±0.070</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">2.151<span class="s">±0.066</span></td>
+<td class="">1.334<span class="s">±0.054</span></td>
+<td class="">0.987<span class="s">±0.081</span></td>
+<td class="">0.709<span class="s">±0.066</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">1.973<span class="s">±0.093</span></td>
+<td class="">1.141<span class="s">±0.119</span></td>
+<td class="">0.630<span class="s">±0.060</span></td>
+<td class="">0.418<span class="s">±0.033</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">1.832<span class="s">±0.108</span></td>
+<td class="win">0.869<span class="s">±0.072</span></td>
+<td class="">0.602<span class="s">±0.088</span></td>
+<td class="">0.413<span class="s">±0.055</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.907<span class="s">±0.058</span></td>
+<td class="">0.505<span class="s">±0.054</span></td>
+<td class="">0.303<span class="s">±0.043</span></td>
+<td class="">0.210<span class="s">±0.021</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">1.166<span class="s">±0.108</span></td>
+<td class="">0.707<span class="s">±0.039</span></td>
+<td class="">0.471<span class="s">±0.046</span></td>
+<td class="">0.338<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.731<span class="s">±0.039</span></td>
+<td class="win">0.456<span class="s">±0.030</span></td>
+<td class="">0.313<span class="s">±0.025</span></td>
+<td class="">0.224<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.841<span class="s">±0.036</span></td>
+<td class="">0.771<span class="s">±0.023</span></td>
+<td class="">0.724<span class="s">±0.024</span></td>
+<td class="">0.679<span class="s">±0.064</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.860<span class="s">±0.031</span></td>
+<td class="">0.671<span class="s">±0.018</span></td>
+<td class="">0.511<span class="s">±0.020</span></td>
+<td class="">0.377<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.892<span class="s">±0.016</span></td>
+<td class="">0.883<span class="s">±0.015</span></td>
+<td class="">0.847<span class="s">±0.020</span></td>
+<td class="">0.832<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.711<span class="s">±0.031</span></td>
+<td class="">0.504<span class="s">±0.014</span></td>
+<td class="">0.394<span class="s">±0.025</span></td>
+<td class="">0.286<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.834<span class="s">±0.022</span></td>
+<td class="">0.648<span class="s">±0.012</span></td>
+<td class="">0.535<span class="s">±0.018</span></td>
+<td class="">0.403<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.866<span class="s">±0.046</span></td>
+<td class="">0.487<span class="s">±0.043</span></td>
+<td class="win">0.301<span class="s">±0.025</span></td>
+<td class="win">0.210<span class="s">±0.012</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.728<span class="s">±0.027</span></td>
+<td class="">0.459<span class="s">±0.015</span></td>
+<td class="">0.348<span class="s">±0.025</span></td>
+<td class="">0.230<span class="s">±0.015</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.722<span class="s">±0.027</span></td>
+<td class="">0.455<span class="s">±0.041</span></td>
+<td class="">0.288<span class="s">±0.038</span></td>
+<td class="">0.198<span class="s">±0.017</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.859<span class="s">±0.024</span></td>
+<td class="">0.643<span class="s">±0.028</span></td>
+<td class="">0.444<span class="s">±0.039</span></td>
+<td class="">0.318<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.732<span class="s">±0.035</span></td>
+<td class="">0.441<span class="s">±0.037</span></td>
+<td class="">0.300<span class="s">±0.031</span></td>
+<td class="">0.213<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.825<span class="s">±0.048</span></td>
+<td class="">0.683<span class="s">±0.043</span></td>
+<td class="">0.652<span class="s">±0.054</span></td>
+<td class="">0.605<span class="s">±0.100</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.857<span class="s">±0.024</span></td>
+<td class="">0.635<span class="s">±0.030</span></td>
+<td class="">0.479<span class="s">±0.028</span></td>
+<td class="">0.352<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.888<span class="s">±0.019</span></td>
+<td class="">0.847<span class="s">±0.038</span></td>
+<td class="">0.764<span class="s">±0.048</span></td>
+<td class="">0.765<span class="s">±0.062</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.702<span class="s">±0.038</span></td>
+<td class="win">0.369<span class="s">±0.029</span></td>
+<td class="">0.267<span class="s">±0.042</span></td>
+<td class="">0.191<span class="s">±0.024</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.834<span class="s">±0.019</span></td>
+<td class="">0.548<span class="s">±0.022</span></td>
+<td class="">0.415<span class="s">±0.030</span></td>
+<td class="">0.297<span class="s">±0.027</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.784<span class="s">±0.021</span></td>
+<td class="">0.494<span class="s">±0.041</span></td>
+<td class="">0.305<span class="s">±0.027</span></td>
+<td class="">0.213<span class="s">±0.012</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.729<span class="s">±0.028</span></td>
+<td class="">0.370<span class="s">±0.024</span></td>
+<td class="win">0.259<span class="s">±0.039</span></td>
+<td class="win">0.178<span class="s">±0.023</span></td>
+</tr>
+</tbody></table>
+<table><caption>AUROC-H ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.709<span class="s">±0.047</span></td>
+<td class="">0.781<span class="s">±0.026</span></td>
+<td class="">0.834<span class="s">±0.027</span></td>
+<td class="">0.862<span class="s">±0.024</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.614<span class="s">±0.055</span></td>
+<td class="">0.702<span class="s">±0.041</span></td>
+<td class="">0.768<span class="s">±0.022</span></td>
+<td class="">0.799<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.715<span class="s">±0.041</span></td>
+<td class="">0.760<span class="s">±0.030</span></td>
+<td class="">0.785<span class="s">±0.025</span></td>
+<td class="">0.812<span class="s">±0.029</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.808<span class="s">±0.069</span></td>
+<td class="win">0.901<span class="s">±0.020</span></td>
+<td class="win">0.928<span class="s">±0.018</span></td>
+<td class="win">0.947<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.622<span class="s">±0.050</span></td>
+<td class="">0.664<span class="s">±0.045</span></td>
+<td class="">0.704<span class="s">±0.027</span></td>
+<td class="">0.739<span class="s">±0.034</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.681<span class="s">±0.064</span></td>
+<td class="">0.821<span class="s">±0.041</span></td>
+<td class="">0.881<span class="s">±0.032</span></td>
+<td class="">0.910<span class="s">±0.041</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.724<span class="s">±0.051</span></td>
+<td class="">0.810<span class="s">±0.029</span></td>
+<td class="">0.843<span class="s">±0.029</span></td>
+<td class="">0.883<span class="s">±0.029</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.652<span class="s">±0.051</span></td>
+<td class="">0.751<span class="s">±0.029</span></td>
+<td class="">0.769<span class="s">±0.026</span></td>
+<td class="">0.815<span class="s">±0.025</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.658<span class="s">±0.074</span></td>
+<td class="">0.736<span class="s">±0.042</span></td>
+<td class="">0.782<span class="s">±0.034</span></td>
+<td class="">0.825<span class="s">±0.028</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.689<span class="s">±0.051</span></td>
+<td class="">0.793<span class="s">±0.034</span></td>
+<td class="">0.834<span class="s">±0.027</span></td>
+<td class="">0.863<span class="s">±0.019</span></td>
+</tr>
+</tbody></table>
+<table><caption>FPR95-H ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.755<span class="s">±0.119</span></td>
+<td class="">0.603<span class="s">±0.060</span></td>
+<td class="">0.531<span class="s">±0.107</span></td>
+<td class="">0.506<span class="s">±0.179</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.863<span class="s">±0.074</span></td>
+<td class="">0.768<span class="s">±0.077</span></td>
+<td class="">0.651<span class="s">±0.042</span></td>
+<td class="">0.615<span class="s">±0.070</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.723<span class="s">±0.092</span></td>
+<td class="">0.652<span class="s">±0.067</span></td>
+<td class="">0.576<span class="s">±0.071</span></td>
+<td class="">0.506<span class="s">±0.080</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.585<span class="s">±0.174</span></td>
+<td class="win">0.319<span class="s">±0.072</span></td>
+<td class="win">0.284<span class="s">±0.085</span></td>
+<td class="win">0.189<span class="s">±0.048</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.881<span class="s">±0.068</span></td>
+<td class="">0.847<span class="s">±0.060</span></td>
+<td class="">0.780<span class="s">±0.047</span></td>
+<td class="">0.702<span class="s">±0.077</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.813<span class="s">±0.093</span></td>
+<td class="">0.722<span class="s">±0.098</span></td>
+<td class="">0.515<span class="s">±0.134</span></td>
+<td class="">0.329<span class="s">±0.099</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.734<span class="s">±0.099</span></td>
+<td class="">0.565<span class="s">±0.092</span></td>
+<td class="">0.477<span class="s">±0.113</span></td>
+<td class="">0.377<span class="s">±0.116</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.847<span class="s">±0.071</span></td>
+<td class="">0.708<span class="s">±0.076</span></td>
+<td class="">0.649<span class="s">±0.059</span></td>
+<td class="">0.571<span class="s">±0.058</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.833<span class="s">±0.098</span></td>
+<td class="">0.694<span class="s">±0.090</span></td>
+<td class="">0.609<span class="s">±0.073</span></td>
+<td class="">0.515<span class="s">±0.082</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.800<span class="s">±0.086</span></td>
+<td class="">0.592<span class="s">±0.081</span></td>
+<td class="">0.501<span class="s">±0.085</span></td>
+<td class="">0.441<span class="s">±0.079</span></td>
+</tr>
+</tbody></table>
+<h2 id="bloodmnist">BloodMNIST</h2>
+<table><caption>Accuracy ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.217<span class="s">±0.096</span></td>
+<td class="">0.301<span class="s">±0.054</span></td>
+<td class="">0.426<span class="s">±0.076</span></td>
+<td class="">0.579<span class="s">±0.096</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.427<span class="s">±0.054</span></td>
+<td class="">0.654<span class="s">±0.059</span></td>
+<td class="">0.788<span class="s">±0.027</span></td>
+<td class="">0.862<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.276<span class="s">±0.054</span></td>
+<td class="">0.564<span class="s">±0.032</span></td>
+<td class="">0.553<span class="s">±0.057</span></td>
+<td class="">0.758<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.094<span class="s">±0.039</span></td>
+<td class="">0.071<span class="s">±0.000</span></td>
+<td class="">0.123<span class="s">±0.061</span></td>
+<td class="">0.113<span class="s">±0.058</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.539<span class="s">±0.076</span></td>
+<td class="">0.764<span class="s">±0.029</span></td>
+<td class="">0.803<span class="s">±0.028</span></td>
+<td class="">0.859<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.453<span class="s">±0.089</span></td>
+<td class="">0.540<span class="s">±0.107</span></td>
+<td class="">0.550<span class="s">±0.087</span></td>
+<td class="">0.546<span class="s">±0.104</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.415<span class="s">±0.056</span></td>
+<td class="">0.554<span class="s">±0.071</span></td>
+<td class="">0.624<span class="s">±0.083</span></td>
+<td class="">0.755<span class="s">±0.071</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.568<span class="s">±0.077</span></td>
+<td class="win">0.775<span class="s">±0.033</span></td>
+<td class="win">0.832<span class="s">±0.024</span></td>
+<td class="">0.887<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.474<span class="s">±0.085</span></td>
+<td class="">0.698<span class="s">±0.034</span></td>
+<td class="">0.793<span class="s">±0.035</span></td>
+<td class="">0.866<span class="s">±0.015</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.519<span class="s">±0.061</span></td>
+<td class="">0.771<span class="s">±0.028</span></td>
+<td class="">0.822<span class="s">±0.027</span></td>
+<td class="win">0.890<span class="s">±0.011</span></td>
+</tr>
+</tbody></table>
+<table><caption>Macro-F1 ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.286<span class="s">±0.095</span></td>
+<td class="">0.326<span class="s">±0.092</span></td>
+<td class="">0.443<span class="s">±0.068</span></td>
+<td class="">0.637<span class="s">±0.070</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.484<span class="s">±0.049</span></td>
+<td class="">0.684<span class="s">±0.037</span></td>
+<td class="">0.786<span class="s">±0.022</span></td>
+<td class="">0.857<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.329<span class="s">±0.054</span></td>
+<td class="">0.610<span class="s">±0.028</span></td>
+<td class="">0.621<span class="s">±0.029</span></td>
+<td class="">0.773<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.067<span class="s">±0.055</span></td>
+<td class="">0.026<span class="s">±0.028</span></td>
+<td class="">0.075<span class="s">±0.062</span></td>
+<td class="">0.063<span class="s">±0.064</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.539<span class="s">±0.061</span></td>
+<td class="">0.760<span class="s">±0.022</span></td>
+<td class="">0.803<span class="s">±0.018</span></td>
+<td class="">0.855<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.354<span class="s">±0.085</span></td>
+<td class="">0.442<span class="s">±0.127</span></td>
+<td class="">0.508<span class="s">±0.079</span></td>
+<td class="">0.498<span class="s">±0.105</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.452<span class="s">±0.053</span></td>
+<td class="">0.614<span class="s">±0.044</span></td>
+<td class="">0.656<span class="s">±0.074</span></td>
+<td class="">0.780<span class="s">±0.057</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.567<span class="s">±0.063</span></td>
+<td class="win">0.772<span class="s">±0.027</span></td>
+<td class="win">0.826<span class="s">±0.020</span></td>
+<td class="">0.883<span class="s">±0.009</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.483<span class="s">±0.059</span></td>
+<td class="">0.713<span class="s">±0.023</span></td>
+<td class="">0.791<span class="s">±0.026</span></td>
+<td class="">0.859<span class="s">±0.014</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.512<span class="s">±0.060</span></td>
+<td class="">0.763<span class="s">±0.026</span></td>
+<td class="">0.821<span class="s">±0.021</span></td>
+<td class="win">0.884<span class="s">±0.010</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.254<span class="s">±0.119</span></td>
+<td class="">0.115<span class="s">±0.055</span></td>
+<td class="">0.156<span class="s">±0.054</span></td>
+<td class="">0.178<span class="s">±0.071</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.394<span class="s">±0.067</span></td>
+<td class="">0.061<span class="s">±0.034</span></td>
+<td class="win">0.051<span class="s">±0.025</span></td>
+<td class="win">0.027<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.067<span class="s">±0.038</span></td>
+<td class="">0.264<span class="s">±0.033</span></td>
+<td class="">0.188<span class="s">±0.066</span></td>
+<td class="">0.282<span class="s">±0.036</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.064<span class="s">±0.023</span></td>
+<td class="win">0.054<span class="s">±0.000</span></td>
+<td class="">0.079<span class="s">±0.030</span></td>
+<td class="">0.074<span class="s">±0.027</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.182<span class="s">±0.073</span></td>
+<td class="">0.224<span class="s">±0.029</span></td>
+<td class="">0.138<span class="s">±0.026</span></td>
+<td class="">0.098<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.198<span class="s">±0.075</span></td>
+<td class="">0.323<span class="s">±0.076</span></td>
+<td class="">0.320<span class="s">±0.045</span></td>
+<td class="">0.290<span class="s">±0.067</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.078<span class="s">±0.050</span></td>
+<td class="">0.207<span class="s">±0.066</span></td>
+<td class="">0.278<span class="s">±0.068</span></td>
+<td class="">0.320<span class="s">±0.054</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.139<span class="s">±0.045</span></td>
+<td class="">0.282<span class="s">±0.032</span></td>
+<td class="">0.291<span class="s">±0.021</span></td>
+<td class="">0.263<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.115<span class="s">±0.036</span></td>
+<td class="">0.245<span class="s">±0.033</span></td>
+<td class="">0.309<span class="s">±0.032</span></td>
+<td class="">0.349<span class="s">±0.014</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.142<span class="s">±0.053</span></td>
+<td class="">0.332<span class="s">±0.031</span></td>
+<td class="">0.298<span class="s">±0.035</span></td>
+<td class="">0.271<span class="s">±0.014</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.103<span class="s">±0.046</span></td>
+<td class="">0.087<span class="s">±0.033</span></td>
+<td class="">0.139<span class="s">±0.053</span></td>
+<td class="">0.083<span class="s">±0.046</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.083<span class="s">±0.039</span></td>
+<td class="">0.040<span class="s">±0.020</span></td>
+<td class="">0.029<span class="s">±0.012</span></td>
+<td class="win">0.020<span class="s">±0.008</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.063<span class="s">±0.035</span></td>
+<td class="">0.054<span class="s">±0.020</span></td>
+<td class="">0.064<span class="s">±0.029</span></td>
+<td class="">0.039<span class="s">±0.018</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.060<span class="s">±0.014</span></td>
+<td class="">0.054<span class="s">±0.000</span></td>
+<td class="">0.058<span class="s">±0.007</span></td>
+<td class="">0.059<span class="s">±0.009</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.050<span class="s">±0.021</span></td>
+<td class="win">0.029<span class="s">±0.010</span></td>
+<td class="win">0.025<span class="s">±0.007</span></td>
+<td class="">0.020<span class="s">±0.007</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.089<span class="s">±0.027</span></td>
+<td class="">0.120<span class="s">±0.033</span></td>
+<td class="">0.098<span class="s">±0.026</span></td>
+<td class="">0.072<span class="s">±0.025</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.043<span class="s">±0.020</span></td>
+<td class="">0.084<span class="s">±0.037</span></td>
+<td class="">0.062<span class="s">±0.029</span></td>
+<td class="">0.053<span class="s">±0.029</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.063<span class="s">±0.032</span></td>
+<td class="">0.042<span class="s">±0.012</span></td>
+<td class="">0.039<span class="s">±0.008</span></td>
+<td class="">0.032<span class="s">±0.006</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.132<span class="s">±0.026</span></td>
+<td class="">0.060<span class="s">±0.024</span></td>
+<td class="">0.051<span class="s">±0.014</span></td>
+<td class="">0.051<span class="s">±0.013</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.070<span class="s">±0.034</span></td>
+<td class="">0.042<span class="s">±0.018</span></td>
+<td class="">0.038<span class="s">±0.009</span></td>
+<td class="">0.029<span class="s">±0.007</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.445<span class="s">±0.146</span></td>
+<td class="">0.430<span class="s">±0.135</span></td>
+<td class="">0.430<span class="s">±0.133</span></td>
+<td class="">0.332<span class="s">±0.083</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.560<span class="s">±0.118</span></td>
+<td class="">0.184<span class="s">±0.094</span></td>
+<td class="">0.285<span class="s">±0.210</span></td>
+<td class="">0.238<span class="s">±0.078</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.408<span class="s">±0.117</span></td>
+<td class="">0.459<span class="s">±0.090</span></td>
+<td class="">0.354<span class="s">±0.078</span></td>
+<td class="">0.384<span class="s">±0.039</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.286<span class="s">±0.284</span></td>
+<td class="win">0.073<span class="s">±0.070</span></td>
+<td class="">0.342<span class="s">±0.298</span></td>
+<td class="">0.313<span class="s">±0.296</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.390<span class="s">±0.117</span></td>
+<td class="">0.330<span class="s">±0.045</span></td>
+<td class="win">0.265<span class="s">±0.133</span></td>
+<td class="win">0.203<span class="s">±0.055</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.508<span class="s">±0.061</span></td>
+<td class="">0.607<span class="s">±0.034</span></td>
+<td class="">0.581<span class="s">±0.044</span></td>
+<td class="">0.537<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.300<span class="s">±0.127</span></td>
+<td class="">0.438<span class="s">±0.038</span></td>
+<td class="">0.447<span class="s">±0.036</span></td>
+<td class="">0.452<span class="s">±0.104</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.341<span class="s">±0.111</span></td>
+<td class="">0.365<span class="s">±0.025</span></td>
+<td class="">0.357<span class="s">±0.040</span></td>
+<td class="">0.473<span class="s">±0.236</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.428<span class="s">±0.228</span></td>
+<td class="">0.431<span class="s">±0.152</span></td>
+<td class="">0.453<span class="s">±0.155</span></td>
+<td class="">0.470<span class="s">±0.151</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.361<span class="s">±0.172</span></td>
+<td class="">0.447<span class="s">±0.074</span></td>
+<td class="">0.364<span class="s">±0.030</span></td>
+<td class="">0.344<span class="s">±0.113</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.361<span class="s">±0.183</span></td>
+<td class="">0.348<span class="s">±0.127</span></td>
+<td class="">0.393<span class="s">±0.163</span></td>
+<td class="">0.196<span class="s">±0.052</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.301<span class="s">±0.190</span></td>
+<td class="">0.148<span class="s">±0.073</span></td>
+<td class="">0.205<span class="s">±0.171</span></td>
+<td class="">0.219<span class="s">±0.154</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.363<span class="s">±0.148</span></td>
+<td class="">0.181<span class="s">±0.078</span></td>
+<td class="">0.188<span class="s">±0.156</span></td>
+<td class="">0.245<span class="s">±0.194</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.250<span class="s">±0.264</span></td>
+<td class="win">0.068<span class="s">±0.064</span></td>
+<td class="win">0.187<span class="s">±0.153</span></td>
+<td class="">0.205<span class="s">±0.188</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.260<span class="s">±0.204</span></td>
+<td class="">0.219<span class="s">±0.163</span></td>
+<td class="">0.212<span class="s">±0.090</span></td>
+<td class="">0.239<span class="s">±0.141</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="win">0.207<span class="s">±0.063</span></td>
+<td class="">0.244<span class="s">±0.059</span></td>
+<td class="">0.215<span class="s">±0.084</span></td>
+<td class="win">0.184<span class="s">±0.053</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.207<span class="s">±0.078</span></td>
+<td class="">0.194<span class="s">±0.098</span></td>
+<td class="">0.203<span class="s">±0.152</span></td>
+<td class="">0.367<span class="s">±0.276</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.216<span class="s">±0.095</span></td>
+<td class="">0.275<span class="s">±0.168</span></td>
+<td class="">0.279<span class="s">±0.178</span></td>
+<td class="">0.438<span class="s">±0.255</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.376<span class="s">±0.151</span></td>
+<td class="">0.260<span class="s">±0.210</span></td>
+<td class="">0.302<span class="s">±0.210</span></td>
+<td class="">0.360<span class="s">±0.182</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.337<span class="s">±0.269</span></td>
+<td class="">0.187<span class="s">±0.070</span></td>
+<td class="">0.268<span class="s">±0.143</span></td>
+<td class="">0.290<span class="s">±0.157</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">2.237<span class="s">±0.226</span></td>
+<td class="">1.916<span class="s">±0.097</span></td>
+<td class="">1.709<span class="s">±0.116</span></td>
+<td class="">1.224<span class="s">±0.187</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">2.859<span class="s">±0.638</span></td>
+<td class="">0.960<span class="s">±0.138</span></td>
+<td class="">0.680<span class="s">±0.102</span></td>
+<td class="win">0.438<span class="s">±0.046</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">1.904<span class="s">±0.071</span></td>
+<td class="">1.488<span class="s">±0.036</span></td>
+<td class="">1.319<span class="s">±0.053</span></td>
+<td class="">0.949<span class="s">±0.035</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">2.070<span class="s">±0.020</span></td>
+<td class="">2.079<span class="s">±0.000</span></td>
+<td class="">2.032<span class="s">±0.061</span></td>
+<td class="">2.038<span class="s">±0.061</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">1.416<span class="s">±0.107</span></td>
+<td class="win">0.860<span class="s">±0.044</span></td>
+<td class="win">0.658<span class="s">±0.050</span></td>
+<td class="">0.473<span class="s">±0.030</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">1.699<span class="s">±0.096</span></td>
+<td class="">1.643<span class="s">±0.095</span></td>
+<td class="">1.574<span class="s">±0.110</span></td>
+<td class="">1.467<span class="s">±0.134</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">1.705<span class="s">±0.112</span></td>
+<td class="">1.449<span class="s">±0.087</span></td>
+<td class="">1.382<span class="s">±0.134</span></td>
+<td class="">1.082<span class="s">±0.132</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">1.336<span class="s">±0.154</span></td>
+<td class="">0.972<span class="s">±0.056</span></td>
+<td class="">0.830<span class="s">±0.056</span></td>
+<td class="">0.629<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">1.852<span class="s">±0.332</span></td>
+<td class="">1.173<span class="s">±0.066</span></td>
+<td class="">0.977<span class="s">±0.053</span></td>
+<td class="">0.834<span class="s">±0.029</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">1.500<span class="s">±0.120</span></td>
+<td class="">1.072<span class="s">±0.066</span></td>
+<td class="">0.863<span class="s">±0.044</span></td>
+<td class="">0.629<span class="s">±0.035</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">1.942<span class="s">±0.065</span></td>
+<td class="">1.878<span class="s">±0.083</span></td>
+<td class="">1.695<span class="s">±0.128</span></td>
+<td class="">1.104<span class="s">±0.218</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">1.574<span class="s">±0.134</span></td>
+<td class="">0.946<span class="s">±0.127</span></td>
+<td class="">0.642<span class="s">±0.076</span></td>
+<td class="">0.424<span class="s">±0.047</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">1.891<span class="s">±0.081</span></td>
+<td class="">1.272<span class="s">±0.075</span></td>
+<td class="">1.161<span class="s">±0.099</span></td>
+<td class="">0.701<span class="s">±0.063</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">2.060<span class="s">±0.041</span></td>
+<td class="">2.079<span class="s">±0.000</span></td>
+<td class="">1.996<span class="s">±0.104</span></td>
+<td class="">2.010<span class="s">±0.102</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">1.292<span class="s">±0.177</span></td>
+<td class="win">0.697<span class="s">±0.055</span></td>
+<td class="">0.593<span class="s">±0.058</span></td>
+<td class="">0.433<span class="s">±0.043</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">1.552<span class="s">±0.180</span></td>
+<td class="">1.311<span class="s">±0.175</span></td>
+<td class="">1.251<span class="s">±0.164</span></td>
+<td class="">1.175<span class="s">±0.213</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">1.680<span class="s">±0.142</span></td>
+<td class="">1.278<span class="s">±0.170</span></td>
+<td class="">1.120<span class="s">±0.210</span></td>
+<td class="">0.757<span class="s">±0.206</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">1.279<span class="s">±0.192</span></td>
+<td class="">0.732<span class="s">±0.100</span></td>
+<td class="win">0.565<span class="s">±0.074</span></td>
+<td class="">0.392<span class="s">±0.048</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">1.716<span class="s">±0.179</span></td>
+<td class="">1.002<span class="s">±0.107</span></td>
+<td class="">0.711<span class="s">±0.082</span></td>
+<td class="">0.496<span class="s">±0.052</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">1.465<span class="s">±0.145</span></td>
+<td class="">0.788<span class="s">±0.102</span></td>
+<td class="">0.594<span class="s">±0.073</span></td>
+<td class="win">0.381<span class="s">±0.036</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.930<span class="s">±0.086</span></td>
+<td class="">0.832<span class="s">±0.030</span></td>
+<td class="">0.739<span class="s">±0.035</span></td>
+<td class="">0.584<span class="s">±0.082</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.921<span class="s">±0.109</span></td>
+<td class="">0.475<span class="s">±0.069</span></td>
+<td class="win">0.311<span class="s">±0.038</span></td>
+<td class="win">0.203<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.824<span class="s">±0.021</span></td>
+<td class="">0.681<span class="s">±0.016</span></td>
+<td class="">0.624<span class="s">±0.023</span></td>
+<td class="">0.454<span class="s">±0.018</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.872<span class="s">±0.007</span></td>
+<td class="">0.875<span class="s">±0.000</span></td>
+<td class="">0.857<span class="s">±0.024</span></td>
+<td class="">0.859<span class="s">±0.024</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.652<span class="s">±0.043</span></td>
+<td class="win">0.405<span class="s">±0.024</span></td>
+<td class="">0.314<span class="s">±0.030</span></td>
+<td class="">0.222<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.737<span class="s">±0.035</span></td>
+<td class="">0.716<span class="s">±0.034</span></td>
+<td class="">0.680<span class="s">±0.046</span></td>
+<td class="">0.624<span class="s">±0.054</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.747<span class="s">±0.038</span></td>
+<td class="">0.645<span class="s">±0.035</span></td>
+<td class="">0.613<span class="s">±0.053</span></td>
+<td class="">0.475<span class="s">±0.058</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.600<span class="s">±0.062</span></td>
+<td class="">0.425<span class="s">±0.025</span></td>
+<td class="">0.350<span class="s">±0.027</span></td>
+<td class="">0.250<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.743<span class="s">±0.089</span></td>
+<td class="">0.520<span class="s">±0.029</span></td>
+<td class="">0.432<span class="s">±0.030</span></td>
+<td class="">0.354<span class="s">±0.015</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.675<span class="s">±0.045</span></td>
+<td class="">0.480<span class="s">±0.034</span></td>
+<td class="">0.371<span class="s">±0.022</span></td>
+<td class="">0.252<span class="s">±0.017</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.840<span class="s">±0.024</span></td>
+<td class="">0.818<span class="s">±0.029</span></td>
+<td class="">0.730<span class="s">±0.044</span></td>
+<td class="">0.538<span class="s">±0.098</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.706<span class="s">±0.047</span></td>
+<td class="">0.469<span class="s">±0.065</span></td>
+<td class="">0.306<span class="s">±0.036</span></td>
+<td class="">0.202<span class="s">±0.022</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.822<span class="s">±0.023</span></td>
+<td class="">0.582<span class="s">±0.034</span></td>
+<td class="">0.566<span class="s">±0.048</span></td>
+<td class="">0.342<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.867<span class="s">±0.017</span></td>
+<td class="">0.875<span class="s">±0.000</span></td>
+<td class="">0.838<span class="s">±0.046</span></td>
+<td class="">0.845<span class="s">±0.045</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.598<span class="s">±0.076</span></td>
+<td class="">0.334<span class="s">±0.032</span></td>
+<td class="">0.284<span class="s">±0.036</span></td>
+<td class="">0.204<span class="s">±0.019</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.668<span class="s">±0.076</span></td>
+<td class="">0.550<span class="s">±0.071</span></td>
+<td class="">0.520<span class="s">±0.071</span></td>
+<td class="">0.489<span class="s">±0.090</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.736<span class="s">±0.050</span></td>
+<td class="">0.580<span class="s">±0.071</span></td>
+<td class="">0.505<span class="s">±0.084</span></td>
+<td class="">0.345<span class="s">±0.089</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.576<span class="s">±0.078</span></td>
+<td class="win">0.327<span class="s">±0.043</span></td>
+<td class="win">0.249<span class="s">±0.033</span></td>
+<td class="">0.171<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.740<span class="s">±0.074</span></td>
+<td class="">0.441<span class="s">±0.045</span></td>
+<td class="">0.312<span class="s">±0.047</span></td>
+<td class="">0.212<span class="s">±0.022</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.652<span class="s">±0.059</span></td>
+<td class="">0.341<span class="s">±0.041</span></td>
+<td class="">0.264<span class="s">±0.036</span></td>
+<td class="win">0.166<span class="s">±0.016</span></td>
+</tr>
+</tbody></table>
+<table><caption>AUROC-H ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.678<span class="s">±0.102</span></td>
+<td class="">0.663<span class="s">±0.083</span></td>
+<td class="">0.733<span class="s">±0.083</span></td>
+<td class="">0.715<span class="s">±0.054</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.674<span class="s">±0.081</span></td>
+<td class="">0.735<span class="s">±0.045</span></td>
+<td class="">0.821<span class="s">±0.025</span></td>
+<td class="">0.871<span class="s">±0.014</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.612<span class="s">±0.078</span></td>
+<td class="">0.667<span class="s">±0.041</span></td>
+<td class="">0.693<span class="s">±0.040</span></td>
+<td class="">0.715<span class="s">±0.036</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.576<span class="s">±0.110</span></td>
+<td class="">0.500<span class="s">±0.001</span></td>
+<td class="">0.639<span class="s">±0.151</span></td>
+<td class="">0.616<span class="s">±0.141</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.710<span class="s">±0.066</span></td>
+<td class="">0.782<span class="s">±0.033</span></td>
+<td class="">0.803<span class="s">±0.029</span></td>
+<td class="">0.859<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="win">0.790<span class="s">±0.065</span></td>
+<td class="win">0.884<span class="s">±0.048</span></td>
+<td class="win">0.918<span class="s">±0.026</span></td>
+<td class="win">0.944<span class="s">±0.030</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.663<span class="s">±0.044</span></td>
+<td class="">0.774<span class="s">±0.050</span></td>
+<td class="">0.773<span class="s">±0.049</span></td>
+<td class="">0.820<span class="s">±0.055</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.735<span class="s">±0.049</span></td>
+<td class="">0.820<span class="s">±0.021</span></td>
+<td class="">0.861<span class="s">±0.024</span></td>
+<td class="">0.897<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.625<span class="s">±0.088</span></td>
+<td class="">0.739<span class="s">±0.045</span></td>
+<td class="">0.776<span class="s">±0.045</span></td>
+<td class="">0.848<span class="s">±0.031</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.667<span class="s">±0.054</span></td>
+<td class="">0.774<span class="s">±0.042</span></td>
+<td class="">0.838<span class="s">±0.031</span></td>
+<td class="">0.889<span class="s">±0.015</span></td>
+</tr>
+</tbody></table>
+<table><caption>FPR95-H ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.793<span class="s">±0.133</span></td>
+<td class="">0.853<span class="s">±0.053</span></td>
+<td class="">0.706<span class="s">±0.136</span></td>
+<td class="">0.696<span class="s">±0.088</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.787<span class="s">±0.130</span></td>
+<td class="">0.683<span class="s">±0.085</span></td>
+<td class="">0.565<span class="s">±0.074</span></td>
+<td class="">0.439<span class="s">±0.059</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.850<span class="s">±0.107</span></td>
+<td class="">0.794<span class="s">±0.062</span></td>
+<td class="">0.736<span class="s">±0.068</span></td>
+<td class="">0.713<span class="s">±0.056</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.848<span class="s">±0.218</span></td>
+<td class="">0.999<span class="s">±0.003</span></td>
+<td class="">0.712<span class="s">±0.311</span></td>
+<td class="">0.758<span class="s">±0.291</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.743<span class="s">±0.114</span></td>
+<td class="">0.610<span class="s">±0.071</span></td>
+<td class="">0.550<span class="s">±0.057</span></td>
+<td class="">0.412<span class="s">±0.048</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="win">0.631<span class="s">±0.141</span></td>
+<td class="win">0.425<span class="s">±0.158</span></td>
+<td class="win">0.319<span class="s">±0.089</span></td>
+<td class="win">0.220<span class="s">±0.077</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.827<span class="s">±0.067</span></td>
+<td class="">0.612<span class="s">±0.077</span></td>
+<td class="">0.623<span class="s">±0.108</span></td>
+<td class="">0.498<span class="s">±0.116</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.690<span class="s">±0.098</span></td>
+<td class="">0.548<span class="s">±0.079</span></td>
+<td class="">0.441<span class="s">±0.082</span></td>
+<td class="">0.340<span class="s">±0.043</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.876<span class="s">±0.089</span></td>
+<td class="">0.778<span class="s">±0.127</span></td>
+<td class="">0.743<span class="s">±0.143</span></td>
+<td class="">0.603<span class="s">±0.154</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.846<span class="s">±0.100</span></td>
+<td class="">0.708<span class="s">±0.133</span></td>
+<td class="">0.513<span class="s">±0.096</span></td>
+<td class="">0.366<span class="s">±0.054</span></td>
+</tr>
+</tbody></table>
+<h2 id="ssl-patches">SSL-Patches</h2>
+<table><caption>Accuracy ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.699<span class="s">±0.153</span></td>
+<td class="">0.823<span class="s">±0.081</span></td>
+<td class="">0.880<span class="s">±0.049</span></td>
+<td class="">0.906<span class="s">±0.045</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.610<span class="s">±0.101</span></td>
+<td class="">0.725<span class="s">±0.086</span></td>
+<td class="">0.770<span class="s">±0.076</span></td>
+<td class="">0.798<span class="s">±0.069</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.717<span class="s">±0.125</span></td>
+<td class="win">0.877<span class="s">±0.042</span></td>
+<td class="win">0.907<span class="s">±0.044</span></td>
+<td class="">0.936<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.615<span class="s">±0.117</span></td>
+<td class="">0.849<span class="s">±0.094</span></td>
+<td class="">0.905<span class="s">±0.061</span></td>
+<td class="">0.936<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.615<span class="s">±0.101</span></td>
+<td class="">0.819<span class="s">±0.064</span></td>
+<td class="">0.875<span class="s">±0.039</span></td>
+<td class="">0.924<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.597<span class="s">±0.094</span></td>
+<td class="">0.760<span class="s">±0.136</span></td>
+<td class="">0.838<span class="s">±0.121</span></td>
+<td class="">0.935<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.676<span class="s">±0.109</span></td>
+<td class="">0.863<span class="s">±0.053</span></td>
+<td class="">0.898<span class="s">±0.037</span></td>
+<td class="">0.933<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.615<span class="s">±0.100</span></td>
+<td class="">0.799<span class="s">±0.088</span></td>
+<td class="">0.886<span class="s">±0.052</span></td>
+<td class="">0.930<span class="s">±0.027</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.697<span class="s">±0.120</span></td>
+<td class="">0.837<span class="s">±0.094</span></td>
+<td class="">0.898<span class="s">±0.046</span></td>
+<td class="">0.932<span class="s">±0.026</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.706<span class="s">±0.120</span></td>
+<td class="">0.847<span class="s">±0.068</span></td>
+<td class="">0.906<span class="s">±0.041</span></td>
+<td class="win">0.949<span class="s">±0.018</span></td>
+</tr>
+</tbody></table>
+<table><caption>Macro-F1 ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.735<span class="s">±0.140</span></td>
+<td class="">0.841<span class="s">±0.063</span></td>
+<td class="">0.889<span class="s">±0.039</span></td>
+<td class="">0.912<span class="s">±0.038</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.615<span class="s">±0.137</span></td>
+<td class="">0.753<span class="s">±0.070</span></td>
+<td class="">0.798<span class="s">±0.060</span></td>
+<td class="">0.824<span class="s">±0.054</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.753<span class="s">±0.107</span></td>
+<td class="win">0.882<span class="s">±0.035</span></td>
+<td class="">0.910<span class="s">±0.037</span></td>
+<td class="">0.938<span class="s">±0.023</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.633<span class="s">±0.160</span></td>
+<td class="">0.848<span class="s">±0.127</span></td>
+<td class="">0.910<span class="s">±0.049</span></td>
+<td class="">0.937<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.638<span class="s">±0.100</span></td>
+<td class="">0.825<span class="s">±0.060</span></td>
+<td class="">0.879<span class="s">±0.036</span></td>
+<td class="">0.926<span class="s">±0.024</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.567<span class="s">±0.157</span></td>
+<td class="">0.743<span class="s">±0.189</span></td>
+<td class="">0.826<span class="s">±0.172</span></td>
+<td class="">0.936<span class="s">±0.012</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.721<span class="s">±0.100</span></td>
+<td class="">0.871<span class="s">±0.044</span></td>
+<td class="">0.903<span class="s">±0.031</span></td>
+<td class="">0.934<span class="s">±0.018</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.642<span class="s">±0.105</span></td>
+<td class="">0.812<span class="s">±0.073</span></td>
+<td class="">0.892<span class="s">±0.044</span></td>
+<td class="">0.933<span class="s">±0.024</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.723<span class="s">±0.127</span></td>
+<td class="">0.851<span class="s">±0.075</span></td>
+<td class="">0.904<span class="s">±0.037</span></td>
+<td class="">0.934<span class="s">±0.024</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.725<span class="s">±0.110</span></td>
+<td class="">0.859<span class="s">±0.056</span></td>
+<td class="win">0.911<span class="s">±0.035</span></td>
+<td class="win">0.950<span class="s">±0.016</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.285<span class="s">±0.159</span></td>
+<td class="">0.152<span class="s">±0.090</span></td>
+<td class="">0.096<span class="s">±0.041</span></td>
+<td class="">0.070<span class="s">±0.033</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.363<span class="s">±0.103</span></td>
+<td class="">0.206<span class="s">±0.085</span></td>
+<td class="">0.139<span class="s">±0.064</span></td>
+<td class="">0.102<span class="s">±0.057</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.168<span class="s">±0.121</span></td>
+<td class="win">0.055<span class="s">±0.030</span></td>
+<td class="win">0.046<span class="s">±0.037</span></td>
+<td class="">0.038<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.214<span class="s">±0.117</span></td>
+<td class="">0.093<span class="s">±0.044</span></td>
+<td class="">0.090<span class="s">±0.029</span></td>
+<td class="">0.086<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.229<span class="s">±0.128</span></td>
+<td class="">0.090<span class="s">±0.042</span></td>
+<td class="">0.063<span class="s">±0.015</span></td>
+<td class="">0.045<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.201<span class="s">±0.110</span></td>
+<td class="">0.124<span class="s">±0.066</span></td>
+<td class="">0.125<span class="s">±0.069</span></td>
+<td class="">0.122<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.207<span class="s">±0.102</span></td>
+<td class="">0.078<span class="s">±0.039</span></td>
+<td class="">0.060<span class="s">±0.024</span></td>
+<td class="">0.058<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.245<span class="s">±0.114</span></td>
+<td class="">0.119<span class="s">±0.076</span></td>
+<td class="">0.064<span class="s">±0.030</span></td>
+<td class="">0.055<span class="s">±0.016</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.205<span class="s">±0.109</span></td>
+<td class="">0.115<span class="s">±0.074</span></td>
+<td class="">0.073<span class="s">±0.034</span></td>
+<td class="">0.073<span class="s">±0.027</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.185<span class="s">±0.123</span></td>
+<td class="">0.108<span class="s">±0.058</span></td>
+<td class="">0.057<span class="s">±0.032</span></td>
+<td class="win">0.033<span class="s">±0.012</span></td>
+</tr>
+</tbody></table>
+<table><caption>ECE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.191<span class="s">±0.140</span></td>
+<td class="">0.090<span class="s">±0.079</span></td>
+<td class="">0.052<span class="s">±0.023</span></td>
+<td class="">0.046<span class="s">±0.014</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.216<span class="s">±0.125</span></td>
+<td class="">0.117<span class="s">±0.054</span></td>
+<td class="">0.093<span class="s">±0.047</span></td>
+<td class="">0.078<span class="s">±0.036</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.123<span class="s">±0.061</span></td>
+<td class="win">0.051<span class="s">±0.012</span></td>
+<td class="win">0.046<span class="s">±0.022</span></td>
+<td class="">0.035<span class="s">±0.010</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.176<span class="s">±0.089</span></td>
+<td class="">0.074<span class="s">±0.053</span></td>
+<td class="">0.048<span class="s">±0.024</span></td>
+<td class="">0.036<span class="s">±0.012</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.112<span class="s">±0.064</span></td>
+<td class="">0.062<span class="s">±0.028</span></td>
+<td class="">0.057<span class="s">±0.017</span></td>
+<td class="">0.038<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.099<span class="s">±0.054</span></td>
+<td class="">0.108<span class="s">±0.079</span></td>
+<td class="">0.083<span class="s">±0.082</span></td>
+<td class="">0.034<span class="s">±0.013</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.133<span class="s">±0.045</span></td>
+<td class="">0.072<span class="s">±0.036</span></td>
+<td class="">0.053<span class="s">±0.022</span></td>
+<td class="">0.037<span class="s">±0.017</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.087<span class="s">±0.054</span></td>
+<td class="">0.072<span class="s">±0.037</span></td>
+<td class="">0.060<span class="s">±0.018</span></td>
+<td class="">0.043<span class="s">±0.020</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.147<span class="s">±0.071</span></td>
+<td class="">0.102<span class="s">±0.042</span></td>
+<td class="">0.062<span class="s">±0.026</span></td>
+<td class="">0.044<span class="s">±0.025</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.109<span class="s">±0.064</span></td>
+<td class="">0.079<span class="s">±0.035</span></td>
+<td class="">0.048<span class="s">±0.020</span></td>
+<td class="win">0.031<span class="s">±0.009</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.683<span class="s">±0.155</span></td>
+<td class="">0.572<span class="s">±0.199</span></td>
+<td class="">0.498<span class="s">±0.104</span></td>
+<td class="">0.500<span class="s">±0.172</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.695<span class="s">±0.156</span></td>
+<td class="">0.529<span class="s">±0.156</span></td>
+<td class="">0.410<span class="s">±0.143</span></td>
+<td class="">0.367<span class="s">±0.125</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.427<span class="s">±0.219</span></td>
+<td class="">0.292<span class="s">±0.129</span></td>
+<td class="">0.418<span class="s">±0.153</span></td>
+<td class="">0.421<span class="s">±0.133</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.524<span class="s">±0.232</span></td>
+<td class="">0.328<span class="s">±0.136</span></td>
+<td class="">0.352<span class="s">±0.150</span></td>
+<td class="">0.353<span class="s">±0.116</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.419<span class="s">±0.177</span></td>
+<td class="">0.274<span class="s">±0.127</span></td>
+<td class="">0.329<span class="s">±0.112</span></td>
+<td class="">0.349<span class="s">±0.124</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="win">0.382<span class="s">±0.193</span></td>
+<td class="win">0.274<span class="s">±0.130</span></td>
+<td class="win">0.325<span class="s">±0.154</span></td>
+<td class="win">0.292<span class="s">±0.125</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.561<span class="s">±0.176</span></td>
+<td class="">0.547<span class="s">±0.124</span></td>
+<td class="">0.522<span class="s">±0.151</span></td>
+<td class="">0.536<span class="s">±0.141</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.479<span class="s">±0.192</span></td>
+<td class="">0.487<span class="s">±0.117</span></td>
+<td class="">0.575<span class="s">±0.099</span></td>
+<td class="">0.564<span class="s">±0.138</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.600<span class="s">±0.213</span></td>
+<td class="">0.363<span class="s">±0.128</span></td>
+<td class="">0.342<span class="s">±0.122</span></td>
+<td class="">0.333<span class="s">±0.105</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.429<span class="s">±0.185</span></td>
+<td class="">0.492<span class="s">±0.207</span></td>
+<td class="">0.479<span class="s">±0.170</span></td>
+<td class="">0.546<span class="s">±0.157</span></td>
+</tr>
+</tbody></table>
+<table><caption>MCE (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.473<span class="s">±0.241</span></td>
+<td class="">0.349<span class="s">±0.156</span></td>
+<td class="">0.368<span class="s">±0.153</span></td>
+<td class="">0.384<span class="s">±0.162</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.421<span class="s">±0.211</span></td>
+<td class="">0.289<span class="s">±0.121</span></td>
+<td class="win">0.277<span class="s">±0.119</span></td>
+<td class="win">0.293<span class="s">±0.125</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.320<span class="s">±0.133</span></td>
+<td class="">0.340<span class="s">±0.127</span></td>
+<td class="">0.437<span class="s">±0.141</span></td>
+<td class="">0.422<span class="s">±0.148</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.459<span class="s">±0.128</span></td>
+<td class="">0.410<span class="s">±0.140</span></td>
+<td class="">0.445<span class="s">±0.115</span></td>
+<td class="">0.512<span class="s">±0.165</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.240<span class="s">±0.088</span></td>
+<td class="win">0.281<span class="s">±0.150</span></td>
+<td class="">0.371<span class="s">±0.119</span></td>
+<td class="">0.404<span class="s">±0.164</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.256<span class="s">±0.146</span></td>
+<td class="">0.301<span class="s">±0.119</span></td>
+<td class="">0.393<span class="s">±0.127</span></td>
+<td class="">0.465<span class="s">±0.135</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.441<span class="s">±0.164</span></td>
+<td class="">0.566<span class="s">±0.158</span></td>
+<td class="">0.550<span class="s">±0.158</span></td>
+<td class="">0.616<span class="s">±0.173</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="win">0.197<span class="s">±0.109</span></td>
+<td class="">0.402<span class="s">±0.171</span></td>
+<td class="">0.561<span class="s">±0.144</span></td>
+<td class="">0.646<span class="s">±0.141</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.392<span class="s">±0.089</span></td>
+<td class="">0.330<span class="s">±0.090</span></td>
+<td class="">0.310<span class="s">±0.108</span></td>
+<td class="">0.361<span class="s">±0.130</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.300<span class="s">±0.126</span></td>
+<td class="">0.412<span class="s">±0.180</span></td>
+<td class="">0.426<span class="s">±0.153</span></td>
+<td class="">0.509<span class="s">±0.147</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">2.894<span class="s">±2.468</span></td>
+<td class="">1.403<span class="s">±1.622</span></td>
+<td class="">0.560<span class="s">±0.260</span></td>
+<td class="">0.387<span class="s">±0.221</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">3.542<span class="s">±2.185</span></td>
+<td class="">0.901<span class="s">±0.394</span></td>
+<td class="">0.543<span class="s">±0.201</span></td>
+<td class="">0.446<span class="s">±0.151</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.734<span class="s">±0.472</span></td>
+<td class="win">0.315<span class="s">±0.104</span></td>
+<td class="win">0.239<span class="s">±0.103</span></td>
+<td class="">0.189<span class="s">±0.054</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.709<span class="s">±0.200</span></td>
+<td class="">0.346<span class="s">±0.083</span></td>
+<td class="">0.270<span class="s">±0.105</span></td>
+<td class="">0.210<span class="s">±0.021</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.904<span class="s">±0.394</span></td>
+<td class="">0.426<span class="s">±0.151</span></td>
+<td class="">0.293<span class="s">±0.059</span></td>
+<td class="">0.190<span class="s">±0.035</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.751<span class="s">±0.196</span></td>
+<td class="">0.458<span class="s">±0.114</span></td>
+<td class="">0.358<span class="s">±0.086</span></td>
+<td class="">0.250<span class="s">±0.022</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.727<span class="s">±0.261</span></td>
+<td class="">0.369<span class="s">±0.128</span></td>
+<td class="">0.294<span class="s">±0.092</span></td>
+<td class="">0.217<span class="s">±0.045</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.863<span class="s">±0.274</span></td>
+<td class="">0.509<span class="s">±0.209</span></td>
+<td class="">0.323<span class="s">±0.116</span></td>
+<td class="">0.225<span class="s">±0.061</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">1.167<span class="s">±0.820</span></td>
+<td class="">0.536<span class="s">±0.373</span></td>
+<td class="">0.295<span class="s">±0.118</span></td>
+<td class="">0.215<span class="s">±0.066</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.772<span class="s">±0.403</span></td>
+<td class="">0.477<span class="s">±0.234</span></td>
+<td class="">0.257<span class="s">±0.109</span></td>
+<td class="win">0.155<span class="s">±0.047</span></td>
+</tr>
+</tbody></table>
+<table><caption>NLL (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.689<span class="s">±0.347</span></td>
+<td class="">0.436<span class="s">±0.232</span></td>
+<td class="">0.292<span class="s">±0.080</span></td>
+<td class="">0.246<span class="s">±0.073</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.819<span class="s">±0.282</span></td>
+<td class="">0.508<span class="s">±0.091</span></td>
+<td class="">0.429<span class="s">±0.099</span></td>
+<td class="">0.392<span class="s">±0.088</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.516<span class="s">±0.123</span></td>
+<td class="win">0.309<span class="s">±0.060</span></td>
+<td class="win">0.239<span class="s">±0.065</span></td>
+<td class="">0.190<span class="s">±0.048</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.610<span class="s">±0.088</span></td>
+<td class="">0.339<span class="s">±0.104</span></td>
+<td class="">0.243<span class="s">±0.100</span></td>
+<td class="">0.177<span class="s">±0.037</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.614<span class="s">±0.078</span></td>
+<td class="">0.393<span class="s">±0.114</span></td>
+<td class="">0.287<span class="s">±0.070</span></td>
+<td class="">0.186<span class="s">±0.043</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.634<span class="s">±0.064</span></td>
+<td class="">0.439<span class="s">±0.136</span></td>
+<td class="">0.323<span class="s">±0.111</span></td>
+<td class="">0.172<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.600<span class="s">±0.092</span></td>
+<td class="">0.369<span class="s">±0.112</span></td>
+<td class="">0.302<span class="s">±0.092</span></td>
+<td class="">0.218<span class="s">±0.058</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.630<span class="s">±0.085</span></td>
+<td class="">0.457<span class="s">±0.122</span></td>
+<td class="">0.318<span class="s">±0.103</span></td>
+<td class="">0.223<span class="s">±0.070</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.608<span class="s">±0.211</span></td>
+<td class="">0.400<span class="s">±0.118</span></td>
+<td class="">0.286<span class="s">±0.080</span></td>
+<td class="">0.198<span class="s">±0.081</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.544<span class="s">±0.133</span></td>
+<td class="">0.388<span class="s">±0.119</span></td>
+<td class="">0.242<span class="s">±0.084</span></td>
+<td class="win">0.153<span class="s">±0.040</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.570<span class="s">±0.308</span></td>
+<td class="">0.319<span class="s">±0.170</span></td>
+<td class="">0.206<span class="s">±0.085</span></td>
+<td class="">0.157<span class="s">±0.069</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.730<span class="s">±0.203</span></td>
+<td class="">0.445<span class="s">±0.143</span></td>
+<td class="">0.331<span class="s">±0.110</span></td>
+<td class="">0.283<span class="s">±0.092</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.413<span class="s">±0.185</span></td>
+<td class="win">0.186<span class="s">±0.060</span></td>
+<td class="win">0.136<span class="s">±0.063</span></td>
+<td class="">0.101<span class="s">±0.031</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.493<span class="s">±0.151</span></td>
+<td class="">0.209<span class="s">±0.067</span></td>
+<td class="">0.151<span class="s">±0.082</span></td>
+<td class="">0.105<span class="s">±0.018</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.558<span class="s">±0.183</span></td>
+<td class="">0.262<span class="s">±0.089</span></td>
+<td class="">0.180<span class="s">±0.044</span></td>
+<td class="">0.112<span class="s">±0.026</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.527<span class="s">±0.144</span></td>
+<td class="">0.296<span class="s">±0.096</span></td>
+<td class="">0.214<span class="s">±0.075</span></td>
+<td class="">0.123<span class="s">±0.015</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.479<span class="s">±0.173</span></td>
+<td class="">0.219<span class="s">±0.088</span></td>
+<td class="">0.165<span class="s">±0.062</span></td>
+<td class="">0.113<span class="s">±0.031</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.574<span class="s">±0.181</span></td>
+<td class="">0.319<span class="s">±0.144</span></td>
+<td class="">0.186<span class="s">±0.081</span></td>
+<td class="">0.118<span class="s">±0.043</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.455<span class="s">±0.192</span></td>
+<td class="">0.274<span class="s">±0.142</span></td>
+<td class="">0.174<span class="s">±0.070</span></td>
+<td class="">0.119<span class="s">±0.040</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.448<span class="s">±0.204</span></td>
+<td class="">0.256<span class="s">±0.116</span></td>
+<td class="">0.143<span class="s">±0.062</span></td>
+<td class="win">0.083<span class="s">±0.027</span></td>
+</tr>
+</tbody></table>
+<table><caption>Brier (TS) ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.447<span class="s">±0.232</span></td>
+<td class="">0.268<span class="s">±0.144</span></td>
+<td class="">0.177<span class="s">±0.058</span></td>
+<td class="">0.142<span class="s">±0.055</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.551<span class="s">±0.177</span></td>
+<td class="">0.344<span class="s">±0.073</span></td>
+<td class="">0.286<span class="s">±0.076</span></td>
+<td class="">0.258<span class="s">±0.066</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="win">0.340<span class="s">±0.096</span></td>
+<td class="win">0.181<span class="s">±0.046</span></td>
+<td class="win">0.133<span class="s">±0.047</span></td>
+<td class="">0.100<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="">0.426<span class="s">±0.076</span></td>
+<td class="">0.208<span class="s">±0.076</span></td>
+<td class="">0.143<span class="s">±0.073</span></td>
+<td class="">0.099<span class="s">±0.025</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.431<span class="s">±0.067</span></td>
+<td class="">0.250<span class="s">±0.082</span></td>
+<td class="">0.178<span class="s">±0.048</span></td>
+<td class="">0.110<span class="s">±0.029</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.446<span class="s">±0.057</span></td>
+<td class="">0.286<span class="s">±0.101</span></td>
+<td class="">0.202<span class="s">±0.082</span></td>
+<td class="">0.097<span class="s">±0.018</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.408<span class="s">±0.081</span></td>
+<td class="">0.218<span class="s">±0.082</span></td>
+<td class="">0.168<span class="s">±0.060</span></td>
+<td class="">0.114<span class="s">±0.033</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.443<span class="s">±0.074</span></td>
+<td class="">0.293<span class="s">±0.097</span></td>
+<td class="">0.184<span class="s">±0.075</span></td>
+<td class="">0.120<span class="s">±0.044</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.391<span class="s">±0.110</span></td>
+<td class="">0.250<span class="s">±0.094</span></td>
+<td class="">0.164<span class="s">±0.060</span></td>
+<td class="">0.106<span class="s">±0.044</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.366<span class="s">±0.106</span></td>
+<td class="">0.237<span class="s">±0.090</span></td>
+<td class="">0.139<span class="s">±0.055</span></td>
+<td class="win">0.082<span class="s">±0.025</span></td>
+</tr>
+</tbody></table>
+<table><caption>AUROC-H ↑</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.785<span class="s">±0.088</span></td>
+<td class="">0.789<span class="s">±0.060</span></td>
+<td class="">0.829<span class="s">±0.051</span></td>
+<td class="">0.832<span class="s">±0.043</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.679<span class="s">±0.111</span></td>
+<td class="">0.775<span class="s">±0.056</span></td>
+<td class="">0.817<span class="s">±0.028</span></td>
+<td class="">0.824<span class="s">±0.024</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.776<span class="s">±0.083</span></td>
+<td class="">0.820<span class="s">±0.038</span></td>
+<td class="">0.867<span class="s">±0.039</span></td>
+<td class="">0.854<span class="s">±0.035</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.792<span class="s">±0.136</span></td>
+<td class="win">0.832<span class="s">±0.048</span></td>
+<td class="win">0.868<span class="s">±0.029</span></td>
+<td class="">0.895<span class="s">±0.035</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.684<span class="s">±0.104</span></td>
+<td class="">0.786<span class="s">±0.061</span></td>
+<td class="">0.844<span class="s">±0.051</span></td>
+<td class="">0.897<span class="s">±0.028</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.685<span class="s">±0.132</span></td>
+<td class="">0.810<span class="s">±0.077</span></td>
+<td class="">0.861<span class="s">±0.060</span></td>
+<td class="win">0.901<span class="s">±0.032</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.742<span class="s">±0.115</span></td>
+<td class="">0.811<span class="s">±0.047</span></td>
+<td class="">0.826<span class="s">±0.059</span></td>
+<td class="">0.819<span class="s">±0.071</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.671<span class="s">±0.101</span></td>
+<td class="">0.763<span class="s">±0.092</span></td>
+<td class="">0.791<span class="s">±0.083</span></td>
+<td class="">0.840<span class="s">±0.063</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.703<span class="s">±0.142</span></td>
+<td class="">0.780<span class="s">±0.063</span></td>
+<td class="">0.812<span class="s">±0.068</span></td>
+<td class="">0.861<span class="s">±0.076</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.737<span class="s">±0.096</span></td>
+<td class="">0.807<span class="s">±0.048</span></td>
+<td class="">0.866<span class="s">±0.034</span></td>
+<td class="">0.884<span class="s">±0.031</span></td>
+</tr>
+</tbody></table>
+<table><caption>FPR95-H ↓</caption><thead><tr><th>Model</th><th>1-shot</th><th>5-shot</th><th>10-shot</th><th>20-shot</th></tr></thead><tbody>
+<tr class="single"><td class="m">DINOv2 (single, MLP)</td>
+<td class="">0.976<span class="s">±0.108</span></td>
+<td class="">0.904<span class="s">±0.199</span></td>
+<td class="">0.818<span class="s">±0.270</span></td>
+<td class="">0.854<span class="s">±0.186</span></td>
+</tr>
+<tr class="single"><td class="m">ConvNeXt-V2-Tiny (single, MLP)</td>
+<td class="">0.995<span class="s">±0.021</span></td>
+<td class="">0.606<span class="s">±0.229</span></td>
+<td class="">0.470<span class="s">±0.094</span></td>
+<td class="">0.463<span class="s">±0.118</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — MC Dropout</td>
+<td class="">0.602<span class="s">±0.171</span></td>
+<td class="">0.581<span class="s">±0.172</span></td>
+<td class="">0.577<span class="s">±0.299</span></td>
+<td class="">0.657<span class="s">±0.192</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (MLP)</td>
+<td class="win">0.543<span class="s">±0.208</span></td>
+<td class="">0.539<span class="s">±0.159</span></td>
+<td class="">0.521<span class="s">±0.193</span></td>
+<td class="">0.438<span class="s">±0.174</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — MC Dropout</td>
+<td class="">0.705<span class="s">±0.168</span></td>
+<td class="">0.615<span class="s">±0.114</span></td>
+<td class="">0.522<span class="s">±0.162</span></td>
+<td class="">0.373<span class="s">±0.188</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (MLP)</td>
+<td class="">0.690<span class="s">±0.184</span></td>
+<td class="win">0.518<span class="s">±0.177</span></td>
+<td class="win">0.419<span class="s">±0.174</span></td>
+<td class="win">0.372<span class="s">±0.160</span></td>
+</tr>
+<tr class="base"><td class="m">DINOv2 — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.693<span class="s">±0.203</span></td>
+<td class="">0.649<span class="s">±0.120</span></td>
+<td class="">0.673<span class="s">±0.142</span></td>
+<td class="">0.712<span class="s">±0.220</span></td>
+</tr>
+<tr class="base"><td class="m">ConvNeXt-V2-Tiny — Sensoy EDL (shared head, Brier)</td>
+<td class="">0.761<span class="s">±0.170</span></td>
+<td class="">0.714<span class="s">±0.200</span></td>
+<td class="">0.709<span class="s">±0.210</span></td>
+<td class="">0.592<span class="s">±0.192</span></td>
+</tr>
+<tr class="base"><td class="m">Vanilla deep ensemble (DINOv2 + ConvNeXt-V2, MLP)</td>
+<td class="">0.846<span class="s">±0.227</span></td>
+<td class="">0.634<span class="s">±0.209</span></td>
+<td class="">0.528<span class="s">±0.171</span></td>
+<td class="">0.554<span class="s">±0.284</span></td>
+</tr>
+<tr class="ours"><td class="m">DD-CoMB: DINOv2 + ConvNeXt-V2-Tiny (Dempster, ours)</td>
+<td class="">0.706<span class="s">±0.223</span></td>
+<td class="">0.591<span class="s">±0.211</span></td>
+<td class="">0.519<span class="s">±0.166</span></td>
+<td class="">0.531<span class="s">±0.246</span></td>
+</tr>
+</tbody></table>
+</body></html>

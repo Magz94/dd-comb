@@ -1,0 +1,28 @@
+# Hydra entry config for scripts/eval.py — evaluate a saved fusion checkpoint
+# without training.
+#
+# Schema: TrainFusionConfig in src/ddcomb/config.py (shared with
+# train_fusion.yaml). Defaults differ: skip_train=true, return_full_metrics=true.
+#
+# Required: pipeline.run_tag must match the run tag used at training time so
+# the checkpoint is found at
+#   <pipeline.model_save_path>/attn_fusion_classifier_<run_tag>_<postfix>.pt
+# (and the corresponding attn_fusion_model_*.pt for stage_a / stage_d).
+#
+# For mode=stage_b or mode=stage_d, frozen_fusion_tag is also required —
+# it's the Stage-A source whose fusion weights initialised this run.
+#
+# Example:
+#   python scripts/eval.py mode=stage_d \
+#       stage_a_source=img100_dirichlet_imagenet_1_acc85 \
+#       dataset=plantvillage_color_split \
+#       pipeline.run_tag=attn_stage_d_finetune_dirichlet_linear_plantvillage_from_dirichlet
+
+defaults:
+  - train_fusion_schema
+  - dataset: null
+  - stage_a_source: null
+  - _self_
+
+skip_train: true
+return_full_metrics: true

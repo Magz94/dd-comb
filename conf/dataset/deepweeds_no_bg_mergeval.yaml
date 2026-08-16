@@ -1,0 +1,15 @@
+# @package pipeline
+# DeepWeeds with label-8 ("no_bg") removed and val merged into train.
+# Held-out test = DeepWeeds test split.
+
+use_deepweeds: true
+use_ssl_patches: false
+use_imagenet1k_parquet: false
+use_jkk: false
+
+use_deepweeds_without_label8: true
+use_deepweeds_merge_val_into_train: true
+deepweeds_root: /datasets/DeepWeeds
+deepweeds_subset: subset0
+
+num_classes: 8

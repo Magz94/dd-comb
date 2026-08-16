@@ -1,0 +1,1996 @@
+{
+  "schema_version": 1,
+  "dataset_key": "plantvillage_color_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 10,
+  "run_index": 9,
+  "seed": 10051,
+  "num_classes": 38,
+  "class_pool_sizes": {
+    "0": 503,
+    "1": 475,
+    "2": 223,
+    "3": 1359,
+    "4": 1178,
+    "5": 833,
+    "6": 731,
+    "7": 406,
+    "8": 975,
+    "9": 765,
+    "10": 912,
+    "11": 1012,
+    "12": 1099,
+    "13": 872,
+    "14": 323,
+    "15": 4527,
+    "16": 1755,
+    "17": 289,
+    "18": 831,
+    "19": 1195,
+    "20": 836,
+    "21": 788,
+    "22": 120,
+    "23": 209,
+    "24": 4117,
+    "25": 1457,
+    "26": 909,
+    "27": 376,
+    "28": 1691,
+    "29": 785,
+    "30": 1534,
+    "31": 780,
+    "32": 1434,
+    "33": 1356,
+    "34": 1116,
+    "35": 4257,
+    "36": 307,
+    "37": 1261
+  },
+  "selected_count": 380,
+  "selected_per_class": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10,
+    "6": 10,
+    "7": 10,
+    "8": 10,
+    "9": 10,
+    "10": 10,
+    "11": 10,
+    "12": 10,
+    "13": 10,
+    "14": 10,
+    "15": 10,
+    "16": 10,
+    "17": 10,
+    "18": 10,
+    "19": 10,
+    "20": 10,
+    "21": 10,
+    "22": 10,
+    "23": 10,
+    "24": 10,
+    "25": 10,
+    "26": 10,
+    "27": 10,
+    "28": 10,
+    "29": 10,
+    "30": 10,
+    "31": 10,
+    "32": 10,
+    "33": 10,
+    "34": 10,
+    "35": 10,
+    "36": 10,
+    "37": 10
+  },
+  "selected": [
+    {
+      "id": "train/Apple___Apple_scab/5345e6fb-1829-457f-ac86-6683d762c9ea___FREC_Scab 3482.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/63a29431-0e93-4e5d-b28d-3956edd10d01___FREC_Scab 3197.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/75896d3d-899a-4143-9262-c44bcea75237___FREC_Scab 3295.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/7e64fdef-9cb7-40ed-9f40-f3c97d6e0e8a___FREC_Scab 3536.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/9fd8d7c3-3321-49fc-a7dc-165ccc353c78___FREC_Scab 3177.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/a7609a35-fd75-4ec3-868a-eb97b9ffd096___FREC_Scab 3032.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/abd8b296-db97-40c0-af5b-39e03f4dec16___FREC_Scab 3041.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/adfdba4a-a725-4c5b-8b1c-96e8b20baa7b___FREC_Scab 3265.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/bce3ba0b-a142-4b28-8cb3-eb6bb6a3b8a2___FREC_Scab 3142.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Apple_scab/d1773f0b-f049-4bb1-b13f-d33b96078ab3___FREC_Scab 3046.JPG",
+      "class_name": "Apple___Apple_scab",
+      "label": 0
+    },
+    {
+      "id": "train/Apple___Black_rot/05fd8037-fd27-4d26-9e5d-9a47856ab134___JR_FrgE.S 8770.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/2d1ac581-1847-419e-8254-55a9caad6b2b___JR_FrgE.S 8766.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/4db0765f-5928-4254-b935-e6fcbec9deeb___JR_FrgE.S 3062.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/6df2fa87-ba57-4627-ae8f-cba5f080e9cd___JR_FrgE.S 3049.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/73fcc7b8-b884-45ef-a52f-6ed6b2f93c27___JR_FrgE.S 8642.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/769283e3-f7ec-4e62-b907-4b22d1bda1ea___JR_FrgE.S 8618.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/90af12e6-8764-4cb5-9f88-ac1fa8b337c0___JR_FrgE.S 2738.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/9bae8265-90e1-4b34-8db3-35b530fded3d___JR_FrgE.S 8667.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/ab1b3baa-483a-4b41-b5d7-32e043f52594___JR_FrgE.S 3073.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Black_rot/f872ce63-a162-44bd-84ac-c7d89c485457___JR_FrgE.S 8701.JPG",
+      "class_name": "Apple___Black_rot",
+      "label": 1
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/1a80b84d-1a5a-4e23-8deb-823ba928e29a___FREC_C.Rust 4431.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/23f6e0fa-3860-48a5-a3f4-4e64b54a3046___FREC_C.Rust 4336.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/39c00da9-396e-4bd3-8e4a-f701c11d4fa7___FREC_C.Rust 3907.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/3e123b1b-a57d-4689-8211-e270c19fd4a9___FREC_C.Rust 9962.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/4ddf4752-f02c-40ae-a2a8-19095f07137d___FREC_C.Rust 3733.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/5367e167-14f3-4d65-bd93-4c4b693e0bc7___FREC_C.Rust 4109.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/58c70126-b289-441f-a608-eff6a2df3762___FREC_C.Rust 3654.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/5c9da5f6-93f9-4fba-8adc-49a6392a7467___FREC_C.Rust 3909.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/d3df6ac8-4b20-460a-ad91-68e50d49078c___FREC_C.Rust 3879.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___Cedar_apple_rust/ea119d19-1b3a-4767-af1d-e8b148a3bb8d___FREC_C.Rust 3579.JPG",
+      "class_name": "Apple___Cedar_apple_rust",
+      "label": 2
+    },
+    {
+      "id": "train/Apple___healthy/00fca0da-2db3-481b-b98a-9b67bb7b105c___RS_HL 7708.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/0e857e3d-34ff-4549-b8ef-4d699aacb178___RS_HL 7511.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/2d62f422-484f-4fa9-af67-f2724cfe5564___RS_HL 7441.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/367d7a43-f910-4714-918f-f4b9ffde5a91___RS_HL 7692.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/69344270-ab7c-44c1-a395-03dfb984108a___RS_HL 5925.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/7ac83dd1-c411-4348-82d9-f59abcf75924___RS_HL 7245.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/b3562453-945e-4462-8589-ec879c2a4102___RS_HL 5893.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/c9783552-aa6d-4288-ab36-a30887253bdd___RS_HL 7547.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/d3647b4c-45d8-4366-8e93-baf1310072ba___RS_HL 6248.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Apple___healthy/dbe7017a-b866-4c93-8ee5-8b2526929328___RS_HL 7992.JPG",
+      "class_name": "Apple___healthy",
+      "label": 3
+    },
+    {
+      "id": "train/Blueberry___healthy/06eacfab-fb39-40e0-bbce-927bc98fa2ac___RS_HL 2663.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/0920d941-0a86-4797-9285-10f6f956b893___RS_HL 0455.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/1f8018e1-2011-4826-87f9-06060d189f37___RS_HL 2462.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/321bcba9-a5bc-4560-b1d3-4580b8a51c42___RS_HL 2517.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/63e05a62-1e80-4aea-975a-55a5ba1ed5f0___RS_HL 5406.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/ae75ae2b-06bd-4397-bb2d-5f937bda687d___RS_HL 2645.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/b15f23b2-4fd8-483b-92f3-0f79dab0c674___RS_HL 2305.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/bbb99911-f196-412a-948b-bccd2c7a1d2a___RS_HL 2328.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/c7602701-eeeb-49b7-bdf6-c25315476c69___RS_HL 2499.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Blueberry___healthy/efa90326-f102-4c64-9233-e4250b03e014___RS_HL 2255.JPG",
+      "class_name": "Blueberry___healthy",
+      "label": 4
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/093d5f5b-f724-457e-b354-7f74b07cba64___FREC_Pwd.M 5078.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/503409a9-1a72-4cbf-98ab-421139942fd9___FREC_Pwd.M 0296.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/81cd32df-f7ac-4ffa-bdc2-0a64b9c13792___FREC_Pwd.M 4505.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/8af92c46-f8c4-4b63-a9db-8718f2ac1dd4___FREC_Pwd.M 0438.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/a4922bd5-2911-478c-bb02-f801c834bfeb___FREC_Pwd.M 0337.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/dea9ce8a-30b3-47cd-bb96-29e648896c8f___FREC_Pwd.M 4947.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/e308c527-a0a9-4c33-b469-ac05a2059b7b___FREC_Pwd.M 0552.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/e815da85-2217-4f25-8c16-e64ad69b6404___FREC_Pwd.M 0431.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/e99f1af6-d930-42f0-abe0-93e442fa6359___FREC_Pwd.M 4830.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___Powdery_mildew/fc5a6065-20bd-440d-92fd-03457bdb8614___FREC_Pwd.M 4589.JPG",
+      "class_name": "Cherry_(including_sour)___Powdery_mildew",
+      "label": 5
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/41a30be4-4d7a-43ef-8f2a-5ada38561423___JR_HL 9641.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/501a9e53-250c-4ba7-b216-2295f4883aba___JR_HL 9575.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/5e41de53-cd10-49e0-8b6a-ed5c8f19b463___JR_HL 9761.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/6a0faa8f-adeb-4ee4-90f5-cb5b74b2cb4a___JR_HL 4018.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/71226c5a-bc1f-4257-9369-506e32147cea___JR_HL 4169.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/bbf21e80-e21f-4dcb-a3ae-de05529960ef___JR_HL 9526.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/d488e8a6-948b-4805-9852-1a1825890e04___JR_HL 9554.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/dcd94f3c-a363-4b22-8dd8-0ae62ddc6f07___JR_HL 4192.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/defa124c-873c-4a35-92d1-28a2dc137957___JR_HL 9532.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Cherry_(including_sour)___healthy/e1f1a0eb-b3df-4b1a-9af6-01c2472a4d0c___JR_HL 9472.JPG",
+      "class_name": "Cherry_(including_sour)___healthy",
+      "label": 6
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/2bfff79a-08ce-4f07-a059-465326ef2ea2___RS_GLSp 4436.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/4f3406d0-c000-40ea-91e2-0e41d69f668b___RS_GLSp 4458.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/4f50bad3-aee2-4d6d-a144-5c56f4c1fdd9___RS_GLSp 9297.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/5ac6ef38-097e-4509-9090-1c02cf2c152a___RS_GLSp 4650.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/5cfe5cf5-bdba-44b5-8295-c5bda6e34ae3___RS_GLSp 9353 copy.jpg",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/9f07734a-54f8-4083-b99f-76f3cf329916___RS_GLSp 4625.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/a23ba9aa-4f37-4d07-b4ef-396fcaf6514d___RS_GLSp 4553.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/dfe650bb-d16a-47ed-85d2-25abcbd0f152___RS_GLSp 4612.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/e415586a-efd4-402a-90dc-5a417ba95313___RS_GLSp 4448.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/e4be1210-e9dc-44d0-8674-2dc7ecac0acc___RS_GLSp 4659.JPG",
+      "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "label": 7
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 1633.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 1696.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 1797.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 1892.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 2225.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 2275.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 2498.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 2639.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 2646.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Common_rust_/RS_Rust 2683.JPG",
+      "class_name": "Corn_(maize)___Common_rust_",
+      "label": 8
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/0a62fe5a-22db-42e2-bca0-53a8dcfd8129___RS_NLB 0810.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/13bd65f1-fbdc-4863-9550-51a1bdb4afe7___RS_NLB 3707.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/5dc9613c-fcbf-42ce-a95a-6520bf780872___RS_NLB 4225.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/7856bc05-e462-4f51-b945-b2801236d17c___RS_NLB 3881.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/8c674c27-dcc1-4ce3-a3e7-669f9dd3521b___RS_NLB 3867.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/b9aed562-345f-4010-b898-33359c4c85db___RS_NLB 4202.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/c0b461c8-cb13-47c8-8e35-25996de22e7e___RS_NLB 3618.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/e941ff1a-22c8-42ef-8ccb-bc5899e6764b___RS_NLB 3802.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/eaf93f13-37be-489a-9405-b7602bf59f8a___RS_NLB 3963 copy.jpg",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___Northern_Leaf_Blight/f5773153-728e-4631-8cc8-1bc06412df89___RS_NLB 4056.JPG",
+      "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+      "label": 9
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/093cf670-66a2-4bc6-bdb5-0c3d2ea6dab2___R.S_HL 8302 copy.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/21380f6b-1ccb-4aa3-9cf6-af8d85b8925e___R.S_HL 8340 copy.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/2d04e6d6-acd5-4af9-887c-f76fc8371669___R.S_HL 7959 copy 3.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/384dee4e-f5d5-4c86-a3f8-279946157984___R.S_HL 8278 copy.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/62811a1f-4c27-4775-abe6-bf0c00bfeacd___R.S_HL 8128 copy.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/6792a3b8-444b-48fb-bc25-85529d7c2693___R.S_HL 8319 copy.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/a4403c1b-ad05-4b03-9d13-7367a2d16a16___R.S_HL 8272 copy.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/b018b098-e68c-4ad7-88b8-371959829b79___R.S_HL 8245 copy 2.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/bd387a28-3b26-47d8-827b-062ae0a0f234___R.S_HL 7990 copy 2.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Corn_(maize)___healthy/ddf11a05-a096-4b9b-a3f9-f12714edcb50___R.S_HL 8333 copy 2.jpg",
+      "class_name": "Corn_(maize)___healthy",
+      "label": 10
+    },
+    {
+      "id": "train/Grape___Black_rot/252822b9-3c03-4206-92ad-81c509e2c38a___FAM_B.Rot 5023.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/422245a4-9a54-44af-90f5-f9428cdc5e43___FAM_B.Rot 3166.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/4b052d59-caee-4a85-9ebb-27bf987e54b6___FAM_B.Rot 3016.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/6477cd76-093e-47e5-a3e8-5792a075e846___FAM_B.Rot 3085.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/6f45e522-2142-49ea-bdd9-d52ecfea5642___FAM_B.Rot 0401.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/6f47e933-57e2-4361-8dc2-1f85f7c231dc___FAM_B.Rot 3415.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/b9e51868-f2c0-436a-aed5-9f8360b86479___FAM_B.Rot 0417.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/b9eaae15-de88-4dff-9c57-7cfc1cb9ee38___FAM_B.Rot 0619.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/bca43508-6643-40ec-bf51-01c1a5de3e56___FAM_B.Rot 3608.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Black_rot/e09bbce3-c5ad-404d-82c9-206ceaa40a24___FAM_B.Rot 0519.JPG",
+      "class_name": "Grape___Black_rot",
+      "label": 11
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/019afd88-6645-44c4-a5d2-bd583b877a50___FAM_B.Msls 1744.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/2f89c58c-1bc4-40f7-babf-b1f1dc2cffc9___FAM_B.Msls 3969.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/34447994-b2d2-4a3e-b23f-8234c197dab9___FAM_B.Msls 4032.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/9e5d5657-1fde-45df-8e0d-648107f38396___FAM_B.Msls 1214.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/b4865ce8-8ed7-4993-87f1-c8f0c2840248___FAM_B.Msls 4041.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/b51dd9b6-0ab4-411f-ad41-a1549b3ae488___FAM_B.Msls 3839.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/bd615424-a586-49e0-b807-ce0989710f84___FAM_B.Msls 4048.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/bd64796d-9b77-4969-bab8-09ac6fd6cc41___FAM_B.Msls 1237.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/bed79e41-7214-47eb-8f98-5b2b5f5555c7___FAM_B.Msls 1038.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Esca_(Black_Measles)/ecccbe4f-a1c1-4359-8059-8085dcf199ad___FAM_B.Msls 4105.JPG",
+      "class_name": "Grape___Esca_(Black_Measles)",
+      "label": 12
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/0fc8c252-e026-494e-bd28-02897b969af4___FAM_L.Blight 1437.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/48470e3f-9bf0-4d77-86a2-68e312cd8263___FAM_L.Blight 4947.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/6d1b8a4c-e7c0-4bab-a9fa-312516c91849___FAM_L.Blight 4739.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/71e88a05-f65f-4e41-8985-30f032408a80___FAM_L.Blight 1618.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/7303586d-6de8-489d-9b78-a26d1497ce59___FAM_L.Blight 4735.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/9332c3fa-9f55-42bf-a3cf-35f336e58ecb___FAM_L.Blight 1564.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/d5d5532f-7fbd-4e8c-9d72-66e3a46abf69___FAM_L.Blight 1662.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/df76a644-9808-4446-8c18-578b46ff56a5___FAM_L.Blight 1594.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e224d690-e64f-40a4-bfe6-c7d71900f346___FAM_L.Blight 0774.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/f0e644ee-aa1f-416c-a308-d2b9170986da___FAM_L.Blight 1624.JPG",
+      "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "label": 13
+    },
+    {
+      "id": "train/Grape___healthy/0ac4ff49-7fbf-4644-98a4-4dc596e2fa87___Mt.N.V_HL 9004.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/244804b5-05e2-4372-a376-36a0655aff41___Mt.N.V_HL 6121.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/4bd1e0f6-b69e-4936-83a2-235e6f8d7479___Mt.N.V_HL 6044.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/5b2c9b7e-4f3a-4850-bd70-35230df9c794___Mt.N.V_HL 8933.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/97c0552c-1cd6-4813-9608-3735b9867f98___Mt.N.V_HL 6046.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/a5f23bc2-240d-4db0-8998-43a2cf2a0752___Mt.N.V_HL 6166.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/bfd1909d-6235-41a4-a24a-eeea9ffdd0a5___Mt.N.V_HL 9042.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/c60dbdbb-4ae6-4265-a587-de11c3c13e2d___Mt.N.V_HL 6136.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/cf290224-e5ca-4d0b-8037-c147acfc290d___Mt.N.V_HL 6049.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Grape___healthy/fefb8922-dcb4-4dbf-8777-237ad9a99c40___Mt.N.V_HL 6085.JPG",
+      "class_name": "Grape___healthy",
+      "label": 14
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/092c7af8-c90b-444f-b2ad-ebd22939ca0a___CREC_HLB 6937.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/0f0a91ba-185b-46ff-8f68-914b85e0fa9b___UF.Citrus_HLB_Lab 0832.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/14799d69-94a0-4392-81cd-ba5c75225f47___UF.Citrus_HLB_Lab 1278.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/2685367c-1485-45f0-9ccd-9c023b604d40___CREC_HLB 3890.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/59abc6b9-fa00-4ca7-b419-70fc3e53bd90___UF.Citrus_HLB_Lab 1488.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/6c3c0c0d-649f-4869-9009-697d77a35d41___CREC_HLB 5575.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/d764fdb2-3c93-4f23-afec-1759b1d241a6___UF.Citrus_HLB_Lab 9902.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/db064934-9868-49ed-9ab2-f439777caa6d___UF.Citrus_HLB_Lab 9897.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/eafb2432-4b56-40e9-827e-c72bc7176db0___CREC_HLB 4747.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Orange___Haunglongbing_(Citrus_greening)/f3467f73-905f-441b-9c84-54e7914748a9___UF.Citrus_HLB_Lab 9759.JPG",
+      "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+      "label": 15
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/00130039-8425-42e9-9dd9-15aead7271ff___Rut._Bact.S 3421.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/0e40bd19-4ca5-4ce5-b585-3525e6f5c0b4___Rut._Bact.S 0938.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/36e40e20-9613-4b98-9e9f-fa60a34e9c1c___Rutg._Bact.S 2344.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/42581072-3f69-4977-a030-89e029f0c0db___Rutg._Bact.S 1614.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/74a830de-fab1-4628-9016-1d7de7dfc8ba___Rutg._Bact.S 1107.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/c3f18a97-3f04-41e0-bd28-4563f17ec7a3___Rut._Bact.S 1203.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/cb364e0f-feab-4bb8-939f-e063df11b7e7___Rut._Bact.S 3351.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/ec8b301d-6963-4029-80e6-4d8be10104da___Rutg._Bact.S 1273.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/f3da92fa-2a1e-4f55-9fd9-a8890049275a___Rut._Bact.S 1182.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___Bacterial_spot/fdb6f19d-ebf5-46ce-96aa-595329a91869___Rutg._Bact.S 2314.JPG",
+      "class_name": "Peach___Bacterial_spot",
+      "label": 16
+    },
+    {
+      "id": "train/Peach___healthy/04c14871-257f-4067-80f7-ecc5e50f42a4___Rutg._HL 3631.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/1bfd0438-e8ea-4581-a20e-b4aba6f2ff87___Rutg._HL 3527.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/2d3ac070-841f-434c-a316-7dae05c37b5e___Rutg._HL 3640.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/5f517529-5fed-4253-b931-582c5edbf281___Rutg._HL 3647.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/5fac87db-e0f9-43a5-9704-60ae7689b56e___Rutg._HL 3751.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/6dace05e-4df1-44dd-9f81-7760c1d3260d___Rutg._HL 3649.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/a61c536d-7c39-42dd-9296-c9543f30da91___Rutg._HL 3567.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/ac2d8133-2f14-4970-9fab-317113de0dc6___Rutg._HL 3584.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/ee4537d3-b53b-4825-b924-30696dffe4ed___Rutg._HL 2501.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Peach___healthy/f3b84b18-e550-459e-b6e3-e3f6d9dd8984___Rutg._HL 3600.JPG",
+      "class_name": "Peach___healthy",
+      "label": 17
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/0576dd21-3958-46a5-ab99-f9865371bd1a___NREC_B.Spot 1957.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/0726c166-3471-41a8-8fe6-18600e89e802___NREC_B.Spot 1812.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/4396fc84-fea6-4cfd-a352-01241e44efda___NREC_B.Spot 1927.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/4a1ba341-501b-4f74-879b-61a9e29a8f9a___NREC_B.Spot 9211.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/6b8b1a3d-4dd3-42a3-bebb-062d43d45a34___NREC_B.Spot 9204.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/836b4b9e-85d5-47bc-ad93-9ab31b07be3d___JR_B.Spot 3361.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/9bf474f8-9a60-47b8-acdb-06ab32363f4c___JR_B.Spot 3353.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/9f3a7e14-bd0e-48ea-89c3-9c3bd743fb19___NREC_B.Spot 1956.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/aca08460-3229-47d9-9ce6-7b2bb9f1ce7f___JR_B.Spot 8901.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___Bacterial_spot/b0d97a12-ed6a-41f0-9772-bb3b801e6041___NREC_B.Spot 9194.JPG",
+      "class_name": "Pepper,_bell___Bacterial_spot",
+      "label": 18
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/3b5f6152-09c6-4458-8e7a-fb0b1ff43ee8___JR_HL 5851.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/4531baee-70c8-4504-82f1-5cb38c857928___JR_HL 8710.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/4ce9b335-f4f7-4637-8317-16e010700ed6___JR_HL 8727.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/5576e4e0-56d8-4919-b5c3-dbde06afd143___JR_HL 7800.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/6833d4e3-96e0-48d1-895a-077fd13da395___JR_HL 8635.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/a4e150f2-9b5c-4b2c-9b8b-775d132a03b4___JR_HL 8299.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/be34960a-dd60-446d-80bd-7a01ba58baae___JR_HL 5820.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/c1443eb8-9c20-46b7-8f19-cd9c78c76674___JR_HL 7745.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/ca8ef249-eb56-438f-acf0-17e0104b16ec___JR_HL 8231.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Pepper,_bell___healthy/e6a3e0cb-e1d4-4440-9440-f0b4f489ecc4___JR_HL 8742.JPG",
+      "class_name": "Pepper,_bell___healthy",
+      "label": 19
+    },
+    {
+      "id": "train/Potato___Early_blight/26d0502d-5fb3-48fa-a86d-d1de92703285___RS_Early.B 6959.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/38807f81-ce49-4978-916a-a6cd2a95bfb0___RS_Early.B 8397.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/4f5ed8b8-7266-451d-a726-c1dbba2e5381___RS_Early.B 7384.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/63b61694-16e9-4ef4-ad6f-5e27d2c9eed9___RS_Early.B 6871.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/69ee53e1-a9b6-4e97-bc5f-f91617bc87ab___RS_Early.B 7987.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/84546db4-ea7c-4357-bf3d-6afcae9a05bf___RS_Early.B 7637.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/848336c4-eaad-47e7-8458-5e80d5520d05___RS_Early.B 7729.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/8a9f0340-d5d1-479b-9dc5-d8df11685951___RS_Early.B 7024.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/c4dd703b-1d4c-4e4c-8064-0e1d743c47ae___RS_Early.B 7050.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Early_blight/ccec0636-2984-4164-aad7-34b1b84ec42b___RS_Early.B 7766.JPG",
+      "class_name": "Potato___Early_blight",
+      "label": 20
+    },
+    {
+      "id": "train/Potato___Late_blight/031c39d3-9a91-4e81-85ac-b36512133b0a___RS_LB 5220.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/4043044d-1e8d-4861-9152-99660fdffa9e___RS_LB 4438.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/908546cd-34b8-4502-ab09-0c5bb7c1d87b___RS_LB 4912.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/b0db9fbb-ff7f-4b5c-901c-19c7797c1d4a___RS_LB 2969.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/bc5b403e-ecc2-4fde-bafa-9b8698e4545c___RS_LB 4448.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/bf07f2b7-6ab3-4192-a418-ecabc32a11fe___RS_LB 2576.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/c18a017c-262c-41ca-93f3-8fc97ffd7043___RS_LB 4770.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/c268fd1d-0a6d-46f1-bbcd-81b4e79894e6___RS_LB 2808.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/d994fd7e-a338-42c5-ac37-ede01c18999e___RS_LB 5134.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___Late_blight/ec958877-f479-4c8c-a947-3686039f8921___RS_LB 2587.JPG",
+      "class_name": "Potato___Late_blight",
+      "label": 21
+    },
+    {
+      "id": "train/Potato___healthy/00fc2ee5-729f-4757-8aeb-65c3355874f2___RS_HL 1864.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/3a1dbeee-089c-43f0-8f51-a92d3687a515___RS_HL 1754.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/414f6249-9f78-4af5-9593-9d5a7e7d979f___RS_HL 1918.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/4a08efaa-28cc-4356-8769-4002f4b299ef___RS_HL 1850.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/4ae82355-6885-40e7-9807-dabe46ed3441___RS_HL 5410.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/533abd3a-3e1d-42d0-ae9c-5189282b78af___RS_HL 5369.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/774875d3-438a-4305-afe2-7d59e2925dc4___RS_HL 1759.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/9d7d1bb9-1b10-4a8f-a961-e404b9d5acf8___RS_HL 1960.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/b4031970-60ea-4739-9fed-6c81be1bad1c___RS_HL 1752.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Potato___healthy/c07db642-c675-4066-99b6-56bc8207fb37___RS_HL 4164.JPG",
+      "class_name": "Potato___healthy",
+      "label": 22
+    },
+    {
+      "id": "train/Raspberry___healthy/020e14fb-6016-4d7f-b489-445e0021b58e___Mary_HL 6324.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/28b1e241-4234-4710-893c-b75c6dec6fa7___Mary_HL 9299.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/2f5293ed-9843-4c15-830e-94ea76b56c3a___Mary_HL 6368.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/4e1efa30-c1ef-4328-91f1-892747a9bcaf___Mary_HL 6295.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/4f308cb4-ee22-4e5a-a276-71e3c095eb2d___Mary_HL 9348.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/68c91797-4323-4a34-a203-8393cdf3889b___Mary_HL 9143.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/9efc34db-3437-4ba6-b989-70febfb37305___Mary_HL 6298.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/b20fe9e8-8962-47d8-ac19-13429747bda0___Mary_HL 6396.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/f9a17672-1988-4d21-be88-a47880d56e44___Mary_HL 6365.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Raspberry___healthy/fc261eca-1110-4cd3-ae1b-a969680c9550___Mary_HL 6379.JPG",
+      "class_name": "Raspberry___healthy",
+      "label": 23
+    },
+    {
+      "id": "train/Soybean___healthy/018149f9-81fa-46fd-a35d-ee3618b4effc___RS_HL 3091.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/2200a7cf-f12a-4308-bf09-403ae73f4961___RS_HL 6992.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/2803369c-9ce5-4dd3-8cb8-d1a4a65839bd___RS_HL 3142.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/5fb2bc9c-b1e5-4798-9c7c-c8b08802631a___RS_HL 3697.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/606f9fd1-c44f-4fc8-84e0-d7c09552b411___RS_HL 6792.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/6b8437be-c1ce-4084-b6c5-6cedb52ff91a___RS_HL 3148.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/94d44bfd-1f81-4570-81a8-42866a13d02c___RS_HL 5655 1.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/975e0b3a-dce0-47a3-b1bd-4ea2683b70fc___RS_HL 4366.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/9bff26f2-9a87-4141-9e3e-4358e9b78e62___RS_HL 3496.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Soybean___healthy/db9b4870-a21b-4e61-8e00-79da689903d1___RS_HL 5936.JPG",
+      "class_name": "Soybean___healthy",
+      "label": 24
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/009996d9-797e-4450-afad-e8346f7ede04___UMD_Powd.M 0216.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/21df5773-646b-4d99-b9e4-acd7ce8df336___MD_Powd.M 9890.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/3b4cd6cf-14ad-44c4-aed2-a41c50b03de2___UMD_Powd.M 0606.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/4a9dc62b-1f64-47a8-8206-fa92476297f3___UMD_Powd.M 0697.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/599ac134-8a46-463b-b3c3-cff143b5873c___MD_Powd.M 0454.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/5e00d624-d127-4d1b-990f-834230786f01___MD_Powd.M 0633.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/6b58e446-f31b-4fb1-8e93-29b3bbb6d1c4___UMD_Powd.M 0556.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/756edcb9-3049-44ed-a5c0-49c2d635a463___MD_Powd.M 9984.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/a800829c-8dc7-47c9-9693-535e5578bb62___MD_Powd.M 0363.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Squash___Powdery_mildew/eba03840-a4de-485d-b0bf-eaf655add746___UMD_Powd.M 0219.JPG",
+      "class_name": "Squash___Powdery_mildew",
+      "label": 25
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/1733ec78-998c-4af9-81b3-d2ad994710ef___RS_L.Scorch 1528.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/1a123c2f-bdb0-4b73-91ce-84284b211edd___RS_L.Scorch 1468.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/390d859c-fe74-44e5-81b8-14f9fa3fcc55___RS_L.Scorch 0013.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/43e3bd88-9fb5-4a9d-bec4-6d80f7898b8c___RS_L.Scorch 0068.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/47e92d20-e9f4-473c-8ca2-7ee794e4439b___RS_L.Scorch 1257.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/5a58d8c7-e935-411d-9568-8cfb7a343177___RS_L.Scorch 0139.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/5cf747a2-76b2-4949-83eb-e25812327d41___RS_L.Scorch 1427.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/6d2d1e82-01f1-451f-83d8-18fd6c7b9b95___RS_L.Scorch 1522.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/7fc6800c-8f7e-424f-91dd-aeb118a57885___RS_L.Scorch 0126.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___Leaf_scorch/aa5dab5c-46b9-40ad-bd23-375b96cbdfa0___RS_L.Scorch 1044.JPG",
+      "class_name": "Strawberry___Leaf_scorch",
+      "label": 26
+    },
+    {
+      "id": "train/Strawberry___healthy/4197c213-9bf6-4b26-aff1-77a73c45ae1a___RS_HL 2117.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/6f058362-f5b8-4602-b1ee-0e13143658f7___RS_HL 4513.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/75d24cc5-b37f-42de-947f-dc7ee673674e___RS_HL 4571.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/a1ff6777-0146-4138-befb-1f0afad46834___RS_HL 2052.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/b286b552-0eb4-437b-8837-ffc5b9e153be___RS_HL 4557.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/b3698114-5399-4cfe-b585-252b2a63ff64___RS_HL 4654.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/bf4fea74-072d-4420-84b7-59c6a8edd677___RS_HL 4680.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/c1ccdd49-6389-40eb-b841-c77ab6568014___RS_HL 2056.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/de5c0c35-f697-421f-8f4f-937185e6a803___RS_HL 4786.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Strawberry___healthy/fea9a141-9561-4508-bd7d-49cd9412bd2f___RS_HL 1624.JPG",
+      "class_name": "Strawberry___healthy",
+      "label": 27
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/02626a44-a613-4402-a6b0-243858736e32___GCREC_Bact.Sp 3191.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/04da1f61-623b-4878-86ed-3ea24723b515___GCREC_Bact.Sp 5700.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/0da838ea-fd8c-43c0-a437-4aba96234262___UF.GRC_BS_Lab Leaf 8770.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/502fb732-b98c-4472-9bf3-5a0c038492fc___UF.GRC_BS_Lab Leaf 8642.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/60095dac-7012-47a0-8697-eade683994c3___UF.GRC_BS_Lab Leaf 0273.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/7eb976bd-5203-44c2-85ab-f27a5852a7db___GCREC_Bact.Sp 3360.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/85e5327e-52a9-43b4-bc9f-b6d0d8a7c386___GCREC_Bact.Sp 5595.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/885267b9-f4e5-4005-97f4-2f527accb859___GCREC_Bact.Sp 3217.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/9b1443e6-25d0-4dbb-a3f4-b586d7cce49f___UF.GRC_BS_Lab Leaf 8769.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Bacterial_spot/ba08cd52-37f7-4d42-be7e-9bd8db9d1d66___GCREC_Bact.Sp 3661.JPG",
+      "class_name": "Tomato___Bacterial_spot",
+      "label": 28
+    },
+    {
+      "id": "train/Tomato___Early_blight/1e671658-3463-4a38-8b6a-e2867aeeda10___RS_Erly.B 6359.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/250df77c-cb57-4e85-9cf2-531033930030___RS_Erly.B 6477.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/4490b039-427d-414c-836d-a1fda6c1ad49___RS_Erly.B 8369.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/7bd63940-1890-4263-8c8c-e0c743bb51ce___RS_Erly.B 9487.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/acc5fb41-7b03-44c2-8167-47346b97791a___RS_Erly.B 8320.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/b450abe9-9282-42a8-af4d-3fa7da258f40___RS_Erly.B 7735.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/ba75cd48-68cb-49cb-9d79-d03c1b007852___RS_Erly.B 7432.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/e81dfd96-227c-41a7-8cf8-dbc14f2e4b33___RS_Erly.B 7407.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/ecafc299-bc29-4b5a-9a9b-537362b81ed2___RS_Erly.B 7435.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Early_blight/fb956247-8c0b-486a-b491-4d49e77e598e___RS_Erly.B 7842.JPG",
+      "class_name": "Tomato___Early_blight",
+      "label": 29
+    },
+    {
+      "id": "train/Tomato___Late_blight/31eb8659-67c1-4cc6-b0b9-1d5ffe9eed0b___GHLB_PS Leaf 2.3 Day 18.jpg",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/32f1dc26-082e-46ea-8cdc-c3d9660acff3___GHLB2 Leaf 8815.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/57562e67-9700-477f-9a67-a3c0459fe00a___RS_Late.B 6292.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/943a9a43-f61d-44f5-88c0-455d5d6c4746___GHLB Leaf 14 Day 7.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/98288f42-3067-4117-9e1d-d4a6b88f16eb___RS_Late.B 5545.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/b67ed405-b86b-4a5b-a403-d5fd87202e92___RS_Late.B 5006.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/c6f2f79f-4554-4869-84e0-32df4ed15eb4___RS_Late.B 6399.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/cbbf7dc3-4ff9-4864-bd26-54ed77b01e51___RS_Late.B 6628.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/cdda8dae-ea06-49fd-bdc3-12852b4105b2___GHLB2 Leaf 8843.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Late_blight/d31734a0-98c8-43a2-9b17-166785e192f8___GHLB2 Leaf 8706.JPG",
+      "class_name": "Tomato___Late_blight",
+      "label": 30
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/0bc63b4c-e41b-4338-a8ac-af664048fdbb___Crnl_L.Mold 6913.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/2a27ed39-5f6c-490e-8dae-8b1df4683dbc___Crnl_L.Mold 9099.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/35a6c962-8f94-4c23-97e3-726b1dcf7170___Crnl_L.Mold 8874.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/4163864b-4d3b-4b6e-8174-e26b4dfc0a86___Crnl_L.Mold 8943.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/4c439043-1b03-485d-8d88-e0b52177c248___Crnl_L.Mold 9145.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/59b7a40e-6049-424d-a05e-21a16570f170___Crnl_L.Mold 9153.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/63ed021f-afc3-44cc-ab70-0bacc9815d3e___Crnl_L.Mold 6997.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/9d807622-ab39-4aa3-a70a-a2a62aa17679___Crnl_L.Mold 9136.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/b75fa72e-186c-4d64-a88c-dc037f275415___Crnl_L.Mold 6531.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Leaf_Mold/c66db186-88ba-48d5-aa14-41eaa4d172bd___Crnl_L.Mold 9079.JPG",
+      "class_name": "Tomato___Leaf_Mold",
+      "label": 31
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/219ee7e9-d5c0-45c9-9a8e-f0e2ccd69171___Matt.S_CG 1578.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/23e043f7-9634-44e5-a49a-25d4ee7e151a___Matt.S_CG 7798.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/2423106f-b2fd-45ed-ac52-69c093b39826___Matt.S_CG 2737.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/381296fd-87f1-4238-a725-b052eb876ee3___Matt.S_CG 1429.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/4467daac-1e75-4b6f-868d-9dcb5016bd1e___Matt.S_CG 7436.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/9d74964a-cca9-4a0c-9193-efb5be233f6f___JR_Sept.L.S 8375.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/a201604c-5abc-414a-89cb-b74c80289fa6___Keller.St_CG 1949.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/a9029aef-c4b6-4ab9-ad68-41f7b1b3ddda___Matt.S_CG 7754.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/d310ed28-a64c-4997-8336-21ea17eb4368___Matt.S_CG 7735.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Septoria_leaf_spot/fb6bea39-f361-457c-b73e-fe3b2dbe6259___Matt.S_CG 2786.JPG",
+      "class_name": "Tomato___Septoria_leaf_spot",
+      "label": 32
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/0956a6ef-18ce-4a82-a9a1-ca41d07ae13f___Com.G_SpM_FL 9371.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/2fd0efb7-d0fd-4c57-ba78-8e6a3fc5e149___Com.G_SpM_FL 8926.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/53465364-cf45-422d-89f7-fa8fb1ce2bfe___Com.G_SpM_FL 9270.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/88edbc3c-7373-46fd-b08b-e99408ea58db___Com.G_SpM_FL 1569.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/94451749-fc16-42bc-93f9-89f08e7e3a7d___Com.G_SpM_FL 8789.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/a0900c57-a463-4412-a3bc-83b413d3eae3___Com.G_SpM_FL 1395.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/ea97444a-53a0-41fe-a790-811c730f1321___Com.G_SpM_FL 1525.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/f326f897-97c5-40fe-a4a5-54569877eb46___Com.G_SpM_FL 8606.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/f83250d9-6b08-4a6c-b135-8d80cc4f258e___Com.G_SpM_FL 1170.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Spider_mites Two-spotted_spider_mite/fd665d64-3079-45da-b719-0e45b9a65a84___Com.G_SpM_FL 1255.JPG",
+      "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "label": 33
+    },
+    {
+      "id": "train/Tomato___Target_Spot/290ea84a-2458-4291-8065-644c5a826935___Com.G_TgS_FL 0039.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/5c2ec1a6-59dc-444d-9f75-b4717229743f___Com.G_TgS_FL 7906.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/5db917b9-048e-48e4-9d9c-9f1abb307a2b___Com.G_TgS_FL 1051.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/62009ea1-a36b-455f-84e0-f60e424d3c05___Com.G_TgS_FL 9924.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/6eddf6dc-415f-4e8d-b6b6-3080370e228b___Com.G_TgS_FL 0659.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/6f37e2ac-cd3a-420e-8525-7225500c8e34___Com.G_TgS_FL 0802.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/717e5866-371a-469a-8242-f2df34d8fa30___Com.G_TgS_FL 8339.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/94d7b607-9ede-4e15-9afa-f031bb204d7c___Com.G_TgS_FL 0814.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/d2535dbd-7af5-4c58-9266-d43c56a6e533___Com.G_TgS_FL 0027.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Target_Spot/d7d2bf3e-2e90-4f21-8c2f-df9baffac2e9___Com.G_TgS_FL 8354.JPG",
+      "class_name": "Tomato___Target_Spot",
+      "label": 34
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/09f1a64a-addd-4216-aa34-58d250ac0ace___YLCV_GCREC 5517.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/100f3160-f1b5-4e56-9f8e-dfac75d26311___YLCV_NREC 0191.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/150f2e9e-1317-492d-a926-3014853ea6de___UF.GRC_YLCV_Lab 03116.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/225b13bb-77a2-44bd-b745-cae8adcb834d___YLCV_GCREC 2136.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/43b2be62-cb86-46f4-9049-92e77d4f335b___YLCV_NREC 0074.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/442b3e79-5dab-46ae-a31c-e75f3d68b013___UF.GRC_YLCV_Lab 01821.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/5af8e38e-7ee5-4b46-8e02-a2cf4ede14a7___YLCV_NREC 2228.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/699f808f-2be8-49ef-bd0b-4f6d368ed4bb___YLCV_NREC 0139.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/a83f2b79-d0e7-4b5c-b2d6-1bcd599cb887___UF.GRC_YLCV_Lab 02046.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_Yellow_Leaf_Curl_Virus/d7d7de53-e3d4-46c4-939a-13cb3356ccfc___YLCV_GCREC 2732.JPG",
+      "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "label": 35
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/0c05f5bb-e38d-422f-8b1c-632d8c0d730c___PSU_CG 2133.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/2fa22081-5533-4b18-9a8f-671f210db37e___PSU_CG 2092.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/78c968a3-8083-4924-b351-3f36569cf33a___PSU_CG 2214.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/9a3a36e0-b0eb-4844-84f5-db08e2d9adef___PSU_CG 2300.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/a3bfb1c8-d60a-4894-adf8-297035279f47___PSU_CG 2306.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/be73ce90-283f-4b17-99bb-57640061c84e___PSU_CG 2167.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/c44f307f-dd40-495d-abfa-e2f68dc31ff6___PSU_CG 2312.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/c56876f0-d18b-4a90-86d1-7f90e8e15fac___PSU_CG 2240.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/cfd8a28f-7af7-4102-b848-0b6d1b2c60e4___PSU_CG 2404.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___Tomato_mosaic_virus/d398ca36-5b67-4690-a2d2-53380e63c4bb___PSU_CG 2085.JPG",
+      "class_name": "Tomato___Tomato_mosaic_virus",
+      "label": 36
+    },
+    {
+      "id": "train/Tomato___healthy/409c349a-7738-41fc-8a3a-844cd33cfcae___RS_HL 9825.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/4ce3098b-aad2-4e5b-8f3b-fd827cad2c0b___RS_HL 0026.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/5f3f3da8-de1a-4cd8-af68-6801c9327834___RS_HL 9755.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/6d0a4eb6-2a48-4fd6-9bb5-df05eeeb05a8___GH_HL Leaf 316.2.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/71967e69-6356-49c1-81ce-624792b4d964___GH_HL Leaf 315.1.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/8d3c1a28-27a6-4376-9390-2372dadb7264___GH_HL Leaf 395.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/9b0e031b-27c2-4c62-8923-ccc3ce5a4048___GH_HL Leaf 401.1.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/b2652ef9-f0d2-4039-b40a-520073551b16___RS_HL 0009.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/e1400c81-62df-44b6-97fd-e210b66dae0b___RS_HL 9672.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    },
+    {
+      "id": "train/Tomato___healthy/f7d044c0-6900-4624-9c20-fa27aa0911ff___GH_HL Leaf 275.JPG",
+      "class_name": "Tomato___healthy",
+      "label": 37
+    }
+  ],
+  "meta": {
+    "train_pool": "train",
+    "eval_pool": "test"
+  }
+}

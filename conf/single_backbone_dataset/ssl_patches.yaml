@@ -1,0 +1,7 @@
+# @package _global_
+# SSL_Patches plant-vs-meadow ImageFolder split. The single-backbone code
+# still uses its historical internal dataset name: plant_vs_meadow.
+
+dataset_name: plant_vs_meadow
+merge_val_into_train: false
+ssl_patches_root: /home/magz94/ddcomb/data/ssl_patches

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "dataset_key": "pathmnist_224_imagefolder_mergeval",
+  "dataset_type": "imagefolder",
+  "k_shot": 1,
+  "run_index": 7,
+  "seed": 1049,
+  "num_classes": 9,
+  "class_pool_sizes": {
+    "0": 10407,
+    "1": 10566,
+    "2": 11512,
+    "3": 11557,
+    "4": 8896,
+    "5": 13536,
+    "6": 8763,
+    "7": 10446,
+    "8": 14317
+  },
+  "selected_count": 9,
+  "selected_per_class": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1
+  },
+  "selected": [
+    {
+      "id": "val/0/val_002249.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/1/train_070035.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/2/train_008882.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/3/train_033357.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/4/train_087923.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/5/train_040485.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/6/train_049222.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "val/7/val_000910.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/8/train_020560.png",
+      "class_name": "8",
+      "label": 8
+    }
+  ],
+  "meta": {
+    "train_pool": "train + val",
+    "eval_pool": "test"
+  }
+}

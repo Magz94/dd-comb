@@ -1,0 +1,11 @@
+# @package pipeline
+# ImageNet-R out-of-distribution split, ImageFolder layout (train/, val/).
+
+use_deepweeds: false
+use_ssl_patches: true
+use_imagenet1k_parquet: false
+use_jkk: false
+
+ssl_patches_root: /home/magz94/Uncertainty/imagenet_r_ood_split
+
+num_classes: 200

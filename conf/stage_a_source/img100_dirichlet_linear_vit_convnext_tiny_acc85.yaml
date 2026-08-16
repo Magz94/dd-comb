@@ -1,0 +1,14 @@
+# @package _global_
+# Stage-A source: Dirichlet attention + linear classifier, ImageNet-100 acc85,
+# using only ViT-B/16 and ConvNeXt-Tiny.
+
+frozen_fusion_tag: attn_stage_a_dirichlet_linear_imagenet100_acc85_vit_convnext_tiny
+
+pipeline:
+  attention_method: dirichlet
+  classifier_method: linear
+  pretrained: false
+  base_models_path: models/base
+  model_save_path: models
+  subfolders: [acc85]
+  model_names: [ViT-B16, ConvNeXt-Tiny]

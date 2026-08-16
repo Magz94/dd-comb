@@ -1,0 +1,938 @@
+{
+  "schema_version": 1,
+  "dataset_key": "pathmnist_224_imagefolder_mergeval",
+  "dataset_type": "imagefolder",
+  "k_shot": 20,
+  "run_index": 8,
+  "seed": 20050,
+  "num_classes": 9,
+  "class_pool_sizes": {
+    "0": 10407,
+    "1": 10566,
+    "2": 11512,
+    "3": 11557,
+    "4": 8896,
+    "5": 13536,
+    "6": 8763,
+    "7": 10446,
+    "8": 14317
+  },
+  "selected_count": 180,
+  "selected_per_class": {
+    "0": 20,
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "5": 20,
+    "6": 20,
+    "7": 20,
+    "8": 20
+  },
+  "selected": [
+    {
+      "id": "train/0/train_010042.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_016374.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_024288.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_024555.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_026396.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_028109.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_029390.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_033567.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_035302.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_036507.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_039970.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_066816.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_070305.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_072606.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_077344.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_078871.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_081875.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_083830.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/0/train_088368.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "val/0/val_009966.png",
+      "class_name": "0",
+      "label": 0
+    },
+    {
+      "id": "train/1/train_009148.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_022411.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_029672.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_038006.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_044105.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_046590.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_048119.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_057715.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_060643.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_065295.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_066683.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_072123.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_084904.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_085217.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_086536.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_086945.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/1/train_087780.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "val/1/val_003888.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "val/1/val_005637.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "val/1/val_008922.png",
+      "class_name": "1",
+      "label": 1
+    },
+    {
+      "id": "train/2/train_001576.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_007101.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_012196.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_033315.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_034083.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_034354.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_034976.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_037068.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_037489.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_038254.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_040770.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_050076.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_057302.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_064973.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_066147.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_071856.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_080839.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/2/train_089432.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "val/2/val_003974.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "val/2/val_005790.png",
+      "class_name": "2",
+      "label": 2
+    },
+    {
+      "id": "train/3/train_011362.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_013326.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_018380.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_019454.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_021920.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_024335.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_025544.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_027747.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_027910.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_028629.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_044120.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_048325.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_049760.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_049864.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_059728.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_060538.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_063681.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_066697.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_067756.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/3/train_084337.png",
+      "class_name": "3",
+      "label": 3
+    },
+    {
+      "id": "train/4/train_004096.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_005896.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_006422.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_013549.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_013735.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_014085.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_016622.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_024912.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_041721.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_048536.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_052426.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_053680.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_055646.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_069562.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_082213.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_085289.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_087074.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/4/train_087612.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "val/4/val_001550.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "val/4/val_002540.png",
+      "class_name": "4",
+      "label": 4
+    },
+    {
+      "id": "train/5/train_004341.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_004845.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_011140.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_025715.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_026785.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_030156.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_032689.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_045705.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_047067.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_055434.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_058876.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_071836.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_075945.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_079365.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_081240.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_086037.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/5/train_086373.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "val/5/val_005677.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "val/5/val_007942.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "val/5/val_008535.png",
+      "class_name": "5",
+      "label": 5
+    },
+    {
+      "id": "train/6/train_011552.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_014727.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_018451.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_024202.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_031247.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_047343.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_049764.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_050938.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_051498.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_055211.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_057418.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_070931.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_072717.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_075005.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_075265.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_076544.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/6/train_081517.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "val/6/val_003101.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "val/6/val_006047.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "val/6/val_008024.png",
+      "class_name": "6",
+      "label": 6
+    },
+    {
+      "id": "train/7/train_001159.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_003807.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_012907.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_019274.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_019709.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_026514.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_034559.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_037237.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_042994.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_056542.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_060077.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_068202.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_074229.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_074456.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_085748.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_087564.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/7/train_088742.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "val/7/val_000529.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "val/7/val_006093.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "val/7/val_008161.png",
+      "class_name": "7",
+      "label": 7
+    },
+    {
+      "id": "train/8/train_001699.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_002474.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_003770.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_006765.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_013798.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_017915.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_022579.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_023613.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_025030.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_035240.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_037647.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_046897.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_055905.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_056720.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_062113.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_063807.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_079564.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "train/8/train_089478.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "val/8/val_003647.png",
+      "class_name": "8",
+      "label": 8
+    },
+    {
+      "id": "val/8/val_007197.png",
+      "class_name": "8",
+      "label": 8
+    }
+  ],
+  "meta": {
+    "train_pool": "train + val",
+    "eval_pool": "test"
+  }
+}

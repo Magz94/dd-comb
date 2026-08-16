@@ -1,0 +1,8 @@
+# @package _global_
+# DeepWeeds with label 8 removed; train and val merged, test held out.
+
+dataset_name: deepweeds_no_bg
+merge_val_into_train: true
+deepweeds_root: /datasets/DeepWeeds
+deepweeds_subset: subset0
+

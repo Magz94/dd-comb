@@ -1,0 +1,14 @@
+# Hydra entry config for scripts/train_single_backbone.py.
+#
+# Schema: SingleBackboneConfig in src/ddcomb/config.py
+# `model`, `mode`, and a single_backbone_dataset preset are required.
+#
+#   python scripts/train_single_backbone.py \
+#       single_backbone_dataset=plantvillage_color_split \
+#       model=resnet18 mode=head_only \
+#       use_wandb=true wandb_entity=kihug
+
+defaults:
+  - train_single_backbone_schema
+  - single_backbone_dataset: null
+  - _self_

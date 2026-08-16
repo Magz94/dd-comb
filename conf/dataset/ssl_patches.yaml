@@ -1,0 +1,15 @@
+# @package pipeline
+# SSL_Patches plant-vs-meadow ImageFolder split.
+
+use_deepweeds: false
+use_ssl_patches: true
+use_imagenet1k_parquet: false
+use_jkk: false
+
+ssl_patches_root: /home/magz94/ddcomb/data/ssl_patches
+ssl_patches_train_split: train
+ssl_patches_eval_split: val
+ssl_patches_merge_split: val
+use_ssl_patches_merge_val_into_train: false
+
+num_classes: 2

@@ -1,0 +1,14 @@
+# @package _global_
+# Stage-A source: vanilla softmax attention + linear classifier, ImageNet-100 acc85,
+# ResNet-first model order (matches the saved checkpoint).
+
+frozen_fusion_tag: attn_stage_a_softmax_linear_imagenet100_acc85_resnetOrder_v1
+
+pipeline:
+  attention_method: softmax
+  classifier_method: linear
+  pretrained: false
+  base_models_path: models/base
+  model_save_path: models
+  subfolders: [acc85]
+  model_names: [ResNet18, VGG16, DenseNet121, EfficientNetB0, ViT-B16]

@@ -1,0 +1,7 @@
+# @package _global_
+# Two-class SSL patches ImageFolder layout (train/, val/).
+
+dataset_name: plant_vs_meadow
+merge_val_into_train: false
+ssl_patches_root: /home/magz94/Uncertainty/ssl_patches
+

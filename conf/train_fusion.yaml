@@ -1,0 +1,21 @@
+# Hydra entry config for scripts/train_fusion.py.
+#
+# Schema: TrainFusionConfig in src/ddcomb/config.py
+#
+# Optional config groups (override via CLI):
+#   dataset=<name>          where <name> is a file in conf/dataset/
+#   stage_a_source=<name>   where <name> is a file in conf/stage_a_source/
+#
+# Inline overrides land on top of any group selections, e.g.:
+#
+#   # Stage-D fine-tune, plant village dataset, dirichlet stage-A source:
+#   python scripts/train_fusion.py mode=stage_d \
+#       stage_a_source=img100_dirichlet_imagenet_1_acc85 \
+#       dataset=plantvillage_color_split \
+#       pipeline.run_tag=attn_stage_d_finetune_plantvillage_from_dirichlet
+#
+defaults:
+  - train_fusion_schema
+  - dataset: null
+  - stage_a_source: null
+  - _self_

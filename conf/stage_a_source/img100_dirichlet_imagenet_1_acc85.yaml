@@ -1,0 +1,14 @@
+# @package _global_
+# Stage-A source: Dirichlet attention + linear classifier, trained on
+# ImageNet-100 acc85 base models. Note the ResNet-first model order.
+
+frozen_fusion_tag: attn_stage_a_dirichlet_imagenet_1
+
+pipeline:
+  attention_method: dirichlet
+  classifier_method: linear
+  pretrained: false
+  base_models_path: models/base
+  model_save_path: models
+  subfolders: [acc85]
+  model_names: [ResNet18, VGG16, DenseNet121, EfficientNetB0, ViT-B16]

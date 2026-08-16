@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "dataset_key": "cottonweedid15_split",
+  "dataset_type": "imagefolder",
+  "k_shot": 10,
+  "run_index": 7,
+  "seed": 10049,
+  "num_classes": 15,
+  "class_pool_sizes": {
+    "0": 610,
+    "1": 88,
+    "2": 203,
+    "3": 172,
+    "4": 892,
+    "5": 218,
+    "6": 551,
+    "7": 103,
+    "8": 360,
+    "9": 103,
+    "10": 192,
+    "11": 187,
+    "12": 48,
+    "13": 57,
+    "14": 360
+  },
+  "selected_count": 150,
+  "selected_per_class": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10,
+    "6": 10,
+    "7": 10,
+    "8": 10,
+    "9": 10,
+    "10": 10,
+    "11": 10,
+    "12": 10,
+    "13": 10,
+    "14": 10
+  },
+  "selected": [
+    {
+      "id": "train/carpetweeds/06282021_IphoneSE_YL_Carpetweed_006.JPG",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/07122021_IphoneSE_YL_Carpetweed_073.JPG",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/07122021_IphoneSE_YL_Carpetweed_167 (2).JPG",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/66b07492a756425a994b98d63c62c30a__carpetweed__2.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/7963ca69808e4e01b200686cb07c5e2c__carpetweed__3.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/7cb4d3d7c597426c8b9c3627adc70a61__carpetweed__2.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/8313223fd8ae462391fb684083c94355__carpetweed__5.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/8860a250cac544a18b96d21d3256c77d__carpetweed__1.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/8895c28febca4bb98088cd0a7080ff3c__carpetweed__0.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/carpetweeds/eea0b961233245e996b0d3737ca00940__carpetweed__3.jpg",
+      "class_name": "carpetweeds",
+      "label": 0
+    },
+    {
+      "id": "train/crabgrass/5394a1240c224e288698fa1c1b86a314__crabgrass__0.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/807f7c8abce6460e9645ad27047208c5__crabgrass__0.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0331.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0337.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0431.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0448.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/IMG_0491.JPG",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/a00df080be504385ae59480397653473__crabgrass__2.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/c5542b651ec14698887b284a647f91d8__crabgrass__1.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/crabgrass/dd56a4c8d36a47e98a7587d139f071bd__crabgrass__0.jpg",
+      "class_name": "crabgrass",
+      "label": 1
+    },
+    {
+      "id": "train/eclipta/3dfac2c2b03844ef9da0f6796815230f__eclipta__4.jpg",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/3dfac2c2b03844ef9da0f6796815230f__eclipta__5.jpg",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/B2355686-D45A-4400-ABFB-373312EE2600.jpeg",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1043.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1084.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1127 (2).JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1160.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1948 (2).JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1987 (2).JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/eclipta/IMG_1999.JPG",
+      "class_name": "eclipta",
+      "label": 2
+    },
+    {
+      "id": "train/goosegrass/07122021_IphoneSE_YL_Goosegrass_023.JPG",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/54c17c03ea0c4c6a94052b35801d7637__goosegrass__2.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/6087a9bb0526486ebda166c253c6d55b__goosegrass__2.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/68dac120746b4eefa731875cfa537102__goosegrass__10.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/IMG_1261.JPG",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/IMG_1262.JPG",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/IMG_1926.JPG",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/fd8e16bffc94404eb291498a737e19da__goosegrass__3.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/goosegrass-0002.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/goosegrass/goosegrass_0004.jpg",
+      "class_name": "goosegrass",
+      "label": 3
+    },
+    {
+      "id": "train/morningglory/06282021_IphoneSE_YL_Morningglory_012.JPG",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/06282021_IphoneSE_YL_Morningglory_023.JPG",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/1643e88d4c9546c89f42df66c957e1e6__morningglory__1.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/6036eeede02a4bd9bd512ec8098f9611__morningglory__0.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/679be6904e73427ba86e96878b15bccc__morningglory__0.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/79423b51966540a08283da003e8ee86c__morningglory__1.jpg",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/IMG_0375.JPG",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/IMG_0418.JPG",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/IMG_1336 (2).JPG",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/morningglory/IMG_2125.JPG",
+      "class_name": "morningglory",
+      "label": 4
+    },
+    {
+      "id": "train/nutsedge/06b653426f4447dfaef0404af57f418b__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/178eacaafd3b4ebba23c4f0cc0aea61e__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/17D2EF7E-6B96-46AE-97B2-41157A2DAB0E.jpeg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/3d6de183c5bd44bda219d80c2ec1ae98__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/56BA217B-BD86-4838-A453-49F15021DC19.jpeg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/7de214b781444a6c9969ca91c01ab8d9__nutsedge__1.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/a27f5a4cecda4168b80692a08c2d7105__nutsedge__2.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/a49d239374dc4578912aa66f362a5154__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/b5306ce05b1542a7a1af670825d16197__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/nutsedge/d7864d67058b4e6ba00fbc05f41ab08c__nutsedge__0.jpg",
+      "class_name": "nutsedge",
+      "label": 5
+    },
+    {
+      "id": "train/palmeramaranth/06282021_IphoneSE_YL_PalmerAmaranth_013.JPG",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/07122021_IphoneSE_YL_PalmerAmaranth_015(1).JPG",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/0961e74dad2448de9feb91625e6da4eb__palmer_amaranth__1.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/0f072114af7a4c43aa1fb2407c8dc012__palmer_amaranth__1.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/55aef07fc8e547d8aefe53916436dd55__palmer_amaranth__0.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/63bec01bd0e5421d8b75f34cb819f478__palmer_amaranth__0.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/IMG_1873 (2).JPG",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/a156156bb8284a1c974331f44e325b71__palmer_amaranth__31.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/e4b062a5764a4a2d819f7a3d070dbb45__palmer_amaranth__3.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/palmeramaranth/fb9c79157a9047db95d234fc8e233192__palmer_amaranth__0.jpg",
+      "class_name": "palmeramaranth",
+      "label": 6
+    },
+    {
+      "id": "train/prickly_sida/8607e39504f947f6a5cc634f2e2a971e__prickly_sida__3.jpg",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/DSC_0331.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/DSC_0333 (3).JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_1638.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_1639.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_1908.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_1911.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_1913.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_1942.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/prickly_sida/IMG_2163.JPG",
+      "class_name": "prickly_sida",
+      "label": 7
+    },
+    {
+      "id": "train/purslane/11156570aadb4a48a2cc93ca2fa552bf__purselane__1.jpg",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_0043.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1367.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1393.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1405.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1481 (2).JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1536.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_1538.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_2039.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/purslane/IMG_2075.JPG",
+      "class_name": "purslane",
+      "label": 8
+    },
+    {
+      "id": "train/ragweed/04eb5a8251d741b8b2d276dda111f897__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/10aea99408064630a23d82a554378a86__ragweed__3.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/4cb22ffa637e442f903192c3313c193e__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/4cb22ffa637e442f903192c3313c193e__ragweed__3.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/5eaeae7b11864362a13eb318bceec16f__ragweed__7.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/6b838c343fcf4ec380ddf04000c16e8f__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/83affe2e673c41158d915739096bc140__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/9c5967b46c9d453bbbf66b2a97f5a961__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/c12d53f04ae5414c80f5fc628b469087__ragweed__1.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/ragweed/c69cc55af26f4764b5685d5e4a6562fb__ragweed__0.jpg",
+      "class_name": "ragweed",
+      "label": 9
+    },
+    {
+      "id": "train/sicklepod/2c729b95b34843c68f3de7d4023800da__sicklepod__3.jpg",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/2c729b95b34843c68f3de7d4023800da__sicklepod__6.jpg",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/3a32e7c1498e49779f0e93f5db944bdc__sicklepod__0.jpg",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/96f27e743db8440c8a271bd4ebaf011c__sicklepod__9.jpg",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_0255.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_1701.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_1706.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_1720.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_1758.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/sicklepod/IMG_1766.JPG",
+      "class_name": "sicklepod",
+      "label": 10
+    },
+    {
+      "id": "train/spottedspurge/07122021_IphoneSE_YL_SpottedSpurge_005.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/07122021_IphoneSE_YL_SpottedSpurge_009.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/402FD48D-1072-4F50-921C-057F3BF2673B.jpeg",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/DSC_0333 (4).JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_0355.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_0398.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_0763.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_0783.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/IMG_1495.JPG",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spottedspurge/c10ebdec3ad241629d6affae23d0eb2b__prostrate_spurge__1.jpg",
+      "class_name": "spottedspurge",
+      "label": 11
+    },
+    {
+      "id": "train/spurredanoda/0625e7d180bb471793930afaee4c2120__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/2108850b08624d3d979d4d2dfd238a43__spurred_anoda__1.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/40cb1aba4df546a0b550498bae358dc2__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/6775f10ef0974c77996b7a964f6ebb23__spurred_anoda__4.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/6e79970ffda04a9f933d88adb3480e18__spurred_anoda__6.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/8e07069a78b248cea8feda3fa35e6e5c__spurred_anoda__1.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/96f27e743db8440c8a271bd4ebaf011c__spurred_anoda__2.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/b5f654fb6ce942fa8f41bfeb694f2a8f__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/c13f374757e946dc8900fc7204e8119b__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/spurredanoda/e62b111fe70c44e797fe422a2d3b8908__spurred_anoda__0.jpg",
+      "class_name": "spurredanoda",
+      "label": 12
+    },
+    {
+      "id": "train/swinecress/1cd25ec94d034514984816778edc0058__swinecress__0.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/2a68b04d60224f5f92ba0fdaf30c45db__swinecress__14.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/547e1ce7dca64fd28c46d2c02fea6bd0__swinecress__2.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/656da09f0e564c7b960ab4f220e0ac2e__swinecress__13.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/8c3ac6da765d435b84b4ac8df917bdcd__swinecress__3.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/98bfd0ad502d466a94bfebffc7804a20__swinecress__1.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/Swine-Cress-1.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/c1ebd434de6c449f814c7d494da6deaa__swinecress__3.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/eea0b961233245e996b0d3737ca00940__swinecress__1.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/swinecress/fa48d47d0fb14169b83b66e9e63c6df0__swinecress__9.jpg",
+      "class_name": "swinecress",
+      "label": 13
+    },
+    {
+      "id": "train/waterhemp/D60F7C7A-8BF2-4B6D-99CE-9AE1C4578DCE_3.jpeg",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_0982.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1046.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1095.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1543.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1622.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1674.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_1738.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_2173.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    },
+    {
+      "id": "train/waterhemp/IMG_2179.JPG",
+      "class_name": "waterhemp",
+      "label": 14
+    }
+  ],
+  "meta": {
+    "train_pool": "train"
+  }
+}

@@ -1,0 +1,28 @@
+# Hydra entry config for scripts/sweep_single_backbone_kshot.py.
+#
+# Schema: SingleBackboneKShotSweepConfig in src/ddcomb/config.py
+#
+# kshot_manifest_path and run_name are auto-built from the sweep dimensions
+# (kshot_dataset_key, kshot_shot, kshot_run_idx). Each multirun job picks one
+# concrete manifest and runs one single-backbone training job. Relative kshot
+# paths are resolved against the repository root, not Hydra's job directory.
+#
+# Example:
+#   python scripts/sweep_single_backbone_kshot.py -m \
+#       single_backbone_dataset=plantvillage_color_split \
+#       model=vgg16 \
+#       mode=head_only \
+#       kshot_dataset_key=plantvillage_color_split \
+#       kshot_shot=1,5,10,20 \
+#       kshot_run_idx=range(1,21)
+
+defaults:
+  - single_backbone_kshot_sweep_schema
+  - single_backbone_dataset: null
+  - _self_
+
+kshot_manifest_path: "${kshot_root}/${kshot_dataset_key}/${kshot_shot}_shot_run_${kshot_run_idx}.json"
+run_name: "single_backbone_kshot_${kshot_dataset_key}_${model}_${mode}_${preprocess}_${kshot_shot}shot_run${kshot_run_idx}"
+
+# Match the fusion k-shot sweep default: avoid long-run W&B init/sync failures.
+use_wandb: false

@@ -1,0 +1,18 @@
+# @package _global_
+# Stage-A source: ORIGINAL torchvision ImageNet-1k pretrained backbones,
+# WITHOUT the acc85 ImageNet-100 finetuning. The feature extractors are the
+# stock IMAGENET1K_V1 weights, frozen. Used to test whether the method holds
+# with off-the-shelf backbones rather than the domain-finetuned acc85 ones.
+#
+# A distinct emb_cache_root is mandatory: these embeddings differ from the
+# acc85 ones, so they must not collide with the existing cache.
+
+frozen_fusion_tag: imagenet1k_original_5bb
+
+pipeline:
+  pretrained: true
+  base_models_path: null
+  model_save_path: models
+  subfolders: [original]
+  model_names: [ResNet18, VGG16, DenseNet121, EfficientNetB0, ViT-B16]
+  emb_cache_root: embedding_cache_original_5bb

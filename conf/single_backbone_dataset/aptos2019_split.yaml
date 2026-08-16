@@ -1,0 +1,6 @@
+# @package _global_
+# APTOS 2019 fixed ImageFolder split (train/, val/ as held-out test).
+
+dataset_name: aptos2019
+merge_val_into_train: false
+aptos_root: /home/magz94/ddcomb/data/aptos2019_split
