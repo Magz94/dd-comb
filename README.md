@@ -12,6 +12,13 @@ baselines (single-backbone EDL, MC-Dropout, deep ensembles).
 
 ---
 
+## Bachelor's Thesis
+
+This repository accompanies my bachelor's thesis
+at Technische Hochschule Mittelhessen (THM), 2026.
+
+[Read the full Bachelor's Thesis (PDF)](docs/bachelor-thesis.pdf)
+
 ## Repository layout
 
 ```
